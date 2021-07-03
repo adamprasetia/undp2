@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | make active.  By default there is only one group (the 'default' group).
 |
 | The $query_builder variables lets you determine whether or not to load
-| the query builder class.
+| the query builder class. 
 */
 $active_group = 'default';
 $query_builder = TRUE;
@@ -94,3 +94,10 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+if (in_array($_SERVER['HTTP_HOST'], ['adamprasetia.com','undp.adamprasetia.com'])) {
+	$db['default']['hostname'] = 'localhost';
+	$db['default']['username'] = 'u1474150_undp';
+	$db['default']['password'] = '1~+qE8k68Pf,';
+	$db['default']['database'] = 'u1474150_undp';
+}
