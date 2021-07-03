@@ -1032,7 +1032,7 @@
                     
                     <div class="content p-6 text-t-blue">
                         <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha Selama Pandemi COVID-19</h2>
-                        <h1 class="text-xl font-bold">43. Selama enam bulan terakhir, apa yang paling membantu usaha Bapak/Ibu agar tetap bertahan atau menjadi lebih baik?</h1>
+                        <h1 class="text-xl font-bold">B4. Selama enam bulan terakhir, apa yang paling membantu usaha Bapak/Ibu agar tetap bertahan atau menjadi lebih baik?</h1>
                         <small>(bisa lebih dari satu)</small>
                         <div class="my-4">
                             <div class="my-2 multiple__input">

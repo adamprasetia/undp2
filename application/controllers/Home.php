@@ -41,16 +41,16 @@ class Home extends CI_Controller {
 	}
 	public function export()
     {       
-        // if ($_SERVER['PHP_AUTH_USER']!='admin' || $_SERVER['PHP_AUTH_PW']!='#undp#') {
-        //     header('WWW-Authenticate: Basic realm="UNDP"');
-        //     header('HTTP/1.0 401 Unauthorized');
-        //     exit;
-        // }
+        if ($_SERVER['PHP_AUTH_USER']!='admin' || $_SERVER['PHP_AUTH_PW']!='#undp#') {
+            header('WWW-Authenticate: Basic realm="UNDP"');
+            header('HTTP/1.0 401 Unauthorized');
+            exit;
+        }
 
 		$db = $this->load->database('default', true);
 
-        // header("Content-type: application/vnd-ms-excel"); 
-        // header("Content-Disposition: attachment; filename=undp-".date('YmdHis').".xls");
+        header("Content-type: application/vnd-ms-excel"); 
+        header("Content-Disposition: attachment; filename=undp-".date('YmdHis').".xls");
 
 		$result = $db->get('participant')->result();
 		$this->load->view('export_view', ['result'=>$result]);

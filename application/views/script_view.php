@@ -60,7 +60,6 @@
     $(".btn__next").on("click", function() {
         var id = $(this).attr('data-id');
         if (id=='0' && $('input[name="q[0]"]:checked').val() == "no") {
-            save_data()
             $(this).parent().parent().parent().next().fadeOut(100);
             $(this).parent().parent().parent().fadeOut(500);
             setTimeout(function() {
@@ -70,7 +69,6 @@
             }, 500);
             $(".last--page h1").text("Terima kasih atas ketertarikan Bapak/Ibu dalam mengisi survei ini");
         }else if (id=='1' && $('input[name="q[1]"]:checked').val() == "no") {
-            save_data();
             $(this).parent().parent().parent().next().fadeOut(100);
             $(this).parent().parent().parent().fadeOut(500);
             setTimeout(function() {
