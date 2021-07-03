@@ -203,6 +203,7 @@
     });
 
     $(".input__b9__last").on("keyup change", function() {
+        console.log('sini');
         if($(this).val() != ''){
             $('.input__others__b9').show();
             $('.input__others__b9').removeAttr("disabled");

@@ -1463,7 +1463,7 @@
                 </div>
             </div>
 
-            <div class="wrap hidden">
+            <div class="wrap hiddens">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
                     
                     <div class="content p-6 text-t-blue">
@@ -1535,7 +1535,7 @@
                             </div>
                             <div class="my-4 flex items-center flex-wrap">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9 input__b9__last">
-                                    <option value="" disabled selected></option>
+                                    <option value="" selected></option>
                                     <option value="1-Lainnya">1</option>
                                     <option value="2-Lainnya">2</option>
                                     <option value="3-Lainnya">3</option>
