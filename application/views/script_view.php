@@ -130,7 +130,6 @@
             var val = el.split("-")[0];
             if(el!= "" && $.inArray(val, unique) === -1) unique.push(val);
         });
-        console.log(unique);
         if(unique.length == 5){
             $('.btn__next__a12').removeAttr("disabled");
             $('.btn__next__a12').removeClass("disabled");
@@ -203,7 +202,6 @@
     });
 
     $(".input__b9__last").on("keyup change", function() {
-        console.log('sini');
         if($(this).val() != ''){
             $('.input__others__b9').show();
             $('.input__others__b9').removeAttr("disabled");
