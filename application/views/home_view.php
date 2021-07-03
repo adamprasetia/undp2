@@ -1610,89 +1610,89 @@
                         <div class="my-4">
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Menggunakan energi terbarukan/ramah lingkungan dalam aktivitas usaha" type="checkbox" name="q[<?php echo ++$inc ?>]" class="mr-3 hidden">
+                                    <input value="Menggunakan energi terbarukan/ramah lingkungan dalam aktivitas usaha" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden">
                                     <span class="input__custom"></span>
                                     Menggunakan energi terbarukan/ramah lingkungan dalam aktivitas usaha
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Melaksanakan proses recycle/pengolahan kembali" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Melaksanakan proses recycle/pengolahan kembali" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Melaksanakan proses recycle/pengolahan kembali
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Melaksanakan proses reuse/penggunaan kembali" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Melaksanakan proses reuse/penggunaan kembali" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Melaksanakan proses reuse/penggunaan kembali
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Melakukan efisiensi penggunaan air" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Melakukan efisiensi penggunaan air" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Melakukan efisiensi penggunaan air
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Memilah limbah usaha" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Memilah limbah usaha" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Memilah limbah usaha
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Menggunakan alat produksi (lampu, mesin) yang rendah energi" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Menggunakan alat produksi (lampu, mesin) yang rendah energi" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Menggunakan alat produksi (lampu, mesin) yang rendah energi
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Membeli bahan baku dari penjual yang lokasinya dekat" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Membeli bahan baku dari penjual yang lokasinya dekat" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Membeli bahan baku dari penjual yang lokasinya dekat
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Mengurangi penggunaan kemasan sekali pakai" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Mengurangi penggunaan kemasan sekali pakai" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Mengurangi penggunaan kemasan sekali pakai
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Membeli bahan baku yang merupakan hasil recycle atau limbah dari usaha lain" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Membeli bahan baku yang merupakan hasil recycle atau limbah dari usaha lain" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Membeli bahan baku yang merupakan hasil recycle atau limbah dari usaha lain
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Mematikan peralatan usaha (lampu, mesin, komputer) ketika tidak digunakan" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Mematikan peralatan usaha (lampu, mesin, komputer) ketika tidak digunakan" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Mematikan peralatan usaha (lampu, mesin, komputer) ketika tidak digunakan
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Tidak melakukan" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Tidak melakukan" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Tidak melakukan
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>]" class="mr-3 last hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 last hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Lainnya
                                 </label>
                                 <div class="flex-none">
-                                    <input type="text" name="q[<?php echo $inc ?>]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 mt-2 ml-6 w-4/5  lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
+                                    <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 mt-2 ml-6 w-4/5  lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
                                 </div>
                             </div>
                         </div>
