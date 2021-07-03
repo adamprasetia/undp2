@@ -1610,7 +1610,7 @@
                         <div class="my-4">
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Menggunakan energi terbarukan/ramah lingkungan dalam aktivitas usaha" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden">
+                                    <input value="Menggunakan energi terbarukan/ramah lingkungan dalam aktivitas usaha" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Menggunakan energi terbarukan/ramah lingkungan dalam aktivitas usaha
                                 </label>
