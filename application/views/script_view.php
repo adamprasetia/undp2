@@ -56,39 +56,44 @@
         }
     });
 
-    // $(".multiple__input, .radio__pick").on("click", function() {
-    //     // first yes/no
-    //     if ($('input[name="q[0]"]:checked').val() == "yes") {
-    //         $(".btn__next").on("click", nextStep);
-    //     } else if ($('input[name="q[0]"]:checked').val() == "no") {
-    //         $(".btn__next").on("click", function() {
-    //             $(this).parent().parent().parent().next().fadeOut(100);
-    //             $(this).parent().parent().parent().fadeOut(500);
-    //             setTimeout(function() {
-    //                 $(".last--page").fadeIn(500);
-    //                 $(".bg").addClass("blue");
-    //                 $(".head").addClass("hidden");
-    //             }, 500);
-    //             $(".last--page h1").text("Terima kasih atas ketertarikan Bapak/Ibu dalam mengisi survei ini");
-    //         });
-    //     }
+    $(".btn__next").on("click", function() {
+        var id = $(this).attr('data-id');
+        if (id==0 && $('input[name="q[0]"]:checked').val() == "no") {
+            $(this).parent().parent().parent().next().fadeOut(100);
+            $(this).parent().parent().parent().fadeOut(500);
+            setTimeout(function() {
+                $(".last--page").fadeIn(500);
+                $(".bg").addClass("blue");
+                $(".head").addClass("hidden");
+            }, 500);
+            $(".last--page h1").text("Terima kasih atas ketertarikan Bapak/Ibu dalam mengisi survei ini");
+        }else if (id==1 && $('input[name="q[1]"]:checked').val() == "no") {
+            $(this).parent().parent().parent().next().fadeOut(100);
+            $(this).parent().parent().parent().fadeOut(500);
+            setTimeout(function() {
+                $(".last--page").fadeIn(500);
+                $(".bg").addClass("blue");
+                $(".head").addClass("hidden");
+            }, 500);
 
-    //     // second yes/no
-    //     if($('input[name="q[1]"]:checked').val() == "yes") {
-    //         $(".btn__next").on("click", nextStep);
-    //     } else if ($('input[name="q[1]"]:checked').val() == "no") {
-    //         $(".btn__next").on("click", function() {
-    //             $(this).parent().parent().parent().next().fadeOut(100);
-    //             $(this).parent().parent().parent().fadeOut(500);
-    //             setTimeout(function() {
-    //                 $(".last--page").fadeIn(500);
-    //                 $(".bg").addClass("blue");
-    //                 $(".head").addClass("hidden");
-    //             }, 500);
-    //             $(".last--page h1").text("Terima kasih atas waktu Bapak/Ibu");
-    //         });
-    //     }
-    // });
+            $(".last--page h1").text("Terima kasih atas waktu Bapak/Ibu");
+        }else if (id==5 && $('input[name="q[5]"]:checked').val() == "Tidak") {
+            $(this).attr("disabled", true);
+            $(this).addClass("disabled")
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().next().next().fadeIn(500);                        
+        }else if ((id==15 && $('input[name="q[15]"]:checked').val() == "Tidak") || id==16) {
+            $(this).attr("disabled", true);
+            $(this).addClass("disabled")
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().next().next().fadeIn(500);                        
+        }else{
+            $(this).attr("disabled", true);
+            $(this).addClass("disabled")
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().next().fadeIn(500);            
+        }
+    });
     
     $('.input__others').hide();
     $("input[type='checkbox'], .input__others").on("keyup change", function() {
@@ -118,18 +123,20 @@
         }
     });
 
-    $(".input__short__homes").on("keyup change", function() {
-        var value = $('.input__short__homes').map((_,el) => el.value).get()
+    $(".input__a12").on("keyup change", function() {
+        var value = $('.input__a12').map((_,el) => el.value).get()
         var unique = [];
         $.each(value, function(i, el){
-            if($.inArray(el, unique) === -1) unique.push(el);
+            var val = el.split("-")[0];
+            if(el!= "" && $.inArray(val, unique) === -1) unique.push(val);
         });
+        console.log(unique);
         if(unique.length == 5){
-            $('.btn__next__short__homes').removeAttr("disabled");
-            $('.btn__next__short__homes').removeClass("disabled");
+            $('.btn__next__a12').removeAttr("disabled");
+            $('.btn__next__a12').removeClass("disabled");
         } else {
-            $('.btn__next__short__homes').attr("disabled", true);
-            $('.btn__next__short__homes').addClass("disabled");
+            $('.btn__next__a12').attr("disabled", true);
+            $('.btn__next__a12').addClass("disabled");
         }
     });
 

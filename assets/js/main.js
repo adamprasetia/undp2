@@ -1,12 +1,12 @@
 // Next Transition
-function nextStep() {
-    $(this).attr("disabled", true);
-    $(this).addClass("disabled")
-    $(this).parent().parent().parent().fadeOut(500);
-    $(this).parent().parent().parent().next().fadeIn(500);
-}
+// function nextStep() {
+//     $(this).attr("disabled", true);
+//     $(this).addClass("disabled")
+//     $(this).parent().parent().parent().fadeOut(500);
+//     $(this).parent().parent().parent().next().fadeIn(500);
+// }
 
-$(".btn__next").on("click", nextStep);
+// $(".btn__next").on("click", nextStep);
 
 // Change bg to white
 $(".btn__change--white").on("click", function() {

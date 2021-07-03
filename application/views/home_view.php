@@ -496,14 +496,14 @@
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span class="inline-block w-14">Wanita</span>
-                                    <input type="number" name="q[<?php echo ++$inc ?>]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span class="inline-block w-14">Pria</span>
-                                    <input type="number" name="q[<?php echo $inc ?>]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
@@ -524,14 +524,14 @@
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span class="inline-block w-14">Wanita</span>
-                                    <input type="number" name="q[<?php echo ++$inc ?>]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span class="inline-block w-14">Pria</span>
-                                    <input type="number" name="q[<?php echo $inc ?>]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
@@ -552,24 +552,24 @@
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span>Wanita</span>
-                                    <input type="number" name="q[<?php echo ++$inc ?>]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" name="q[<?php echo ++$inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                                 <div>
                                     <span>Dengan disabilitas</span>
-                                    <input type="number" name="q[<?php echo $inc ?>]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text"  data-id="<?php echo $inc ?>">
+                                    <input type="number" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text"  data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span>Pria</span>
-                                    <input type="number" name="q[<?php echo $inc ?>]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                                 <div>
                                     <span>Dengan disabilitas</span>
-                                    <input type="number" name="q[<?php echo $inc ?>]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
@@ -588,7 +588,8 @@
                         <small>(prioritas paling tinggi 1, paling rendah 5)</small>
                         <div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo ++$inc ?>]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__short__homes">
+                                <select name="q[<?php echo ++$inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a12">
+                                    <option value="" selected hidden></option>
                                     <option value="1-Pekerja Wanita">1</option>
                                     <option value="2-Pekerja Wanita">2</option>
                                     <option value="3-Pekerja Wanita">3</option>
@@ -598,7 +599,8 @@
                                 Pekerja Wanita
                             </div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__short__homes">
+                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a12">
+                                    <option value="" selected hidden></option>
                                     <option value="1-Pekerja Pria">1</option>
                                     <option value="2-Pekerja Pria">2</option>
                                     <option value="3-Pekerja Pria">3</option>
@@ -608,7 +610,8 @@
                                 Pekerja Pria
                             </div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__short__homes">
+                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a12">
+                                    <option value="" selected hidden></option>
                                     <option value="1-Pekerja dengan produktivitas terendah">1</option>
                                     <option value="2-Pekerja dengan produktivitas terendah">2</option>
                                     <option value="3-Pekerja dengan produktivitas terendah">3</option>
@@ -618,7 +621,8 @@
                                 Pekerja dengan produktivitas terendah
                             </div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__short__homes">
+                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a12">
+                                    <option value="" selected hidden></option>
                                     <option value="1-Pekerja yang tidak memiliki tanggungan">1</option>
                                     <option value="2-Pekerja yang tidak memiliki tanggungan">2</option>
                                     <option value="3-Pekerja yang tidak memiliki tanggungan">3</option>
@@ -628,7 +632,8 @@
                                 Pekerja yang tidak memiliki tanggungan
                             </div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__short__homes">
+                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a12">
+                                    <option value="" selected hidden></option>
                                     <option value="1-Pekerja yang berdomisili jauh dari lokasi usaha anda">1</option>
                                     <option value="2-Pekerja yang berdomisili jauh dari lokasi usaha anda">2</option>
                                     <option value="3-Pekerja yang berdomisili jauh dari lokasi usaha anda">3</option>
@@ -638,7 +643,7 @@
                                 Pekerja yang berdomisili jauh dari lokasi usaha anda
                             </div>
                         </div>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__short__homes btn__form disabled" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__a12 btn__form disabled" disabled>SELANJUTNYA</button>
                     </div>
                 </div>
             </div>
@@ -724,28 +729,28 @@
                                 <div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Tidak menurun" type="radio" name="<?php echo ++$inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Tidak menurun" type="radio" name="q[<?php echo ++$inc ?>][0]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Tidak menurun
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun kurang dari 20%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun kurang dari 20%" type="radio" name="q[<?php echo $inc ?>][0]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun kurang dari 20%
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun 20% - 50%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun 20% - 50%" type="radio" name="q[<?php echo $inc ?>][0]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun 20% - 50%
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun lebih dari 50%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun lebih dari 50%" type="radio" name="q[<?php echo $inc ?>][0]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun lebih dari 50%
                                         </label>
@@ -757,28 +762,28 @@
                                 <div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Tidak menurun" type="radio" name="<?php echo ++$inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Tidak menurun" type="radio" name="q[<?php echo $inc ?>][1]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Tidak menurun
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun kurang dari 20%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun kurang dari 20%" type="radio" name="q[<?php echo $inc ?>][1]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun kurang dari 20%
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun 20% - 50%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun 20% - 50%" type="radio" name="q[<?php echo $inc ?>][1]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun 20% - 50%
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun lebih dari 50%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun lebih dari 50%" type="radio" name="q[<?php echo $inc ?>][1]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun lebih dari 50%
                                         </label>
@@ -790,28 +795,28 @@
                                 <div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Tidak menurun" type="radio" name="<?php echo ++$inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Tidak menurun" type="radio" name="q[<?php echo $inc ?>][2]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Tidak menurun
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun kurang dari 20%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun kurang dari 20%" type="radio" name="q[<?php echo $inc ?>][2]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun kurang dari 20%
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun 20% - 50%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun 20% - 50%" type="radio" name="q[<?php echo $inc ?>][2]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun 20% - 50%
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun lebih dari 50%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun lebih dari 50%" type="radio" name="q[<?php echo $inc ?>][2]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun lebih dari 50%
                                         </label>
@@ -823,28 +828,28 @@
                                 <div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Tidak menurun" type="radio" name="<?php echo ++$inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Tidak menurun" type="radio" name="q[<?php echo $inc ?>][3]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Tidak menurun
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun kurang dari 20%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun kurang dari 20%" type="radio" name="q[<?php echo $inc ?>][3]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun kurang dari 20%
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun 20% - 50%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun 20% - 50%" type="radio" name="q[<?php echo $inc ?>][3]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun 20% - 50%
                                         </label>
                                     </div>
                                     <div class="my-2">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menurun lebih dari 50%" type="radio" name="<?php echo $inc ?>" class="mr-3 hidden radio__pick radio__pick__b1">
+                                            <input value="Menurun lebih dari 50%" type="radio" name="q[<?php echo $inc ?>][3]" class="mr-3 hidden radio__pick radio__pick__b1">
                                             <span class="input__custom"></span>
                                             Menurun lebih dari 50%
                                         </label>
@@ -1101,54 +1106,54 @@
                                 <div class="my-4">
                                 <div class="my-2 multiple__input">
                                     <label class="flex items-center input__wrap">
-                                        <input value="Penggunaan alat pelindung bagi pekerja" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>">
+                                        <input value="Penggunaan alat pelindung bagi pekerja" type="checkbox" name="q[<?php echo ++$inc ?>][0][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>_0">
                                         <span class="input__custom"></span>
                                         Penggunaan alat pelindung bagi pekerja
                                     </label>
                                 </div>
                                 <div class="my-2 multiple__input">
                                     <label class="flex items-center input__wrap">
-                                        <input value="Pengaturan ulang ruang usaha agar bisa mengakomodasi pembatasan kontak fisik" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>">
+                                        <input value="Pengaturan ulang ruang usaha agar bisa mengakomodasi pembatasan kontak fisik" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>_0">
                                         <span class="input__custom"></span>
                                         Pengaturan ulang ruang usaha agar bisa mengakomodasi pembatasan kontak fisik
                                     </label>
                                 </div>
                                 <div class="my-2 multiple__input">
                                     <label class="flex items-center input__wrap">
-                                        <input value="Pengawasan kesehatan dan suhu tubuh pekerja" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>">
+                                        <input value="Pengawasan kesehatan dan suhu tubuh pekerja" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>_0">
                                         <span class="input__custom"></span>
                                         Pengawasan kesehatan dan suhu tubuh pekerja
                                     </label>
                                 </div>
                                 <div class="my-2 multiple__input">
                                     <label class="flex items-center input__wrap">
-                                        <input value="Melaksanakan bekerja dari rumah" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>">
+                                        <input value="Melaksanakan bekerja dari rumah" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>_0">
                                         <span class="input__custom"></span>
                                         Melaksanakan bekerja dari rumah
                                     </label>
                                 </div>
                                 <div class="my-2 multiple__input">
                                     <label class="flex items-center input__wrap">
-                                        <input value="Pembersihan rutin ruang usaha" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>">
+                                        <input value="Pembersihan rutin ruang usaha" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>_0">
                                         <span class="input__custom"></span>
                                         Pembersihan rutin ruang usaha
                                     </label>
                                 </div>
                                 <div class="my-2 multiple__input">
                                     <label class="flex items-center input__wrap">
-                                        <input value="Tidak melaksanakan" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>">
+                                        <input value="Tidak melaksanakan" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b5_1" data-id="<?php echo $inc ?>_0">
                                         <span class="input__custom"></span>
                                         Tidak melaksanakan
                                     </label>
                                 </div>
                                 <div class="my-2 multiple__input">
                                     <label class="flex items-center input__wrap">
-                                        <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 last hidden input__b5_1 input__b5_1_last" data-id="<?php echo $inc ?>">
+                                        <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 last hidden input__b5_1 input__b5_1_last" data-id="<?php echo $inc ?>_0">
                                         <span class="input__custom"></span>
                                         Lainnya
                                     </label>
                                     <div class="flex-none">
-                                        <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others input__others__b5_1" data-id="<?php echo $inc ?>">
+                                        <input type="text" name="q[<?php echo $inc ?>][0][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others input__others__b5_1" data-id="<?php echo $inc ?>_0">
                                     </div>
                                 </div>
                             </div>
@@ -1158,54 +1163,54 @@
                                 <div class="my-4">
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Mengurangi jumlah produksi" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>">
+                                            <input value="Mengurangi jumlah produksi" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>_1">
                                             <span class="input__custom"></span>
                                             Mengurangi jumlah produksi
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Diversifikasi usaha" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>">
+                                            <input value="Diversifikasi usaha" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>_1">
                                             <span class="input__custom"></span>
                                             Diversifikasi usaha
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Bergabung ke toko online seperti Shopee/Tokopedia" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>">
+                                            <input value="Bergabung ke toko online seperti Shopee/Tokopedia" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>_1">
                                             <span class="input__custom"></span>
                                             Bergabung ke toko online seperti Shopee/Tokopedia
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Modifikasi teknik produksi dan/atau komposisi bahan baku" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>">
+                                            <input value="Modifikasi teknik produksi dan/atau komposisi bahan baku" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>_1">
                                             <span class="input__custom"></span>
                                             Modifikasi teknik produksi dan/atau komposisi bahan baku
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Memberi diskon/hadiah" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>">
+                                            <input value="Memberi diskon/hadiah" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>_1">
                                             <span class="input__custom"></span>
                                             Memberi diskon/hadiah
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Menggencarkan promosi pada media online" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>">
+                                            <input value="Menggencarkan promosi pada media online" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b5_2" data-id="<?php echo $inc ?>_1">
                                             <span class="input__custom"></span>
                                             Menggencarkan promosi pada media online
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 last hidden input__b5_2 input__b5_2_last" data-id="<?php echo $inc ?>">
+                                            <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 last hidden input__b5_2 input__b5_2_last" data-id="<?php echo $inc ?>_1">
                                             <span class="input__custom"></span>
                                             Lainnya
                                         </label>
                                         <div class="flex-none">
-                                            <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others input__others__b5_2" data-id="<?php echo $inc ?>">
+                                            <input type="text" name="q[<?php echo $inc ?>][1][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others input__others__b5_2" data-id="<?php echo $inc ?>_1">
                                         </div>
                                     </div>
                                 </div>
@@ -1215,61 +1220,61 @@
                                 <div class="my-4">
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Merumahkan pekerja" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>">
+                                            <input value="Merumahkan pekerja" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>_2">
                                             <span class="input__custom"></span>
                                             Merumahkan pekerja
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Mengubah status pekerja menjadi pekerja lepas" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>">
+                                            <input value="Mengubah status pekerja menjadi pekerja lepas" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>_2">
                                             <span class="input__custom"></span>
                                             Mengubah status pekerja menjadi pekerja lepas
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Mengurangi biaya utilitas" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>">
+                                            <input value="Mengurangi biaya utilitas" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>_2">
                                             <span class="input__custom"></span>
                                             Mengurangi biaya utilitas
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Mengurangi biaya sewa tanah/bangunan" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>">
+                                            <input value="Mengurangi biaya sewa tanah/bangunan" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>_2">
                                             <span class="input__custom"></span>
                                             Mengurangi biaya sewa tanah/bangunan
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Mengurangi gaji/bonus pekerja" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>">
+                                            <input value="Mengurangi gaji/bonus pekerja" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>_2">
                                             <span class="input__custom"></span>
                                             Mengurangi gaji/bonus pekerja
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Mengurangi fasilitas khusus pekerja berkebutuhan khusus" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>">
+                                            <input value="Mengurangi fasilitas khusus pekerja berkebutuhan khusus" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>_2">
                                             <span class="input__custom"></span>
                                             Mengurangi fasilitas khusus pekerja berkebutuhan khusus
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Tidak melaksanakan" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>">
+                                            <input value="Tidak melaksanakan" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b5_3" data-id="<?php echo $inc ?>_2">
                                             <span class="input__custom"></span>
                                             Tidak melaksanakan
                                         </label>
                                     </div>
                                     <div class="my-2 multiple__input">
                                         <label class="flex items-center input__wrap">
-                                            <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 last hidden input__b5_3 input__b5_3_last" data-id="<?php echo $inc ?>">
+                                            <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 last hidden input__b5_3 input__b5_3_last" data-id="<?php echo $inc ?>_2">
                                             <span class="input__custom"></span>
                                             Lainnya
                                         </label>
                                         <div class="flex-none">
-                                            <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others input__others__b5_3" data-id="<?php echo $inc ?>">
+                                            <input type="text" name="q[<?php echo $inc ?>][2][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others input__others__b5_3" data-id="<?php echo $inc ?>_2">
                                         </div>
                                     </div>
                                 </div>
