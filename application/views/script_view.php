@@ -1,7 +1,8 @@
 <script>
 
-    function submit()
+    function save_data()
     {
+        console.log('save data');
         $.ajax({
             url: $('#mainform').attr('action'),
             method: $('#mainform').attr('method'),
@@ -58,7 +59,8 @@
 
     $(".btn__next").on("click", function() {
         var id = $(this).attr('data-id');
-        if (id==0 && $('input[name="q[0]"]:checked').val() == "no") {
+        if (id=='0' && $('input[name="q[0]"]:checked').val() == "no") {
+            save_data()
             $(this).parent().parent().parent().next().fadeOut(100);
             $(this).parent().parent().parent().fadeOut(500);
             setTimeout(function() {
@@ -67,7 +69,8 @@
                 $(".head").addClass("hidden");
             }, 500);
             $(".last--page h1").text("Terima kasih atas ketertarikan Bapak/Ibu dalam mengisi survei ini");
-        }else if (id==1 && $('input[name="q[1]"]:checked').val() == "no") {
+        }else if (id=='1' && $('input[name="q[1]"]:checked').val() == "no") {
+            save_data();
             $(this).parent().parent().parent().next().fadeOut(100);
             $(this).parent().parent().parent().fadeOut(500);
             setTimeout(function() {
@@ -88,6 +91,9 @@
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().fadeIn(500);                        
         }else{
+            if(id==36){
+                save_data();
+            }
             $(this).attr("disabled", true);
             $(this).addClass("disabled")
             $(this).parent().parent().parent().fadeOut(500);
@@ -271,7 +277,23 @@
     });
 
     $('form').submit(function(e) {
-        submit()
         e.preventDefault();
     });
+
+    // Change bg to white
+    $(".btn__change--white").on("click", function() {
+        $(".bg").removeClass("blue");
+        setTimeout(function() {
+            $(".head").removeClass("hidden");
+        }, 500);
+    })
+
+    // Change bg to blue
+    $(".btn__change--blue").on("click", function() {
+        $(".bg").addClass("blue");
+        setTimeout(function() {
+            $(".head").addClass("hidden");
+        }, 500);
+    })
+
 </script>

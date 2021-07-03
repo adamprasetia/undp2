@@ -12,93 +12,32 @@ class Home extends CI_Controller {
 			'prov' => $db->query('select distinct(prov) from city')->result(),
 		];
 
-		// dd($data);
-		
-		
 		$this->load->view('home_view', $data);		
 	}
 	public function city($prov = '')
 	{
 		$db = $this->load->database('default', true);	
 		$city = $db->select('city')->where('prov', urldecode($prov))->get('city')->result();
-		// dd($db->last_query());
 		echo json_encode($city);
 	}
 	public function participant()
 	{		
+		$db = $this->load->database('default', true);
 		$answer = $this->input->post('q', true);
-		echo json_encode($answer);exit;
-		$this->load->library('form_validation');
-		$this->form_validation->set_error_delimiters('', ', ');
-		$this->form_validation->set_rules('name','Name', 'required|trim');
-		$this->form_validation->set_rules('gender','Gender', 'required|trim|in_list[M,F,none]');
-		$this->form_validation->set_rules('age','Age', 'required|trim|is_natural_no_zero');
-		$this->form_validation->set_rules('occ','Occ', 'required|trim');
-		$this->form_validation->set_rules('city','City', 'required|trim');
-		$this->form_validation->set_rules('email','Email', 'trim|valid_email');
-
-		$return = ['status'=>false];
-		if($this->form_validation->run() === FALSE){
-			$return = ['status'=>false, 'message'=>validation_errors()];
+		if(!is_array($answer)){
+			echo json_encode(['status'=>false,'message'=>'question wrong format']);
+			exit;
+		}
+		$result = $db->insert('participant', [
+			'answer'=>json_encode($answer),
+			'created_at'=>date('Y-m-d H:i:s')
+		]);
+		if($result){
+			$return = ['status'=>true, 'message'=>'Success'];
 		}else{
-			$db = $this->load->database('default', true);
-			$answer = $this->input->post('question', true);
-			if(!is_array($answer)){
-				echo json_encode(['status'=>false,'message'=>'question wrong format']);
-				exit;
-			}
-			$array = array_slice($answer,-5,5);
-			$values = array_count_values($array);
-			arsort($values);
-			$badge = array_slice(array_keys($values), 0, 1, true);
-
-			$result = $db->insert('participant', [
-				'name'=>$this->input->post('name', true),
-				'gender'=>$this->input->post('gender', true),
-				'age'=>$this->input->post('age', true),
-				'occ'=>$this->input->post('occ', true),
-				'city'=>$this->input->post('city', true),
-				'email'=>$this->input->post('email', true),
-				'answer'=>json_encode($answer),
-				'badge'=>$badge[0],
-			]);
-			$badge_index = 0;
-			switch ($badge[0]) {
-				case 'a':
-					$badge_index = 0;
-					break;
-				case 'b':
-					$badge_index = 1;
-					break;
-				case 'c':
-					$badge_index = 2;
-					break;
-				case 'd':
-					$badge_index = 3;
-					break;
-				case 'e':
-					$badge_index = 4;
-					break;
-				
-				default:
-					$badge_index = 0;
-					break;
-			}			
-			$badge_config = config_item('badge');
-			if($result){
-				$return = ['status'=>true, 'badge'=>$badge_index, 'share_url'=>base_url('?badge='.$badge[0]), 'share_caption'=>$badge_config[$badge_index]['og_desc']];
-			}
-		}		
+			$return = ['status'=>true, 'message'=>'Failed'];
+		}
 		echo json_encode($return);
-	}
-	public function set_lang($value = '')
-	{
-		setcookie('lang', $value, time() + (86400 * 30),'/');
-		redirect();
-	}
-	public function get_lang()
-	{
-		echo config_item('lang');
 	}
 	public function export()
     {       

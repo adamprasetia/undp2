@@ -58,7 +58,7 @@
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
                     
                     <div class="content p-7 text-center font-bold text-t-blue  md:text-xl">
-                        <p>Selamat <?php echo (date('H') < 10?'pagi':(date('H') < 14?'siang':'malam')) ?>, Bapak/Ibu yang kami hormati, kami dari UNDP Indonesia dan Indosat Ooredoo. Saat ini kami sedang melakukan Survei Lanjutan Dampak COVID-19 terhadap UMKM di Indonesia. Kami mohon kesediaan Bapak/Ibu untuk menjadi responden dalam survei ini.</p>
+                        <p>Selamat <?php echo (date('H') < 10?'pagi':(date('H') < 15?'siang':'malam')) ?>, Bapak/Ibu yang kami hormati, kami dari UNDP Indonesia dan Indosat Ooredoo. Saat ini kami sedang melakukan Survei Lanjutan Dampak COVID-19 terhadap UMKM di Indonesia. Kami mohon kesediaan Bapak/Ibu untuk menjadi responden dalam survei ini.</p>
                         <br>
                         <p>Survei ini bertujuan untuk melihat dampak pandemi COVID-19 terhadap UMKM selama tahun 2021, hampir satu tahun setelah pandemi terjadi. Survei ini ingin mengetahui apa strategi dan yang dipilih oleh pelaku usaha UMKM, termasuk pelaku usaha perempuan, pemuda, dan juga yang berkebutuhan.</p>
                         <button class="mt-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 btn__next">SELANJUTNYA</button>
@@ -2169,7 +2169,6 @@
     </div>
 
     <script src="<?php echo base_url('assets') ?>/js/jquery-3.5.1.min.js"></script>
-    <script src="<?php echo base_url('assets') ?>/js/main.js"></script>
     <?php $this->load->view('script_view') ?>
 </body>
 </html>
