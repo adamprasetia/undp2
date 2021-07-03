@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $protocol = 'http';
-if (in_array($_SERVER['HTTP_HOST'], ['innovativefinancinglab.com','www.innovativefinancinglab.com'])) {
+if (in_array($_SERVER['HTTP_HOST'], ['adamprasetia.com','www.adamprasetia.com'])) {
     $protocol = 'https';
 }
 $root = $protocol."://".$_SERVER['HTTP_HOST'];

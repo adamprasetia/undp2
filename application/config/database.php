@@ -95,7 +95,7 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
-if (in_array($_SERVER['HTTP_HOST'], ['adamprasetia.com','undp.adamprasetia.com'])) {
+if (in_array($_SERVER['HTTP_HOST'], ['adamprasetia.com','www.adamprasetia.com','undp.adamprasetia.com'])) {
 	$db['default']['hostname'] = 'localhost';
 	$db['default']['username'] = 'u1474150_undp';
 	$db['default']['password'] = '1~+qE8k68Pf,';
