@@ -195,6 +195,42 @@
         }
     });
 
+    $(".input__b9__last").on("keyup change", function() {
+        if($(this).val() != ''){
+            $('.input__others__b9').show();
+            $('.input__others__b9').removeAttr("disabled");
+            $('.input__others__b9').removeClass("disabled");
+            $('.input__others__b9').focus();
+        }else{
+            $('.input__others__b9').val('');
+            $('.input__others__b9').attr("disabled", true);
+            $('.input__others__b9').addClass("disabled");
+            $('.input__others__b9').hide();
+        }
+    });
+
+    $(".input__b9, .input__others__b9").on("keyup change", function() {
+        var value = $('.input__b9').map((_,el) => el.value).get()
+        var unique = [];
+        var sum = [];
+        $.each(value, function(i, el){
+            var val = el.split("-")[0];
+            if(el!= "" && $.inArray(val, unique) === -1) unique.push(val);
+            if(el!= "" && $.inArray(el, unique) === -1) sum.push(el);
+        });
+
+        if((unique.length == 3 && sum.length == 3 && $('.input__b9__last').val()=='')
+        || (unique.length == 3 && sum.length == 3 && $('.input__b9__last').val()!='' && $('.input__others__b9').val()!='')
+        ){
+            $('.btn__next__b9').removeAttr("disabled");
+            $('.btn__next__b9').removeClass("disabled");
+        } else {
+            $('.btn__next__b9').attr("disabled", true);
+            $('.btn__next__b9').addClass("disabled");
+        }
+    });
+
+
     $(".input__text").on("keyup change", function() {
         var id = $(this).attr('data-id');
         var value = $('input[data-id="'+id+'"]').map((_,el) => el.value).get()
@@ -213,7 +249,13 @@
 
     $(".input__dropdown").on("change", function() {
         var id = $(this).attr('data-id');
-        if($(this).val()!=''){
+        var value = $('select[data-id="'+id+'"]').map((_,el) => el.value).get()
+        var status = true;
+        $.each(value, function(i, el){
+            if(el=='') status = false;
+        });
+
+        if(status){
             $('button[data-id="'+id+'"').removeAttr("disabled");
             $('button[data-id="'+id+'"').removeClass("disabled");
         } else {
