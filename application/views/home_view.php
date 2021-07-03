@@ -1037,42 +1037,42 @@
                         <div class="my-4">
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Pemasaran melalu" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Pemasaran melalui daring/online" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Pemasaran melalui daring/online
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Bantuan dari pem" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Bantuan dari pemerintah" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Bantuan dari pemerintah
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Bantuan dari kel" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Bantuan dari keluarga/rekan/teman" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Bantuan dari keluarga/rekan/teman
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Peningkatan juml" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Peningkatan jumlah permintaan" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Peningkatan jumlah permintaan
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Akses bahan baku" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Akses bahan baku yang lebih baik" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Akses bahan baku yang lebih baik
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Tidak ada yang m" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Tidak ada yang membantu" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Tidak ada yang membantu
                                 </label>
@@ -1414,42 +1414,42 @@
                         <div class="my-4">
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Pelatihan usaha melalui webinar" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Pelatihan usaha melalui webinar
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Akses terhadap barang input domestik / barang import" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Akses terhadap barang input domestik / barang import
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Kemudahan akses ke pasar" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Kemudahan akses ke pasar
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Kemudahan pendistribusian barang" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Kemudahan pendistribusian barang
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Tidak menerima" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Tidak menerima
                                 </label>
                             </div>
                             <div class="my-2 multiple__input">
                                 <label class="flex items-center input__wrap">
-                                    <input type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 last hidden" data-id="<?php echo $inc ?>">
+                                    <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 last hidden" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
                                     Lainnya
                                 </label>
@@ -1471,7 +1471,7 @@
                         <h1 class="text-xl font-bold">B9. Pilih 3 dan urutkan bantuan yang dianggap paling dibutuhkan oleh usaha Bapak/Ibu?</h1>
                         <div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo ++$inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9 input__b9__last">
+                                <select name="q[<?php echo ++$inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
                                     <option value="" selected></option>
                                     <option value="1-Penangguhan pajak">1</option>
                                     <option value="2-Penangguhan pajak">2</option>
@@ -1480,7 +1480,7 @@
                                 Penangguhan pajak
                             </div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9 input__b9__last">
+                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
                                     <option value="" selected></option>
                                     <option value="1-Pemberian modal kerja/bantuan likuiditas dari pemerintah">1</option>
                                     <option value="2-Pemberian modal kerja/bantuan likuiditas dari pemerintah">2</option>
@@ -1489,7 +1489,7 @@
                                 Pemberian modal kerja/bantuan likuiditas dari pemerintah
                             </div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9 input__b9__last">
+                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
                                     <option value="" selected></option>
                                     <option value="1-Subsidi biaya listrik">1</option>
                                     <option value="2-Subsidi biaya listrik">2</option>
@@ -1498,7 +1498,7 @@
                                 Subsidi biaya listrik
                             </div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9 input__b9__last">
+                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
                                     <option value="" selected></option>
                                     <option value="1-Pelatihan usaha melalui webinar/tatap muka terkait e-commerce dan pemasaran online">1</option>
                                     <option value="2-Pelatihan usaha melalui webinar/tatap muka terkait e-commerce dan pemasaran online">2</option>
@@ -1507,7 +1507,7 @@
                                 Pelatihan usaha melalui webinar/tatap muka terkait e-commerce dan pemasaran online
                             </div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9 input__b9__last">
+                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
                                     <option value="" selected></option>
                                     <option value="1-Akses terhadap barang input domestik/barang impor">1</option>
                                     <option value="2-Akses terhadap barang input domestik/barang impor">2</option>
@@ -1516,7 +1516,7 @@
                                 Akses terhadap barang input domestik/barang impor
                             </div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9 input__b9__last">
+                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
                                     <option value="" selected></option>
                                     <option value="1-Kemudahan akses ke pasar">1</option>
                                     <option value="2-Kemudahan akses ke pasar">2</option>
@@ -1525,7 +1525,7 @@
                                 Kemudahan akses ke pasar
                             </div>
                             <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9 input__b9__last">
+                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
                                     <option value="" selected></option>
                                     <option value="1-Kemudahan pendistribusian barang">1</option>
                                     <option value="2-Kemudahan pendistribusian barang">2</option>
