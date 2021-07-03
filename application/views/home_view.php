@@ -1463,7 +1463,7 @@
                 </div>
             </div>
 
-            <div class="wrap hiddens">
+            <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
                     
                     <div class="content p-6 text-t-blue">
