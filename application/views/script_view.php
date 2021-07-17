@@ -90,6 +90,7 @@
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().next().next().fadeIn(500);                        
         }else if (id==14 && $('input[name="q[13]"]:checked').val() == "Tutup permanen") {
+            save_data();
             $(this).parent().parent().parent().next().fadeOut(100);
             $(this).parent().parent().parent().fadeOut(500);
             setTimeout(function() {
@@ -105,7 +106,7 @@
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().fadeIn(500);                        
         }else{
-            if(id==36){
+            if(id==46){
                 save_data();
             }
             $(this).attr("disabled", true);

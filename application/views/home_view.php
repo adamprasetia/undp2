@@ -219,6 +219,7 @@
 
             <?php 
                 $this->load->view('template/checkbox',[
+                    'class'=>'',
                     'title'=>'A. Profil Usaha',
                     'subtitle'=>'A6. Disabilitas apa yang dimiliki oleh pemilik usaha?',
                     'inc'=>++$inc,
@@ -282,6 +283,7 @@
             
             <?php 
                 $this->load->view('template/checkbox',[
+                    'class'=>'',
                     'title'=>'A. Profil Usaha',
                     'subtitle'=>'A9. Jenis Produk Usaha yang dilaksanakan?',
                     'inc'=>++$inc,
@@ -305,11 +307,11 @@
 
             <?php 
                 $this->load->view('template/checkbox',[
+                    'class'=>'grid grid-cols-2',
                     'title'=>'A. Profil Usaha',
                     'subtitle'=>'A10. Sejak pandemi COVID-19 dimulai (Maret 2020), apakah Bapak/Ibu pernah menutup usaha? Jika Ya, pada bulan apa?',
                     'inc'=>++$inc,
                     'question'=>['Maret 2020','April 2020','Mei 2020','Juni 2020','Juli 2020','Agustus 2020','September 2020','November 2020','Desember 2020','Januari 2021','Februari 2021','Maret 2021','April 2021','Mei 2021','Juni 2021','Tidak Pernah'],
-                    'class'=>'grid grid-cols-2',
                     'show'=>0
                 ]);
             ?>
@@ -841,6 +843,7 @@
 
             <?php 
                 $this->load->view('template/checkbox',[
+                    'class'=>'',
                     'title'=>'B. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali',
                     'subtitle'=>'B5. Sejak pandemi COVID-19 dimulai (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, bantuan keuangan apa yang usaha Bapak/Ibu peroleh dari pemerintah?',
                     'inc'=>++$inc,
@@ -861,6 +864,7 @@
 
             <?php 
                 $this->load->view('template/checkbox',[
+                    'class'=>'',
                     'title'=>'B. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali',
                     'subtitle'=>'B6. Sejak pandemi COVID-19 dimulai (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, bantuan non-keuangan apa yang usaha Bapak/Ibu peroleh dari pemerintah?',
                     'inc'=>++$inc,
@@ -1098,6 +1102,7 @@
 
             <?php 
                 $this->load->view('template/checkbox',[
+                    'class'=>'',
                     'title'=>'D. Usaha Ramah Lingkungan',
                     'subtitle'=>'D1. Mana saja dari hal-hal berikut yang sudah diterapkan pada usaha Bapak/Ibu?',
                     'inc'=>++$inc,
@@ -1182,6 +1187,7 @@
 
             <?php 
                 $this->load->view('template/checkbox',[
+                    'class'=>'',
                     'title'=>'E. Usaha Ramah Perempuan dan Penyandang Disabilitas',
                     'subtitle'=>'E1. Mana saja dari hal-hal berikut yang sudah diterapkan pada usaha Bapak/Ibu?',
                     'inc'=>++$inc,
