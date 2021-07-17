@@ -154,6 +154,7 @@
         lock_checkbox(id, $(this),'Tidak Pernah')
         lock_checkbox(id, $(this),'Tidak melakukan')
         lock_checkbox(id, $(this),'Tidak tahu')
+lock_checkbox(id, $(this),'Tidak melaksanakan')
 
         if($(this).hasClass('last')){
             if($(this).prop('checked') == false){
