@@ -144,7 +144,7 @@
                         <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
                         <h1 class="text-xl font-bold">A2. Nomor Telepon Pemilik Usaha</h1>
                         <div class="my-4">
-                            <input type="number" name="q[<?php echo ++$inc ?>]" id="phone" class="border-2 border-t-blue rounded-lg px-2 py-1 w-full mt-2 input__text" data-id="<?php echo $inc ?>">
+                            <input type="number" min="0" name="q[<?php echo ++$inc ?>]" id="phone" class="border-2 border-t-blue rounded-lg px-2 py-1 w-full mt-2 input__text" data-id="<?php echo $inc ?>">
                         </div>
                         <small>1,000 responden yang beruntung dan mengisi survei ini dengan lengkap akan mendapatkan pulsa senilai Rp 25,000. Silakan isi nomor telepon Bapak/Ibu jika tertarik mengikuti undian ini. Cukup isi nama apabila tidak bersedia.</small>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form" data-id="<?php echo $inc ?>">SELANJUTNYA</button>
@@ -377,14 +377,14 @@
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span class="inline-block w-14">Wanita</span>
-                                    <input type="number" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span class="inline-block w-14">Pria</span>
-                                    <input type="number" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
@@ -405,14 +405,14 @@
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span class="inline-block w-14">Wanita</span>
-                                    <input type="number" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span class="inline-block w-14">Pria</span>
-                                    <input type="number" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
@@ -432,14 +432,14 @@
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span class="inline-block w-14">Wanita</span>
-                                    <input type="number" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span class="inline-block w-14">Pria</span>
-                                    <input type="number" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
@@ -460,24 +460,24 @@
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span>Wanita</span>
-                                    <input type="number" name="q[<?php echo ++$inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                                 <div>
                                     <span>Dengan disabilitas</span>
-                                    <input type="number" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text"  data-id="<?php echo $inc ?>">
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text"  data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
                             <li class="my-2 ml-6 list-disc">
                                 <div>
                                     <span>Pria</span>
-                                    <input type="number" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                                 <div>
                                     <span>Dengan disabilitas</span>
-                                    <input type="number" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
                                     <span>orang</span>
                                 </div>
                             </li>
