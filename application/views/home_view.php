@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="wrap page--first ">
+            <div class="wrap page--first">
                 <div class="min-h-screen min-w-full flex flex-col justify-center text-white text-center">
                     <div class="head__mid absolute w-full flex justify-center items-center">
                         <div class="head__mid--one">
@@ -1126,6 +1126,7 @@
                 $this->load->view('template/dropdown',[
                     'title'=>'D. Usaha Ramah Lingkungan',
                     'subtitle'=>'D2. Seberapa setuju Bapak/Ibu dengan pernyataan di bawah ini?',
+                    'question_attr'=>'',
                     'inc'=>++$inc,
                     'question'=>[
                         'Pengelolaan lingkungan yang baik merupakan bagian penting dari pengelolaan usaha',
@@ -1210,6 +1211,7 @@
                 $this->load->view('template/dropdown',[
                     'title'=>'E. Usaha Ramah Perempuan dan Penyandang Disabilitas',
                     'subtitle'=>'E2. Seberapa setuju Bapak/Ibu dengan pernyataan di bawah ini?',
+                    'question_attr'=>'',
                     'inc'=>++$inc,
                     'question'=>[
                         'Pelaku usaha memiliki tanggung jawab dalam melibatkan pekerja perempuan dan penyandang disabilitas dalam kegiatan usaha',
@@ -1247,6 +1249,7 @@
                         'Subsidi/kemudahan pajak bagi usaha yang melaksanakan praktik ramah penyandang disabilitas dan perempuan',
                         'Lainnya',
                     ],
+                    'button_class'=>'btn__change--blue',
                     'show'=>0
                 ]);
             ?>

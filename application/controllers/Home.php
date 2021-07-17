@@ -24,7 +24,7 @@ class Home extends CI_Controller {
 	{		
 		$db = $this->load->database('default', true);
 		$answer = $this->input->post('q', true);
-		// echo json_encode($answer);exit;
+		echo json_encode($answer);exit;
 		if(!is_array($answer)){
 			echo json_encode(['status'=>false,'message'=>'question wrong format']);
 			exit;
