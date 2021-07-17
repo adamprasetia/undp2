@@ -112,7 +112,7 @@
         <td><?php echo @$answer[9] ?></td>
         <td><?php echo @$answer[10] ?></td>
         <td><?php echo implode(',',array_filter(@$answer[11])) ?></td>
-        <td><?php echo implode(',',array_filter(@$answer[12])) ?></td>
+        <td><?php echo @implode(',',@array_filter(@$answer[12])) ?></td>
         <td><?php echo @$answer[13] ?></td>
         <td><?php echo implode(',',array_filter(@$answer[14])) ?></td>
         <td><?php echo @$answer[15] ?></td>
@@ -132,7 +132,7 @@
         <td><?php echo @$answer[23] ?></td>
         <td><?php echo @$answer[24] ?></td>
         <td><?php echo @$answer[25] ?></td>
-        <td><?php echo implode(',',array_filter(@$answer[26])) ?></td>
+        <td><?php echo @implode(',',@array_filter(@$answer[26])) ?></td>
         <td><?php echo @$answer[27][0] ?></td>
         <td><?php echo @$answer[27][1] ?></td>
         <td><?php echo @$answer[27][2] ?></td>
