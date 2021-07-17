@@ -1191,7 +1191,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrap hiddens">
+            <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
                     
                     <div class="content p-6 text-t-blue">
@@ -1218,556 +1218,198 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
             <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
                     
                     <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha Selama Pandemi COVID-19</h2>
-                        <h1 class="text-xl font-bold">B2. Selama enam bulan terakhir, pilih dan urutkan 3 tantangan operasional yang paling sulit dihadapi oleh usaha Bapak/Ibu sebagai akibat dari pandemi?</h1>
-                        <div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo ++$inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b2">
-                                    <option value="" selected></option>
-                                    <option value="1-Kesulitan memperoleh akses bahan baku dari dalam negeri">1</option>
-                                    <option value="2-Kesulitan memperoleh akses bahan baku dari dalam negeri">2</option>
-                                    <option value="3-Kesulitan memperoleh akses bahan baku dari dalam negeri">3</option>
-                                </select>
-                                Kesulitan memperoleh akses bahan baku dari dalam negeri
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b2">
-                                    <option value="" selected></option>
-                                    <option value="1-Kesulitan memperoleh akses bahan baku dari dalam negeri">1</option>
-                                    <option value="2-Kesulitan memperoleh akses bahan baku dari dalam negeri">2</option>
-                                    <option value="3-Kesulitan memperoleh akses bahan baku dari dalam negeri">3</option>
-                                </select>
-                                Kesulitan memperoleh akses bahan baku dari dalam negeri
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b2">
-                                    <option value="" selected></option>
-                                    <option value="1-Penurunan tingkat penurunan  permintaan produk usaha dari dalam negeri">1</option>
-                                    <option value="2-Penurunan tingkat penurunan  permintaan produk usaha dari dalam negeri">2</option>
-                                    <option value="3-Penurunan tingkat penurunan  permintaan produk usaha dari dalam negeri">3</option>
-                                </select>
-                                Penurunan tingkat penurunan  permintaan produk usaha dari dalam negeri
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b2">
-                                    <option value="" selected></option>
-                                    <option value="1-Penurunan tingkat penurunan  permintaan produk usaha dari luar negeri">1</option>
-                                    <option value="2-Penurunan tingkat penurunan  permintaan produk usaha dari luar negeri">2</option>
-                                    <option value="3-Penurunan tingkat penurunan  permintaan produk usaha dari luar negeri">3</option>
-                                </select>
-                                Penurunan tingkat penurunan  permintaan produk usaha dari luar negeri
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b2">
-                                    <option value="" selected></option>
-                                    <option value="1-Kesulitan menentukan harga produk">1</option>
-                                    <option value="2-Kesulitan menentukan harga produk">2</option>
-                                    <option value="3-Kesulitan menentukan harga produk">3</option>
-                                </select>
-                                Kesulitan menentukan harga produk
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b2">
-                                    <option value="" selected></option>
-                                    <option value="1-Kesulitan mendistribusikan produk usaha">1</option>
-                                    <option value="2-Kesulitan mendistribusikan produk usaha">2</option>
-                                    <option value="3-Kesulitan mendistribusikan produk usaha">3</option>
-                                </select>
-                                Kesulitan mendistribusikan produk usaha
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b2">
-                                    <option value="" selected></option>
-                                    <option value="1-Kesulitan memasarkan / mempromosikan produk usaha">1</option>
-                                    <option value="2-Kesulitan memasarkan / mempromosikan produk usaha">2</option>
-                                    <option value="3-Kesulitan memasarkan / mempromosikan produk usaha">3</option>
-                                </select>
-                                Kesulitan memasarkan / mempromosikan produk usaha
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b2">
-                                    <option value="" selected></option>
-                                    <option value="1-Kesulitan memasarkan / mempromosikan produk usaha">1</option>
-                                    <option value="2-Kesulitan memasarkan / mempromosikan produk usaha">2</option>
-                                    <option value="3-Kesulitan memasarkan / mempromosikan produk usaha">3</option>
-                                </select>
-                                Kesulitan memasarkan / mempromosikan produk usaha
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b2">
-                                    <option value="" selected></option>
-                                    <option value="1-Tidak ada tantangan usaha">1</option>
-                                    <option value="2-Tidak ada tantangan usaha">2</option>
-                                    <option value="3-Tidak ada tantangan usaha">3</option>
-                                </select>
-                                Tidak ada tantangan usaha
-                            </div>
-                            <div class="my-4 flex items-center flex-wrap">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b2 input__b2__last">
-                                    <option value="" selected></option>
-                                    <option value="1-Lainnya">1</option>
-                                    <option value="2-Lainnya">2</option>
-                                    <option value="3-Lainnya">3</option>
-                                </select>
-                                Lainnya
-                                <div class="w-full">
-                                    <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg px-2 py-1 ml-14 my-1 w-4/5 lg:w-11/12 input__text input__others input__others__b2">
-                                </div>
-                            </div>
-                        </div>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__b2 btn__form disabled" disabled>SELANJUTNYA</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha Selama Pandemi COVID-19</h2>
-                        <h1 class="text-xl font-bold">B3. Selama enam bulan terakhir, tantangan keuangan apa yang dihadapi oleh usaha Bapak/Ibu sebagai akibat dari pandemi?</h1>
-                        <small>(bisa lebih dari satu)</small>
+                        <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali</h2>
+                        <h1 class="text-xl font-bold">B7. Sejak pandemi COVID-19 dimulai (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, apakah Bapak/Ibu/pekerja usaha merasa tidak Bahagia atau tertekan sehingga mengganggu kegiatan sehari-hari?</h1>
                         <div class="my-4">
-                            <div class="my-2 multiple__input">
+                        <?php ++$inc;$b7 = ['Ya','Tidak']; ?>
+                            <?php foreach ($b7 as $row) { ?>
+                            <div class="my-2">
                                 <label class="flex items-center input__wrap">
-                                    <input value="Gaji pekerja, asuransi, BPJS" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
+                                    <input value="<?php echo $row ?>" type="radio" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
                                     <span class="input__custom"></span>
-                                    Gaji pekerja, asuransi, BPJS
+                                    <?php echo $row ?>
                                 </label>
                             </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Pengeluaran tetap (contoh: biaya sewa)" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Pengeluaran tetap (contoh: biaya sewa)
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Pembayaran utang usaha" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Pembayaran utang usaha
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Pengeluaran lainnya" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Pengeluaran lainnya
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Tidak ada tantangan keuangan" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Tidak ada tantangan keuangan
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden last" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Lainnya
-                                </label>
-                                <div class="flex-none">
-                                    <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
-                                </div>
-                            </div>
+                            <?php } ?>
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
                     </div>
                 </div>
             </div>
-
             <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
                     
                     <div class="content p-6 text-t-blue">
                         <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha Selama Pandemi COVID-19</h2>
-                        <h1 class="text-xl font-bold">B4. Selama enam bulan terakhir, apa yang paling membantu usaha Bapak/Ibu agar tetap bertahan atau menjadi lebih baik?</h1>
-                        <small>(bisa lebih dari satu)</small>
+                        <h1 class="text-xl font-bold">B8. Menurut Bapak/Ibu, berapa bulan usaha Bapak/Ibu diperkirakan dapat bertahan dalam kondisi sebelum PPKM Darurat Jawa-Bali?</h1>
                         <div class="my-4">
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Pemasaran melalui daring/online" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Pemasaran melalui daring/online
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Bantuan dari pemerintah" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Bantuan dari pemerintah
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Bantuan dari keluarga/rekan/teman" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Bantuan dari keluarga/rekan/teman
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Peningkatan jumlah permintaan" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Peningkatan jumlah permintaan
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Akses bahan baku yang lebih baik" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Akses bahan baku yang lebih baik
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Tidak ada yang membantu" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Tidak ada yang membantu
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden last" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Lainnya
-                                </label>
-                                <div class="flex-none">
-                                    <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
-                                </div>
-                            </div>
-                        </div>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha Selama Pandemi COVID-19</h2>
-                        <h1 class="text-xl font-bold">B6. Selama enam bulan terakhir, apakah Bapak/Ibu meminta/mendapatkan bantuan untuk usaha dari pihak lain selama pandemi?</h1>
-                        <div class="my-4">
-                            <div class="my-2">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Ya, dari pemerintah" type="radio" name="q[<?php echo ++$inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Ya, dari pemerintah
-                                </label>
-                            </div>
-                            <div class="my-2">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Ya, dari selain pemerintah (keluarga, tetangga, teman, asosiasi usaha)" type="radio" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Ya, dari selain pemerintah (keluarga, tetangga, teman, asosiasi usaha)
-                                </label>
-                            </div>
-                            <div class="my-2">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Ya, dari keduanya" type="radio" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Ya, dari keduanya
-                                </label>
-                            </div>
-                            <div class="my-2">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Tidak sama sekali" type="radio" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Tidak sama sekali
-                                </label>
-                            </div>
-                        </div>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha Selama Pandemi COVID-19</h2>
-                        <h1 class="text-xl font-bold">B7. Selama enam bulan terakhir, bantuan keuangan apa yang usaha Bapak/Ibu peroleh dari pemerintah?</h1>
-                        <div class="my-4">
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Bantuan Produktif Usaha Mikro (BPUM)" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Bantuan Produktif Usaha Mikro (BPUM)
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Bantuan Modal bagi Wirausaha Difabel" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Bantuan Modal bagi Wirausaha Difabel
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Subsidi bunga" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Subsidi bunga
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="PPh Final UMKM ditanggung pemerintah" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    PPh Final UMKM ditanggung pemerintah
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Pembiayaan investasi kepada koperasi melalui Lembaga pengelola dana bergulir KUMKM" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Pembiayaan investasi kepada koperasi melalui Lembaga pengelola dana bergulir KUMKM
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Bantuan penyerapan barang UMKM" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Bantuan penyerapan barang UMKM
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Perpanjangan grace period (masa leluasa) untuk meminjam dari bank" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Perpanjangan grace period (masa leluasa) untuk meminjam dari bank
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Tidak menerima" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Tidak menerima
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden last" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Lainnya
-                                </label>
-                                <div class="flex-none">
-                                    <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 mt-2 ml-6 w-4/5 lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
-                                </div>
-                            </div>
-                        </div>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha Selama Pandemi COVID-19</h2>
-                        <h1 class="text-xl font-bold">B8. Selama enam bulan terakhir, bantuan non-keuangan apa yang usaha Bapak/Ibu peroleh dari pemerintah?</h1>
-                        <div class="my-4">
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Pelatihan usaha melalui webinar" type="checkbox" name="q[<?php echo ++$inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Pelatihan usaha melalui webinar
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Akses terhadap barang input domestik / barang import" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Akses terhadap barang input domestik / barang import
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Kemudahan akses ke pasar" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Kemudahan akses ke pasar
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Kemudahan pendistribusian barang" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Kemudahan pendistribusian barang
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Tidak menerima" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Tidak menerima
-                                </label>
-                            </div>
-                            <div class="my-2 multiple__input">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Lainnya" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 last hidden" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Lainnya
-                                </label>
-                                <div class="flex-none">
-                                    <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 mt-2 ml-6 w-4/5 lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
-                                </div>
-                            </div>
-                        </div>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha Selama Pandemi COVID-19</h2>
-                        <h1 class="text-xl font-bold">B9. Pilih 3 dan urutkan bantuan yang dianggap paling dibutuhkan oleh usaha Bapak/Ibu?</h1>
-                        <div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo ++$inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
-                                    <option value="" selected></option>
-                                    <option value="1-Penangguhan pajak">1</option>
-                                    <option value="2-Penangguhan pajak">2</option>
-                                    <option value="3-Penangguhan pajak">3</option>
-                                </select>
-                                Penangguhan pajak
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
-                                    <option value="" selected></option>
-                                    <option value="1-Pemberian modal kerja/bantuan likuiditas dari pemerintah">1</option>
-                                    <option value="2-Pemberian modal kerja/bantuan likuiditas dari pemerintah">2</option>
-                                    <option value="3-Pemberian modal kerja/bantuan likuiditas dari pemerintah">3</option>
-                                </select>
-                                Pemberian modal kerja/bantuan likuiditas dari pemerintah
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
-                                    <option value="" selected></option>
-                                    <option value="1-Subsidi biaya listrik">1</option>
-                                    <option value="2-Subsidi biaya listrik">2</option>
-                                    <option value="3-Subsidi biaya listrik">3</option>
-                                </select>
-                                Subsidi biaya listrik
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
-                                    <option value="" selected></option>
-                                    <option value="1-Pelatihan usaha melalui webinar/tatap muka terkait e-commerce dan pemasaran online">1</option>
-                                    <option value="2-Pelatihan usaha melalui webinar/tatap muka terkait e-commerce dan pemasaran online">2</option>
-                                    <option value="3-Pelatihan usaha melalui webinar/tatap muka terkait e-commerce dan pemasaran online">3</option>
-                                </select>
-                                Pelatihan usaha melalui webinar/tatap muka terkait e-commerce dan pemasaran online
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
-                                    <option value="" selected></option>
-                                    <option value="1-Akses terhadap barang input domestik/barang impor">1</option>
-                                    <option value="2-Akses terhadap barang input domestik/barang impor">2</option>
-                                    <option value="3-Akses terhadap barang input domestik/barang impor">3</option>
-                                </select>
-                                Akses terhadap barang input domestik/barang impor
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
-                                    <option value="" selected></option>
-                                    <option value="1-Kemudahan akses ke pasar">1</option>
-                                    <option value="2-Kemudahan akses ke pasar">2</option>
-                                    <option value="3-Kemudahan akses ke pasar">3</option>
-                                </select>
-                                Kemudahan akses ke pasar
-                            </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9">
-                                    <option value="" selected></option>
-                                    <option value="1-Kemudahan pendistribusian barang">1</option>
-                                    <option value="2-Kemudahan pendistribusian barang">2</option>
-                                    <option value="3-Kemudahan pendistribusian barang">3</option>
-                                </select>
-                                Kemudahan pendistribusian barang
-                            </div>
-                            <div class="my-4 flex items-center flex-wrap">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__b9 input__b9__last">
-                                    <option value="" selected></option>
-                                    <option value="1-Lainnya">1</option>
-                                    <option value="2-Lainnya">2</option>
-                                    <option value="3-Lainnya">3</option>
-                                </select>
-                                Lainnya
-                                <div class="w-full">
-                                    <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg px-2 py-1 ml-14 my-1 w-4/5 lg:w-11/12 input__text input__others input__others__b9">
-                                </div>
-                            </div>
-                        </div>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__b9 btn__form disabled" disabled>SELANJUTNYA</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha Selama Pandemi COVID-19</h2>
-                        <h1 class="text-xl font-bold">B10. Apakah Bapak/Ibu berencana untuk menutup usaha saat ini?</h1>
-                        <div class="my-4">
-                            <div class="my-2">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Ya, dan tidak membuka usaha lain" type="radio" name="q[<?php echo ++$inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Ya, dan tidak membuka usaha lain
-                                </label>
-                            </div>
-                            <div class="my-2">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Ya, dan membuka usaha lain" type="radio" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Ya, dan membuka usaha lain
-                                </label>
-                            </div>
-                            <div class="my-2">
-                                <label class="flex items-center input__wrap">
-                                    <input value="Tidak" type="radio" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
-                                    <span class="input__custom"></span>
-                                    Tidak
-                                </label>
-                            </div>
-                        </div>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">B. Keberlangsungan dan Adaptasi Usaha Selama Pandemi COVID-19</h2>
-                        <h1 class="text-xl font-bold">B11. Menurut Bapak/Ibu, berapa bulan usaha Bapak/Ibu diperkirakan dapat bertahan dalam kondisi seperti 6 bulan terakhir?</h1>
-                        <div class="my-4">
-                            <input type="number" name="q[<?php echo ++$inc ?>]" placeholder="..." class="border-2 border-t-blue rounded-lg w-20 px-2 py-1 mr-1 input__text" data-id="<?php echo $inc ?>">
+                            <input type="number" min="0" name="q[<?php echo ++$inc ?>]" placeholder="..." class="border-2 border-t-blue rounded-lg w-20 px-2 py-1 mr-1 input__text" data-id="<?php echo $inc ?>">
                             bulan
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
                     </div>
                 </div>
             </div>
+
+            <!-- Part C -->
+            <div class="wrap hidden part__divider">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    <div class="content p-6 text-t-blue text-center font-bold">
+                        <p class="text-xl md:text-2xl">Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali</p>
+                        <br>
+                        <p class="text-base md:text-xl">Bagian ini menanyakan kondisi usaha Bapak/Ibu selama periode PPKM Darurat Jawa-Bali yang dimulai pada tanggal 3 Juli 2021 dan diakhiri pada tanggal 20 Juli 2021.</p>
+                        
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next">SELANJUTNYA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">C. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali</h2>
+                        <h1 class="text-xl font-bold">C1. Menurut Bapak/Ibu, apakah terjadi penurunan kondisi usaha selama periode PPKM Darurat Jawa-Bali, jika dibandingkan dengan bulan Juni 2021? Jika ya, seberapa besar penurunan yang terjadi?</h1>
+                        <div>
+                            <div class="my-4 flex justify-center items-center flex__dropdown">
+                                <p class="font-bold text-t-red">Permintaan</p>
+                                <select name="q[<?php echo ++$inc ?>][]" class="border-2 border-t-blue rounded-lg w-full p-2 h-12 input__dropdown" data-id="<?php echo $inc ?>">
+                                    <option value="" class="hidden" disabled selected>...</option>
+                                    <option value="Tidak menurun">Tidak menurun</option>
+                                    <option value="Menurun kurang dari 20%">Menurun kurang dari 20%</option>
+                                    <option value="Menurun 20-50%">Menurun 20-50%</option>
+                                    <option value="Menurun lebih dari 50%">Menurun lebih dari 50%</option>
+                                </select>
+                            </div>
+                            <div class="my-4 flex justify-center items-center flex__dropdown">
+                                <p class="font-bold text-t-red">Pendapatan</p>
+                                <select name="q[<?php echo $inc ?>][]" class="border-2 border-t-blue rounded-lg w-full p-2 h-12 input__dropdown" data-id="<?php echo $inc ?>">
+                                    <option value="" class="hidden" disabled selected>...</option>
+                                    <option value="Tidak menurun">Tidak menurun</option>
+                                    <option value="Menurun kurang dari 20%">Menurun kurang dari 20%</option>
+                                    <option value="Menurun 20-50%">Menurun 20-50%</option>
+                                    <option value="Menurun lebih dari 50%">Menurun lebih dari 50%</option>
+                                </select>
+                            </div>
+                            <div class="my-4 flex justify-center items-center flex__dropdown">
+                                <p class="font-bold text-t-red">Nilai Aset</p>
+                                <select name="q[<?php echo $inc ?>][]" class="border-2 border-t-blue rounded-lg w-full p-2 h-12 input__dropdown" data-id="<?php echo $inc ?>">
+                                    <option value="" class="hidden" disabled selected>...</option>
+                                    <option value="Tidak menurun">Tidak menurun</option>
+                                    <option value="Menurun kurang dari 20%">Menurun kurang dari 20%</option>
+                                    <option value="Menurun 20-50%">Menurun 20-50%</option>
+                                    <option value="Menurun lebih dari 50%">Menurun lebih dari 50%</option>
+                                </select>
+                            </div>
+                            <div class="my-4 flex justify-center items-center flex__dropdown">
+                                <p class="font-bold text-t-red">Keuntungan</p>
+                                <select name="q[<?php echo $inc ?>][]" class="border-2 border-t-blue rounded-lg w-full p-2 h-12 input__dropdown" data-id="<?php echo $inc ?>">
+                                    <option value="" class="hidden" disabled selected>...</option>
+                                    <option value="Tidak menurun">Tidak menurun</option>
+                                    <option value="Menurun kurang dari 20%">Menurun kurang dari 20%</option>
+                                    <option value="Menurun 20-50%">Menurun 20-50%</option>
+                                    <option value="Menurun lebih dari 50%">Menurun lebih dari 50%</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">C. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali</h2>
+                        <h1 class="text-xl font-bold">C2. Selama periode PPKM Darurat Jawa-Bali, pilih tantangan operasional yang paling sulit dihadapi oleh usaha Bapak/Ibu sebagai akibat dari pandemi:</h1>
+                        <div class="my-4">
+                            <?php ++$inc;$c2 = ['Kesulitan memperoleh akses bahan baku dari dalam negeri','Kesulitan memperolah akses bahan baku dari luar negeri','Penurunan tingkat penurunan permintaan produk usaha dari dalam negeri','Penurunan tingkat penurunan permintaan produk usaha dari luar negeri','Kesulitan menentukan harga produk','Kesulitan mendistribusikan produk usaha','Kesulitan memasarkan/mempromosikan produk usaha','Kesulitan mendapat akses pendanaan usaha','Tidak ada tantangan usaha','Lainnya']; ?>
+                            <?php foreach ($c2 as $row) { ?>
+                            <div class="my-2">
+                                <label class="flex items-center input__wrap">
+                                    <input value="<?php echo $row ?>" type="radio" name="q[<?php echo $inc ?>][]" class="mr-3 hidden radio__pick <?php echo $row=='Lainnya'?'last':''?>" data-id="<?php echo $inc ?>">
+                                    <span class="input__custom"></span>
+                                    <?php echo $row ?>
+                                </label>
+                                <?php if($row=='Lainnya'): ?>
+                                    <div class="flex-none">
+                                        <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
+                                    </div>
+                                <?php endif ?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">C. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali</h2>
+                        <h1 class="text-xl font-bold">C3. Selama periode PPKM Darurat Jawa-Bali, pilih tantangan keuangan apa yang paling sulit dihadapi oleh usaha Bapak/Ibu sebagai akibat dari pandemi:</h1>
+                        <div class="my-4">
+                        <?php ++$inc;$c3 = ['Gaji pekerja, asuransi, BPJS','Pengeluaran tetap (contoh: biaya sewa)','Pembayaran utang usaha','Tidak ada tantangan keuangan','Lainnya']; ?>
+                            <?php foreach ($c3 as $row) { ?>
+                            <div class="my-2">
+                                <label class="flex items-center input__wrap">
+                                    <input value="<?php echo $row ?>" type="radio" name="q[<?php echo $inc ?>][]" class="mr-3 hidden radio__pick <?php echo $row=='Lainnya'?'last':''?>" data-id="<?php echo $inc ?>">
+                                    <span class="input__custom"></span>
+                                    <?php echo $row ?>
+                                </label>
+                                <?php if($row=='Lainnya'): ?>
+                                    <div class="flex-none">
+                                        <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="Silakan isi..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
+                                    </div>
+                                <?php endif ?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap hiddens">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">C. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali</h2>
+                        <h1 class="text-xl font-bold">C4. Selama periode PPKM Darurat Jawa-Bali, apa yang paling membantu usaha Bapak/Ibu agar tetap bertahan atau menjadi lebih baik?</h1>
+                        <div class="my-4">
+                        <?php ++$inc;$c4 = ['Pemasaran melalui daring/online','Bantuan dari pemerintah','Bantuan dari keluarga/rekan/teman','Bantuan dari komunitas usaha','Peningkatan jumlah permintaan','Akses bahan baku yang lebih baik','Tidak ada yang membantu','Lainnya']; ?>
+                            <?php foreach ($c4 as $row) { ?>
+                            <div class="my-2">
+                                <label class="flex items-center input__wrap">
+                                    <input value="<?php echo $row ?>" type="radio" name="q[<?php echo $inc ?>][]" class="mr-3 hidden radio__pick <?php echo $row=='Lainnya'?'last':''?>" data-id="<?php echo $inc ?>">
+                                    <span class="input__custom"></span>
+                                    <?php echo $row ?>
+                                </label>
+                                <?php if($row=='Lainnya'): ?>
+                                    <div class="flex-none">
+                                        <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="Silakan isi..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
+                                    </div>
+                                <?php endif ?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+                            
+
+
+
+
+
 
             <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
