@@ -60,7 +60,7 @@
     $(".btn__next").on("click", function() {
         var id = $(this).attr('data-id');
         var ques = $(this).attr('data-ques');
-        if (id=='0' && $('input[name="q[0]"]:checked').val() == "no") {
+        if (id==0 && $('input[name="q[0]"]:checked').val() == "Tidak") {
             $(this).parent().parent().parent().next().fadeOut(100);
             $(this).parent().parent().parent().fadeOut(500);
             setTimeout(function() {
@@ -69,7 +69,7 @@
                 $(".head").addClass("hidden");
             }, 500);
             $(".last--page h1").text("Terima kasih atas ketertarikan Bapak/Ibu dalam mengisi survei ini");
-        }else if (id=='1' && $('input[name="q[1]"]:checked').val() == "no") {
+        }else if (id==1 && $('input[name="q[1]"]:checked').val() == "Tidak") {
             $(this).parent().parent().parent().next().fadeOut(100);
             $(this).parent().parent().parent().fadeOut(500);
             setTimeout(function() {
@@ -150,6 +150,7 @@
         lock_checkbox(id, $(this),'Tidak menerima')
         lock_checkbox(id, $(this),'Tidak Pernah')
         lock_checkbox(id, $(this),'Tidak melakukan')
+        lock_checkbox(id, $(this),'Tidak tahu')
 
         if($(this).hasClass('last')){
             if($(this).prop('checked') == false){

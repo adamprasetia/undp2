@@ -5,10 +5,15 @@
             <h2 class="text-base font-bold text-t-red mb-4"><?php echo $title ?></h2>
             <h1 class="text-xl font-bold"><?php echo $subtitle ?></h1>
             <div class="my-4">
+                <?php $others = in_array('Lainnya', $question)?true:false; ?>
                 <?php foreach ($question as $row) { ?>
                 <div class="my-2">
                     <label class="flex items-center input__wrap">
-                        <input value="<?php echo $row ?>" type="radio" name="q[<?php echo $inc ?>][]" class="mr-3 hidden radio__pick <?php echo $row=='Lainnya'?'last':''?>" data-id="<?php echo $inc ?>">
+                        <?php if(!empty($others)):?>
+                            <input value="<?php echo $row ?>" type="radio" name="q[<?php echo $inc ?>][]" class="mr-3 hidden radio__pick <?php echo $row=='Lainnya'?'last':''?>" data-id="<?php echo $inc ?>">
+                        <?php else: ?>
+                            <input value="<?php echo $row ?>" type="radio" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick <?php echo $row=='Lainnya'?'last':''?>" data-id="<?php echo $inc ?>">
+                        <?php endif ?>
                         <span class="input__custom"></span>
                         <?php echo $row ?>
                     </label>
