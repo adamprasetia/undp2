@@ -149,6 +149,7 @@
 
         lock_checkbox(id, $(this),'Tidak menerima')
         lock_checkbox(id, $(this),'Tidak Pernah')
+        lock_checkbox(id, $(this),'Tidak melakukan')
 
         if($(this).hasClass('last')){
             if($(this).prop('checked') == false){
@@ -269,22 +270,22 @@
         }
     });
 
-    $(".input__b9__last").on("keyup change", function() {
+    $(".input__c5__last").on("keyup change", function() {
         if($(this).val() != ''){
-            $('.input__others__b9').show();
-            $('.input__others__b9').removeAttr("disabled");
-            $('.input__others__b9').removeClass("disabled");
-            $('.input__others__b9').focus();
+            $('.input__others__c5').show();
+            $('.input__others__c5').removeAttr("disabled");
+            $('.input__others__c5').removeClass("disabled");
+            $('.input__others__c5').focus();
         }else{
-            $('.input__others__b9').val('');
-            $('.input__others__b9').attr("disabled", true);
-            $('.input__others__b9').addClass("disabled");
-            $('.input__others__b9').hide();
+            $('.input__others__c5').val('');
+            $('.input__others__c5').attr("disabled", true);
+            $('.input__others__c5').addClass("disabled");
+            $('.input__others__c5').hide();
         }
     });
 
-    $(".input__b9, .input__others__b9").on("keyup change", function() {
-        var value = $('.input__b9').map((_,el) => el.value).get()
+    $(".input__c5, .input__others__c5").on("keyup change", function() {
+        var value = $('.input__c5').map((_,el) => el.value).get()
         var unique = [];
         var sum = [];
         $.each(value, function(i, el){
@@ -293,14 +294,14 @@
             if(el!= "" && $.inArray(el, unique) === -1) sum.push(el);
         });
 
-        if((unique.length == 3 && sum.length == 3 && $('.input__b9__last').val()=='')
-        || (unique.length == 3 && sum.length == 3 && $('.input__b9__last').val()!='' && $('.input__others__b9').val()!='')
+        if((unique.length == 3 && sum.length == 3 && $('.input__c5__last').val()=='')
+        || (unique.length == 3 && sum.length == 3 && $('.input__c5__last').val()!='' && $('.input__others__c5').val()!='')
         ){
-            $('.btn__next__b9').removeAttr("disabled");
-            $('.btn__next__b9').removeClass("disabled");
+            $('.btn__next__c5').removeAttr("disabled");
+            $('.btn__next__c5').removeClass("disabled");
         } else {
-            $('.btn__next__b9').attr("disabled", true);
-            $('.btn__next__b9').addClass("disabled");
+            $('.btn__next__c5').attr("disabled", true);
+            $('.btn__next__c5').addClass("disabled");
         }
     });
 
