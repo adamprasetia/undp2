@@ -59,6 +59,7 @@
 
     $(".btn__next").on("click", function() {
         var id = $(this).attr('data-id');
+        var ques = $(this).attr('data-ques');
         if (id=='0' && $('input[name="q[0]"]:checked').val() == "no") {
             $(this).parent().parent().parent().next().fadeOut(100);
             $(this).parent().parent().parent().fadeOut(500);
@@ -78,12 +79,27 @@
             }, 500);
 
             $(".last--page h1").text("Terima kasih atas waktu Bapak/Ibu");
-        }else if (id==5 && $('input[name="q[5]"]:checked').val() == "Tidak") {
+        }else if (id==6 && $('input[name="q[6]"]:checked').val() == "Tidak") {
             $(this).attr("disabled", true);
             $(this).addClass("disabled")
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().fadeIn(500);                        
-        }else if ((id==15 && $('input[name="q[15]"]:checked').val() == "Tidak") || id==16) {
+        }else if (id==13 && ($('input[name="q[13]"]:checked').val() == "Beroperasi" || $('input[name="q[13]"]:checked').val() == "Beroperasi sebagian")) {
+            $(this).attr("disabled", true);
+            $(this).addClass("disabled")
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().next().next().next().next().fadeIn(500);                        
+        }else if (id==14 && $('input[name="q[13]"]:checked').val() == "Tutup permanen") {
+            $(this).parent().parent().parent().next().fadeOut(100);
+            $(this).parent().parent().parent().fadeOut(500);
+            setTimeout(function() {
+                $(".last--page").fadeIn(500);
+                $(".bg").addClass("blue");
+                $(".head").addClass("hidden");
+            }, 500);
+
+            $(".last--page h1").text("Terima kasih atas waktu Bapak/Ibu");
+        }else if (id==23 && $('input[name="q[23]"]:checked').val() == "Tidak" || id==24) {
             $(this).attr("disabled", true);
             $(this).addClass("disabled")
             $(this).parent().parent().parent().fadeOut(500);
@@ -98,7 +114,25 @@
             $(this).parent().parent().parent().next().fadeIn(500);            
         }
     });
-    
+    function lock_checkbox(id, t, text){
+        if($(t).val()==text){
+            if($(t).prop('checked') == false){
+                $('input[data-id="'+id+'"][value!="'+$(t).val()+'"]').removeAttr("disabled");
+                $('input[data-id="'+id+'"][value!="'+$(t).val()+'"]').removeClass("disabled");
+            }else{
+                $('input[data-id="'+id+'"][value!="'+$(t).val()+'"]').attr("disabled", true);
+                $('input[data-id="'+id+'"][value!="'+$(t).val()+'"]').addClass("disabled");   
+            }
+        }else{
+            $('input[data-id="'+id+'"][value="'+text+'"]').attr("disabled", true);
+            $('input[data-id="'+id+'"][value="'+text+'"]').addClass("disabled");   
+        }
+        if($('input[type="checkbox"][data-id="'+id+'"]:checked').length == 0){
+            $('input[data-id="'+id+'"][value="'+text+'"]').removeAttr("disabled");
+            $('input[data-id="'+id+'"][value="'+text+'"]').removeClass("disabled");
+        }
+
+    }
     $('.input__others').hide();
     $("input[type='checkbox'], .input__others").on("keyup change", function() {
         var id = $(this).attr('data-id');
@@ -106,12 +140,16 @@
         if(($('input[type="checkbox"][data-id="'+id+'"]:checked').length > 0 && $('input[type="checkbox"][data-id="'+id+'"][class*="last"]:checked').length == 0)
         || ($('input[type="checkbox"][data-id="'+id+'"]:checked').length > 0 && $('input[type="checkbox"][data-id="'+id+'"][class*="last"]:checked').length == 1 && $('input[type="text"][data-id="'+id+'"]').val() != '')
         ){
-            $('button[data-id="'+id+'"').removeAttr("disabled");
-            $('button[data-id="'+id+'"').removeClass("disabled");
+            $('button[data-id="'+id+'"]').removeAttr("disabled");
+            $('button[data-id="'+id+'"]').removeClass("disabled");
         } else {
-            $('button[data-id="'+id+'"').attr("disabled", true);
-            $('button[data-id="'+id+'"').addClass("disabled");   
+            $('button[data-id="'+id+'"]').attr("disabled", true);
+            $('button[data-id="'+id+'"]').addClass("disabled");   
         }
+
+        lock_checkbox(id, $(this),'Tidak menerima')
+        lock_checkbox(id, $(this),'Tidak Pernah')
+
         if($(this).hasClass('last')){
             if($(this).prop('checked') == false){
                 $('input[data-id="'+id+'"][type="text"]').val('');
@@ -125,6 +163,32 @@
                 $('input[data-id="'+id+'"][type="text"]').focus();
             }
         }
+    });
+
+    $("input[type='radio']").on("keyup change", function() {
+        var id = $(this).attr('data-id');
+        var value = $(this).val();
+        if(($('input[type="radio"][data-id="'+id+'"]:checked').length > 0 && $('input[type="radio"][data-id="'+id+'"][class*="last"]:checked').length == 0)
+        || ($('input[type="radio"][data-id="'+id+'"]:checked').length > 0 && $('input[type="radio"][data-id="'+id+'"][class*="last"]:checked').length == 1 && $('input[type="text"][data-id="'+id+'"]').val() != '')
+        ){
+            $('button[data-id="'+id+'"').removeAttr("disabled");
+            $('button[data-id="'+id+'"').removeClass("disabled");
+        } else {
+            $('button[data-id="'+id+'"').attr("disabled", true);
+            $('button[data-id="'+id+'"').addClass("disabled");   
+        }
+        if($('input[type="radio"][data-id="'+id+'"][class*="last"]:checked').length == 1){
+            $('input[data-id="'+id+'"][type="text"]').show();
+            $('input[data-id="'+id+'"][type="text"]').removeAttr("disabled");
+            $('input[data-id="'+id+'"][type="text"]').removeClass("disabled");
+            $('input[data-id="'+id+'"][type="text"]').focus();
+        }else{
+            $('input[data-id="'+id+'"][type="text"]').val('');
+            $('input[data-id="'+id+'"][type="text"]').attr("disabled", true);
+            $('input[data-id="'+id+'"][type="text"]').addClass("disabled");
+            $('input[data-id="'+id+'"][type="text"]').hide();
+        }
+        
     });
 
     $(".input__a12").on("keyup change", function() {
@@ -188,20 +252,20 @@
         }
     });
 
-    $(".input__b5_1, .input__others__b5_1, .input__b5_2, .input__others__b5_2, .input__b5_3, .input__others__b5_3").on("keyup change", function() {
+    $(".input__b3_1, .input__others__b3_1, .input__b3_2, .input__others__b3_2, .input__b3_3, .input__others__b3_3").on("keyup change", function() {
         if(
-        (($('.input__b5_1:checked').length > 0 && $('.input__b5_1_last:checked').length == 0)
-        || ($('.input__b5_1:checked').length > 0 && $('.input__b5_1_last:checked').length == 1 && $('.input__others__b5_1').val() != ''))
-        && (($('.input__b5_2:checked').length > 0 && $('.input__b5_2_last:checked').length == 0)
-        || ($('.input__b5_2:checked').length > 0 && $('.input__b5_2_last:checked').length == 1 && $('.input__others__b5_2').val() != ''))
-        && (($('.input__b5_3:checked').length > 0 && $('.input__b5_3_last:checked').length == 0)
-        || ($('.input__b5_3:checked').length > 0 && $('.input__b5_3_last:checked').length == 1 && $('.input__others__b5_3').val() != ''))
+        (($('.input__b3_1:checked').length > 0 && $('.input__b3_1_last:checked').length == 0)
+        || ($('.input__b3_1:checked').length > 0 && $('.input__b3_1_last:checked').length == 1 && $('.input__others__b3_1').val() != ''))
+        && (($('.input__b3_2:checked').length > 0 && $('.input__b3_2_last:checked').length == 0)
+        || ($('.input__b3_2:checked').length > 0 && $('.input__b3_2_last:checked').length == 1 && $('.input__others__b3_2').val() != ''))
+        && (($('.input__b3_3:checked').length > 0 && $('.input__b3_3_last:checked').length == 0)
+        || ($('.input__b3_3:checked').length > 0 && $('.input__b3_3_last:checked').length == 1 && $('.input__others__b3_3').val() != ''))
         ){
-            $('.btn__next__b5').removeAttr("disabled");
-            $('.btn__next__b5').removeClass("disabled");
+            $('.btn__next__b3').removeAttr("disabled");
+            $('.btn__next__b3').removeClass("disabled");
         } else {
-            $('.btn__next__b5').attr("disabled", true);
-            $('.btn__next__b5').addClass("disabled");   
+            $('.btn__next__b3').attr("disabled", true);
+            $('.btn__next__b3').addClass("disabled");   
         }
     });
 
