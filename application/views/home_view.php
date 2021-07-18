@@ -494,64 +494,29 @@
                         <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
                         <h1 class="text-xl font-bold">A20. Apabila Bapak/Ibu harus merumahkan pekerja akibat pandemi, karakteristik pekerja yang mana yang menjadi prioritas utama untuk anda rumahkan:</h1>
                         <small>Berikan angka 1-5 kepada setiap pilihan jawaban, dimana angka 1 menandakan prioritas paling tinggi dan angka 5 menandakan prioritas paling rendah.</small>
-                        <div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo ++$inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a12">
-                                    <option value="" selected hidden></option>
-                                    <option value="1-Pekerja Wanita">1</option>
-                                    <option value="2-Pekerja Wanita">2</option>
-                                    <option value="3-Pekerja Wanita">3</option>
-                                    <option value="4-Pekerja Wanita">4</option>
-                                    <option value="5-Pekerja Wanita">5</option>
-                                </select>
+                        <div id="sort-a20">
+                            <div class="my-4 flex items-center font-bold drag">
+                                <input type="hidden" name="q[<?php echo ++$inc ?>][]" value="Pekerja Wanita">
                                 Pekerja Wanita
                             </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a12">
-                                    <option value="" selected hidden></option>
-                                    <option value="1-Pekerja Pria">1</option>
-                                    <option value="2-Pekerja Pria">2</option>
-                                    <option value="3-Pekerja Pria">3</option>
-                                    <option value="4-Pekerja Pria">4</option>
-                                    <option value="5-Pekerja Pria">5</option>
-                                </select>
+                            <div class="my-4 flex items-center font-bold drag">
+                                <input type="hidden" name="q[<?php echo $inc ?>][]" value="Pekerja Pria">
                                 Pekerja Pria
                             </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a12">
-                                    <option value="" selected hidden></option>
-                                    <option value="1-Pekerja dengan produktivitas terendah">1</option>
-                                    <option value="2-Pekerja dengan produktivitas terendah">2</option>
-                                    <option value="3-Pekerja dengan produktivitas terendah">3</option>
-                                    <option value="4-Pekerja dengan produktivitas terendah">4</option>
-                                    <option value="5-Pekerja dengan produktivitas terendah">5</option>
-                                </select>
+                            <div class="my-4 flex items-center font-bold drag">
+                                <input type="hidden" name="q[<?php echo $inc ?>][]" value="Pekerja dengan produktivitas terendah">
                                 Pekerja dengan produktivitas terendah
                             </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a12">
-                                    <option value="" selected hidden></option>
-                                    <option value="1-Pekerja yang tidak memiliki tanggungan">1</option>
-                                    <option value="2-Pekerja yang tidak memiliki tanggungan">2</option>
-                                    <option value="3-Pekerja yang tidak memiliki tanggungan">3</option>
-                                    <option value="4-Pekerja yang tidak memiliki tanggungan">4</option>
-                                    <option value="5-Pekerja yang tidak memiliki tanggungan">5</option>
-                                </select>
+                            <div class="my-4 flex items-center font-bold drag">
+                                <input type="hidden" name="q[<?php echo $inc ?>][]" value="Pekerja yang tidak memiliki tanggungan">
                                 Pekerja yang tidak memiliki tanggungan
                             </div>
-                            <div class="my-4 flex items-center">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a12">
-                                    <option value="" selected hidden></option>
-                                    <option value="1-Pekerja yang berdomisili jauh dari lokasi usaha anda">1</option>
-                                    <option value="2-Pekerja yang berdomisili jauh dari lokasi usaha anda">2</option>
-                                    <option value="3-Pekerja yang berdomisili jauh dari lokasi usaha anda">3</option>
-                                    <option value="4-Pekerja yang berdomisili jauh dari lokasi usaha anda">4</option>
-                                    <option value="5-Pekerja yang berdomisili jauh dari lokasi usaha anda">5</option>
-                                </select>
+                            <div class="my-4 flex items-center font-bold drag">
+                                <input type="hidden" name="q[<?php echo $inc ?>][]" value="Pekerja yang berdomisili jauh dari lokasi usaha anda">
                                 Pekerja yang berdomisili jauh dari lokasi usaha anda
                             </div>
                         </div>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__a12 btn__form disabled" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__a12 btn__form">SELANJUTNYA</button>
                     </div>
                 </div>
             </div>
@@ -1285,6 +1250,7 @@
     </div>
 
     <script src="<?php echo base_url('assets') ?>/js/jquery-3.5.1.min.js"></script>
+    <script src="<?php echo base_url('assets') ?>/js/jquery-ui.min.js"></script>
     <?php $this->load->view('script_view') ?>
 </body>
 </html>

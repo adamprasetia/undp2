@@ -1,5 +1,7 @@
 <script>
 
+    $( "#sort-a20" ).sortable();
+    
     function save_data()
     {
         console.log('save data');
