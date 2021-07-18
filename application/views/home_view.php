@@ -495,7 +495,7 @@
                         <h1 class="text-xl font-bold">A20. Apabila Bapak/Ibu harus merumahkan pekerja akibat pandemi, karakteristik pekerja yang mana yang menjadi prioritas utama untuk anda rumahkan:</h1>
                         <small>Berikan angka 1-5 kepada setiap pilihan jawaban, dimana angka 1 menandakan prioritas paling tinggi dan angka 5 menandakan prioritas paling rendah.</small>
                         <div id="sort-a20">
-                            <div class="my-4 flex items-center font-bold drag" data-position="1">
+                            <div class="my-4 flex items-center font-bold drag__a20" data-position="1">
                                 <select name="q[<?php echo ++$inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
                                     <option value="" selected hidden></option>
                                     <option value="1-Pekerja Wanita">1</option>
@@ -506,7 +506,7 @@
                                 </select>
                                 Pekerja Wanita
                             </div>
-                            <div class="my-4 flex items-center font-bold drag" data-position="2">
+                            <div class="my-4 flex items-center font-bold drag__a20" data-position="2">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
                                     <option value="" selected hidden></option>
                                     <option value="1-Pekerja Pria">1</option>
@@ -517,7 +517,7 @@
                                 </select>
                                 Pekerja Pria
                             </div>
-                            <div class="my-4 flex items-center font-bold drag" data-position="3">
+                            <div class="my-4 flex items-center font-bold drag__a20" data-position="3">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
                                     <option value="" selected hidden></option>
                                     <option value="1-Pekerja dengan produktivitas terendah">1</option>
@@ -528,7 +528,7 @@
                                 </select>
                                 Pekerja dengan produktivitas terendah
                             </div>
-                            <div class="my-4 flex items-center font-bold drag" data-position="4">
+                            <div class="my-4 flex items-center font-bold drag__a20" data-position="4">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
                                     <option value="" selected hidden></option>
                                     <option value="1-Pekerja yang tidak memiliki tanggungan">1</option>
@@ -539,7 +539,7 @@
                                 </select>
                                 Pekerja yang tidak memiliki tanggungan
                             </div>
-                            <div class="my-4 flex items-center font-bold drag" data-position="5">
+                            <div class="my-4 flex items-center font-bold drag__a20" data-position="5">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
                                     <option value="" selected hidden></option>
                                     <option value="1-Pekerja yang tidak memiliki tanggungan">1</option>
@@ -1005,8 +1005,8 @@
                     <div class="content p-6 text-t-blue">
                         <h2 class="text-base font-bold text-t-red mb-4">C. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali</h2>
                         <h1 class="text-xl font-bold">C5. Pilih 3 dan urutkan bantuan yang dianggap paling dibutuhkan oleh usaha Bapak/Ibu?</h1>
-                        <div>
-                            <div class="my-4 flex items-center">
+                        <div id="sort-c5">
+                            <div class="my-4 flex items-center drag__c5" data-position="1">
                                 <select name="q[<?php echo ++$inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__c5">
                                     <option value="" selected></option>
                                     <option value="1-Penangguhan pajak">1</option>
@@ -1015,7 +1015,7 @@
                                 </select>
                                 Penangguhan pajak
                             </div>
-                            <div class="my-4 flex items-center">
+                            <div class="my-4 flex items-center drag__c5" data-position="2">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__c5">
                                     <option value="" selected></option>
                                     <option value="1-Pemberian modal kerja/bantuan likuiditas dari pemerintah">1</option>
@@ -1024,7 +1024,7 @@
                                 </select>
                                 Pemberian modal kerja/bantuan likuiditas dari pemerintah
                             </div>
-                            <div class="my-4 flex items-center">
+                            <div class="my-4 flex items-center drag__c5" data-position="3">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__c5">
                                     <option value="" selected></option>
                                     <option value="1-Subsidi biaya listrik">1</option>
@@ -1033,7 +1033,7 @@
                                 </select>
                                 Subsidi biaya listrik
                             </div>
-                            <div class="my-4 flex items-center">
+                            <div class="my-4 flex items-center drag__c5" data-position="4">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__c5">
                                     <option value="" selected></option>
                                     <option value="1-Pelatihan usaha melalui webinar/tatap muka terkait e-commerce dan pemasaran online">1</option>
@@ -1042,7 +1042,7 @@
                                 </select>
                                 Pelatihan usaha melalui webinar/tatap muka terkait e-commerce dan pemasaran online
                             </div>
-                            <div class="my-4 flex items-center">
+                            <div class="my-4 flex items-center drag__c5" data-position="5">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__c5">
                                     <option value="" selected></option>
                                     <option value="1-Akses terhadap barang input domestik/barang impor">1</option>
@@ -1051,7 +1051,7 @@
                                 </select>
                                 Akses terhadap barang input domestik/barang impor
                             </div>
-                            <div class="my-4 flex items-center">
+                            <div class="my-4 flex items-center drag__c5" data-position="6">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__c5">
                                     <option value="" selected></option>
                                     <option value="1-Kemudahan akses ke pasar">1</option>
@@ -1060,7 +1060,7 @@
                                 </select>
                                 Kemudahan akses ke pasar
                             </div>
-                            <div class="my-4 flex items-center">
+                            <div class="my-4 flex items-center drag__c5" data-position="7">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__c5">
                                     <option value="" selected></option>
                                     <option value="1-Kemudahan pendistribusian barang">1</option>
@@ -1069,7 +1069,7 @@
                                 </select>
                                 Kemudahan pendistribusian barang
                             </div>
-                            <div class="my-4 flex items-center flex-wrap">
+                            <div class="my-4 flex items-center flex-wrap drag__c5" data-position="8">
                                 <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__c5 input__c5__last">
                                     <option value="" selected></option>
                                     <option value="1-Lainnya">1</option>

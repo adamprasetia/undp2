@@ -198,6 +198,17 @@
     });
 
     function a20(){
+        var i = 1;
+        $( ".input__a20" ).each(function( index ) {
+            $("option", this).eq(i).prop('selected',true);
+            i++
+        })
+        var j = 1;
+        $( ".drag__a20" ).each(function( index ) {
+            $(this).attr('data-position',j);
+            j++
+        })
+
         var value = $('.input__a20').map((_,el) => el.value).get()
         var unique = [];
         $.each(value, function(i, el){
@@ -211,19 +222,10 @@
             $('.btn__next__a20').attr("disabled", true);
             $('.btn__next__a20').addClass("disabled");
         }
+        
     }
     $( "#sort-a20" ).sortable({
         update: function() {
-            var i = 1;
-            $( ".input__a20" ).each(function( index ) {
-                $("option", this).eq(i).prop('selected',true);
-                i++
-            })
-            var j = 1;
-            $( ".drag" ).each(function( index ) {
-                $(this).attr('data-position',j);
-                j++
-            })
             a20()
         }
     });
@@ -235,19 +237,67 @@
         }else{
             $(this).parent().insertBefore($("#sort-a20 div[data-position="+(val)+"]"));
         }
+        a20()
+    });
+
+    function c5(){
         var i = 1;
-        $( ".input__a20" ).each(function( index ) {
-            $("option", this).eq(i).prop('selected',true);
+        $( ".input__c5" ).each(function( index ) {
+            if(i<=3){
+                $("option", this).eq(i).prop('selected',true);
+            }else{
+                $("option", this).eq(0).prop('selected',true);
+            }
             i++
         })
         var j = 1;
-        $( ".drag" ).each(function( index ) {
+        $( ".drag__c5" ).each(function( index ) {
             $(this).attr('data-position',j);
             j++
         })
 
-        a20()
+        var value = $('.input__c5').map((_,el) => el.value).get()
+        var unique = [];
+        $.each(value, function(i, el){
+            var val = el.split("-")[0];
+            if(el!= "" && $.inArray(val, unique) === -1) unique.push(val);
+        });
+        if(unique.length == 5){
+            $('.btn__next__c5').removeAttr("disabled");
+            $('.btn__next__c5').removeClass("disabled");
+        } else {
+            $('.btn__next__c5').attr("disabled", true);
+            $('.btn__next__c5').addClass("disabled");
+        }
+        
+        if($('.input__c5__last').val() != ''){
+            $('.input__others__c5').show();
+            $('.input__others__c5').removeAttr("disabled");
+            $('.input__others__c5').removeClass("disabled");
+            $('.input__others__c5').focus();
+        }else{
+            $('.input__others__c5').val('');
+            $('.input__others__c5').attr("disabled", true);
+            $('.input__others__c5').addClass("disabled");
+            $('.input__others__c5').hide();
+        }
+    }
+    $( "#sort-c5" ).sortable({
+        update: function() {
+            c5()
+        }
     });
+    $(".input__c5").on("keyup change", function() {
+        var val = parseInt($(this).val().split("-")[0]);
+        var old = parseInt($(this).parent().attr('data-position'));
+        if(val > old){
+            $(this).parent().insertAfter($("#sort-c5 div[data-position="+(val)+"]"));
+        }else{
+            $(this).parent().insertBefore($("#sort-c5 div[data-position="+(val)+"]"));
+        }
+        c5()
+    });
+
 
     $(".radio__pick__b1").on("keyup change", function() {
         var value = $('.radio__pick__b1:checked').map((_,el) => el.value).get()
