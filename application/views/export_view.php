@@ -101,7 +101,7 @@
         <td><?php echo $i++ ?></td>
         <td><?php echo $row->created_at ?></td>
         <td><?php echo @$answer[0] ?></td>
-        <td><?php echo @$answer[1] ?></td>
+        <td>'<?php echo @$answer[1] ?></td>
         <td><?php echo @$answer[2] ?></td>
         <td><?php echo @$answer[3] ?></td>
         <td><?php echo @$answer[4] ?></td>
@@ -128,6 +128,7 @@
         <td><?php echo @$answer[21][1] ?></td>
         <td><?php echo @$answer[21][2] ?></td>
         <td><?php echo @$answer[21][3] ?></td>
+        <?php sort($answer[22]); ?>
         <td><?php echo implode(',',array_filter(@$answer[22])) ?></td>
         <td><?php echo @$answer[23] ?></td>
         <td><?php echo @$answer[24] ?></td>
