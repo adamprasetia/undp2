@@ -101,9 +101,9 @@
         <td><?php echo $i++ ?></td>
         <td><?php echo $row->created_at ?></td>
         <td><?php echo @$answer[0] ?></td>
-        <td>'<?php echo @$answer[1] ?></td>
+        <td><?php echo @$answer[1] ?></td>
         <td><?php echo @$answer[2] ?></td>
-        <td><?php echo @$answer[3] ?></td>
+        <td>'<?php echo @$answer[3] ?></td>
         <td><?php echo @$answer[4] ?></td>
         <td><?php echo @$answer[5] ?></td>
         <td><?php echo @$answer[6] ?></td>
