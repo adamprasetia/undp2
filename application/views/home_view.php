@@ -1258,7 +1258,7 @@
                 <div class="min-h-screen min-w-full flex flex-col justify-center text-white text-center">
                     <div class="head__mid absolute w-full flex justify-center items-center">
                         <div class="head__mid--one">
-                            <img src="<?php echo base_url('assets') ?>images/logo-indosat.png" alt="">
+                            <img src="<?php echo base_url('assets') ?>images/logo-indosat.png?v=2" alt="">
                         </div>
                         <div class="head__mid--two">
                             <img src="<?php echo base_url('assets') ?>images/logo-undp-w.png" alt="">
