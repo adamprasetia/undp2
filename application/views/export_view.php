@@ -133,12 +133,12 @@
         <td><?php echo @$answer[23] ?></td>
         <td><?php echo @$answer[24] ?></td>
         <td><?php echo @$answer[25] ?></td>
-        <td><?php echo @implode(',',@array_filter(@$answer[26])) ?></td>
+        <td>'<?php echo @implode(',',@array_filter(@$answer[26])) ?></td>
         <td><?php echo @$answer[27][0] ?></td>
         <td><?php echo @$answer[27][1] ?></td>
         <td><?php echo @$answer[27][2] ?></td>
         <td><?php echo @$answer[27][3] ?></td>
-        <td>'<?php echo implode(',',array_filter(@$answer[28][0])) ?></td>
+        <td><?php echo implode(',',array_filter(@$answer[28][0])) ?></td>
         <td><?php echo implode(',',array_filter(@$answer[28][1])) ?></td>
         <td><?php echo implode(',',array_filter(@$answer[28][2])) ?></td>
         <td><?php echo @$answer[29] ?></td>
