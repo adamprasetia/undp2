@@ -493,7 +493,7 @@
                     <div class="content p-6 text-t-blue">
                         <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
                         <h1 class="text-xl font-bold">A20. Apabila Bapak/Ibu harus merumahkan pekerja akibat pandemi, karakteristik pekerja yang mana yang menjadi prioritas utama untuk anda rumahkan:</h1>
-                        <small>Berikan angka 1-5 kepada setiap pilihan jawaban, dimana angka 1 menandakan prioritas paling tinggi dan angka 5 menandakan prioritas paling rendah.</small>
+                        <small>Urutkan pilihan jawaban dari atas ke bawah, dimana angka 1 menandakan prioritas paling tinggi dan angka 5 menandakan prioritas paling rendah.</small>
                         <div id="sort-a20">
                             <div class="my-4 flex items-center font-bold drag__a20" data-position="1">
                                 <select name="q[<?php echo ++$inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
