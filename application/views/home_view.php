@@ -1134,6 +1134,12 @@
                         'Pelaku usaha memiliki tanggung jawab dalam mengurangi sampah yang mereka produksi',
                         'Melaksanakan praktik ramah lingkungan akan menguntungkan usaha saya di jangka panjang',
                     ],
+                    'option'=>[
+                        'Sangat Tidak Setuju',
+                        'Tidak Setuju',
+                        'Setuju',
+                        'Sangat Setuju'
+                    ],
                     'show'=>0
                 ]);
             ?>
@@ -1217,6 +1223,12 @@
                         'Pelaku usaha memiliki tanggung jawab dalam melibatkan pekerja perempuan dan penyandang disabilitas dalam kegiatan usaha',
                         'Pelaku usaha memiliki tanggung jawab dalam memberikan perlakuan yang sama bagi pekerja perempuan dan penyandang disabilitas',
                         'Mengakomodasi keperluan perempuan dan penyandang disabilitas akan menguntungkan usaha saya di jangka panjang',
+                    ],
+                    'option'=>[
+                        'Sangat Tidak Setuju',
+                        'Tidak Setuju',
+                        'Setuju',
+                        'Sangat Setuju'
                     ],
                     'show'=>0
                 ]);
