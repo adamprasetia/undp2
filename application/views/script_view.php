@@ -1,7 +1,5 @@
 <script>
 
-    $( "#sort-a20" ).sortable();
-    
     function save_data()
     {
         console.log('save data');
@@ -199,20 +197,56 @@
         
     });
 
-    $(".input__a12").on("keyup change", function() {
-        var value = $('.input__a12').map((_,el) => el.value).get()
+    function a20(){
+        var value = $('.input__a20').map((_,el) => el.value).get()
         var unique = [];
         $.each(value, function(i, el){
             var val = el.split("-")[0];
             if(el!= "" && $.inArray(val, unique) === -1) unique.push(val);
         });
         if(unique.length == 5){
-            $('.btn__next__a12').removeAttr("disabled");
-            $('.btn__next__a12').removeClass("disabled");
+            $('.btn__next__a20').removeAttr("disabled");
+            $('.btn__next__a20').removeClass("disabled");
         } else {
-            $('.btn__next__a12').attr("disabled", true);
-            $('.btn__next__a12').addClass("disabled");
+            $('.btn__next__a20').attr("disabled", true);
+            $('.btn__next__a20').addClass("disabled");
         }
+    }
+    $( "#sort-a20" ).sortable({
+        update: function() {
+            var i = 1;
+            $( ".input__a20" ).each(function( index ) {
+                $("option", this).eq(i).prop('selected',true);
+                i++
+            })
+            var j = 1;
+            $( ".drag" ).each(function( index ) {
+                $(this).attr('data-position',j);
+                j++
+            })
+            a20()
+        }
+    });
+    $(".input__a20").on("keyup change", function() {
+        var val = parseInt($(this).val().split("-")[0]);
+        var old = parseInt($(this).parent().attr('data-position'));
+        if(val > old){
+            $(this).parent().insertAfter($("#sort-a20 div[data-position="+(val)+"]"));
+        }else{
+            $(this).parent().insertBefore($("#sort-a20 div[data-position="+(val)+"]"));
+        }
+        var i = 1;
+        $( ".input__a20" ).each(function( index ) {
+            $("option", this).eq(i).prop('selected',true);
+            i++
+        })
+        var j = 1;
+        $( ".drag" ).each(function( index ) {
+            $(this).attr('data-position',j);
+            j++
+        })
+
+        a20()
     });
 
     $(".radio__pick__b1").on("keyup change", function() {
