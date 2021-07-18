@@ -154,7 +154,7 @@
         lock_checkbox(id, $(this),'Tidak Pernah')
         lock_checkbox(id, $(this),'Tidak melakukan')
         lock_checkbox(id, $(this),'Tidak tahu')
-lock_checkbox(id, $(this),'Tidak melaksanakan')
+        lock_checkbox(id, $(this),'Tidak melaksanakan')
 
         if($(this).hasClass('last')){
             if($(this).prop('checked') == false){
@@ -316,7 +316,7 @@ lock_checkbox(id, $(this),'Tidak melaksanakan')
         var value = $('input[data-id="'+id+'"]').map((_,el) => el.value).get()
         var status = true;
         $.each(value, function(i, el){
-            if(el=='') status = false;
+            if(el=='' || parseInt(el) < 0) status = false;
         });
         if(status){
             $('button[data-id="'+id+'"').removeAttr("disabled");
