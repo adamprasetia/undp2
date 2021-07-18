@@ -11,8 +11,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets') ?>/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="<?php echo base_url('assets') ?>/images/favicon/site.webmanifest">
     
-    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/tailwind.css">
-    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=2">
+    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/tailwind.css?v=3">
+    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=3">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -55,9 +55,8 @@
             </div>
 
             <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-7 text-center font-bold text-t-blue  md:text-xl">
+                <div class="min-h-screen h-screen min-w-full py-32 md:py-36 overflow-hidden">                    
+                    <div class="content content-scroll p-7 text-center font-bold text-t-blue h-full overflow-y-scroll md:text-xl">
                         <p>Selamat <?php echo (date('H') < 10?'pagi':(date('H') < 15?'siang':'malam')) ?>, Bapak/Ibu yang kami hormati, Kami dari UNDP Indonesia dan Indosat Oooredoo. Saat ini kami sedang melakukan Survei Lanjutan Dampak COVID-19 Terhadap UMKM di Indonesia. Kami mohon kesediaan Bapak/Ibu untuk menjadi responden dalam survei ini.</p>
                         <br>
                         <p>Survei ini bertujuan untuk melihat dampak pandemi COVID-19 bagi UMKM selama tahun 2021, lebih dari satu tahun setelah pandemi dimulai. Survei ini ingin mengetahui apa strategi dan yang dipilih oleh pelaku usaha UMKM, termasuk pelaku usaha perempuan, pemuda, dan juga yang berkebutuhan khusus dalam memitigasi dampak dari pandemik terhadap usaha mereka, serta adaptasi usaha yang telah dilaksanakan. Survei ini juga ingin mengidentifikasi peluang kontribusi UMKM dalam pemulihan ekonomi yang bersifat ramah lingkungan dan inklusif. Hasil dari survei ini diharapkan dapat memberikan gambaran bagi pemangku kepentingan terkait dalam upaya memitigasi dampak pandemi COVID-19 baik dari sisi ekonomi maupun non-ekonomi bagi pelaku UMKM.</p>
@@ -92,6 +91,7 @@
                             </div>
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -118,6 +118,7 @@
                             </div>
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -133,6 +134,7 @@
                             <input type="text" name="q[<?php echo ++$inc ?>]" id="name" class="border-2 border-t-blue rounded-lg px-2 py-1 w-full mt-2 input__text" data-id="<?php echo $inc ?>">
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -148,6 +150,7 @@
                         </div>
                         <small>1,000 responden yang beruntung dan mengisi survei ini dengan lengkap akan mendapatkan pulsa senilai Rp 25,000. Silakan isi nomor telepon Bapak/Ibu jika tertarik mengikuti undian ini. Cukup isi nama apabila tidak bersedia.</small>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form" data-id="<?php echo $inc ?>">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -182,6 +185,7 @@
                             </div>
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -201,6 +205,7 @@
                             </select>
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -258,6 +263,7 @@
                             </select>
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__prov btn__form disabled" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -277,6 +283,7 @@
                             </select>
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -390,6 +397,7 @@
                             </li>
                         </ul>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -418,6 +426,7 @@
                             </li>
                         </ul>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -445,6 +454,7 @@
                             </li>
                         </ul>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -483,6 +493,7 @@
                             </li>
                         </ul>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -552,6 +563,7 @@
                             </div>
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__a20 btn__form disabled" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -575,6 +587,7 @@
                             <input type="text" name="q[<?php echo ++$inc ?>]" class="w-full border-2 border-t-blue rounded-lg px-2 py-1 input__text" data-id="<?php echo $inc ?>" placeholder="Silakan isi...">
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -598,6 +611,7 @@
                         <p class="text-base md:text-xl">Bagian ini menanyakan kondisi usaha Bapak/Ibu selama periode Pandemi COVID-19 dimulai (Maret 2020) hingga sebelum pelaksanaan PPKM Darurat Jawa Bali (akhir Juni 2021).</p>
                         
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="b">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -823,6 +837,7 @@
                             </div>
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__b3 btn__form disabled" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -904,6 +919,7 @@
                             bulan
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -917,6 +933,7 @@
                         <p class="text-base md:text-xl">Bagian ini menanyakan kondisi usaha Bapak/Ibu selama periode PPKM Darurat Jawa-Bali yang dimulai pada tanggal 3 Juli 2021 dan diakhiri pada tanggal 20 Juli 2021.</p>
                         
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="c">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -1083,6 +1100,7 @@
                             </div>
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__c5 btn__form disabled" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -1096,6 +1114,7 @@
                         <p class="text-base md:text-xl">Bagian ini menanyakan pendapat dan upaya dari usaha Bapak/Ibu terkait usaha ramah lingkungan.</p>
                         
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="d">KEMBALI</button>
                     </div>
                 </div>
             </div>
@@ -1188,6 +1207,7 @@
                         <p class="text-base md:text-xl">Bagian ini menanyakan pendapat dan upaya dari usaha Bapak/Ibu terkait usaha ramah penyandang disabilitas dan perempuan.</p>
                         
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="e">KEMBALI</button>
                     </div>
                 </div>
             </div>

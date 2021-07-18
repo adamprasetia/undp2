@@ -84,7 +84,7 @@ img {
   bottom: 0;
   z-index: -1;
   background-color: #fff;
-  background-image: url(../images/bg-white.jpg?v=2);
+  background-image: url(../images/bg-white.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -94,18 +94,18 @@ img {
 
 @media (min-width: 768px) {
   .bg {
-    background-image: url(../images/bg-white-d.jpg?v=2);
+    background-image: url(../images/bg-white-d.jpg);
   }
 }
 
 .bg.blue {
   background-color: #005687;
-  background-image: url(../images/bg-blue.jpg?v=2);
+  background-image: url(../images/bg-blue.jpg);
 }
 
 @media (min-width: 768px) {
   .bg.blue {
-    background-image: url(../images/bg-blue-d.jpg?v=2);
+    background-image: url(../images/bg-blue-d.jpg);
   }
 }
 
@@ -279,6 +279,9 @@ select {
 }
 
 .btn__next {
+  background-color: #005687;
+  color: #fff;
+  border-color: #005687;
   -webkit-animation-name: pulse;
           animation-name: pulse;
   -webkit-animation-duration: 2s;
@@ -289,6 +292,10 @@ select {
           animation-iteration-count: infinite;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.btn__change--white {
+  background-color: #ff0000;
 }
 
 .disabled {
