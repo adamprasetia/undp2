@@ -258,10 +258,27 @@
         
     });
 
-    function a20(){
+    function a20(ui = ''){
+        // if(option &&  index){
+            // .item.find('.input__a20 option'), ui.item.index()+1
+        // option.eq(index).prop('selected',true)
+        // // $('.input__a20:nth-child(2)').eq(1).prop('selected',true)
+        // // $($('.input__a20')[0]).eq(1).prop('selected',true)
+        // }
+
+
+        // console.log('unique',unique)
+        // console.log('unique.length',unique.length)
+
         var i = 1;
         $( ".input__a20" ).each(function( index ) {
-            $("option", this).eq(i).prop('selected',true);
+            // if($(this).val() != '' || unique.length == 4)
+
+            // console.log($('.input__a20').map(function(_,el){if(el.value) return el.value}).get().length)
+
+            if($(this).val() != ''|| (ui && i==ui.item.index()+1)){
+                $("option", this).eq(i).prop('selected',true);
+            }
             i++
         })
         var j = 1;
@@ -270,7 +287,8 @@
             j++
         })
 
-        var value = $('.input__a20').map((_,el) => el.value).get()
+        var value = $('.input__a20').map(function(_,el){return el.value}).get()
+        console.log('value',value)
         var unique = [];
         $.each(value, function(i, el){
             var val = el.split("-")[0];
@@ -279,15 +297,25 @@
         if(unique.length == 5){
             $('.btn__next__a20').removeAttr("disabled");
             $('.btn__next__a20').removeClass("disabled");
-        } else {
+        } else if(unique.length == 4){
+            i=1
+            $( ".input__a20" ).each(function( index ) {
+                $("option", this).eq(i).prop('selected',true);
+                i++
+            })
+        }else {
             $('.btn__next__a20').attr("disabled", true);
             $('.btn__next__a20').addClass("disabled");
         }
         
     }
     $( "#sort-a20" ).sortable({
-        update: function() {
-            a20()
+        update: function(event, ui) {
+            // console.log(ui.item.attr('data-position'))
+            a20(ui)
+        },
+        receive: function(event, ui) {
+            console.log('sini')
         }
     });
     $(".input__a20").on("keyup change", function() {

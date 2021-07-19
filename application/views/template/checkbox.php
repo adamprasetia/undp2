@@ -3,6 +3,7 @@
         <div class="content p-6 text-t-blue">
             <h2 class="text-base font-bold text-t-red mb-4"><?php echo $title ?></h2>
             <h1 class="text-xl font-bold"><?php echo $subtitle ?></h1>
+            <small>(Jawaban boleh lebih dari satu)</small>
             <div class="my-4 <?php echo isset($class)?$class:'' ?>">
                 <?php foreach ($question as $row) { ?>                                
                     <div class="my-2 multiple__input">
