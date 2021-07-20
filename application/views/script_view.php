@@ -288,6 +288,8 @@
                 $("option", this).eq(i).prop('selected',true);
                 i++
             })
+            $('.btn__next__a20').removeAttr("disabled");
+            $('.btn__next__a20').removeClass("disabled");
         }else {
             $('.btn__next__a20').attr("disabled", true);
             $('.btn__next__a20').addClass("disabled");
