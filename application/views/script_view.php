@@ -259,23 +259,8 @@
     });
 
     function a20(ui = ''){
-        // if(option &&  index){
-            // .item.find('.input__a20 option'), ui.item.index()+1
-        // option.eq(index).prop('selected',true)
-        // // $('.input__a20:nth-child(2)').eq(1).prop('selected',true)
-        // // $($('.input__a20')[0]).eq(1).prop('selected',true)
-        // }
-
-
-        // console.log('unique',unique)
-        // console.log('unique.length',unique.length)
-
         var i = 1;
         $( ".input__a20" ).each(function( index ) {
-            // if($(this).val() != '' || unique.length == 4)
-
-            // console.log($('.input__a20').map(function(_,el){if(el.value) return el.value}).get().length)
-
             if($(this).val() != ''|| (ui && i==ui.item.index()+1)){
                 $("option", this).eq(i).prop('selected',true);
             }
@@ -311,12 +296,8 @@
     }
     $( "#sort-a20" ).sortable({
         update: function(event, ui) {
-            // console.log(ui.item.attr('data-position'))
             a20(ui)
         },
-        receive: function(event, ui) {
-            console.log('sini')
-        }
     });
     $(".input__a20").on("keyup change", function() {
         var val = parseInt($(this).val().split("-")[0]);
@@ -329,10 +310,10 @@
         a20()
     });
 
-    function c5(){
+    function c5(ui = ''){
         var i = 1;
         $( ".input__c5" ).each(function( index ) {
-            if(i<=3){
+            if(i<=3 && ($(this).val() != ''|| (ui && i==ui.item.index()+1))){
                 $("option", this).eq(i).prop('selected',true);
             }else{
                 $("option", this).eq(0).prop('selected',true);
@@ -372,8 +353,8 @@
         }
     }
     $( "#sort-c5" ).sortable({
-        update: function() {
-            c5()
+        update: function(event, ui) {
+            c5(ui)
         }
     });
     $(".input__c5").on("keyup change", function() {
