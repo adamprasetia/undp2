@@ -177,27 +177,10 @@
 
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().next().fadeIn(500);            
-
-        // }else if (id==23 && $('input[name="q[23]"]:checked').val() == "Tidak") {
-        //     $('input[name="q[24]"]').val('');
-        //     $('.btn__next[data-id="24"]').attr("disabled", true);
-        //     $('.btn__next[data-id="24"]').addClass("disabled")
-
-        //     $(this).parent().parent().parent().fadeOut(500);
-        //     $(this).parent().parent().parent().next().next().fadeIn(500);                        
-        // }else if (id==23 && $('input[name="q[23]"]:checked').val() == "Ya") {
-        //     $('input[name="q[25]"]').prop('checked',false);
-        //     $('.btn__next[data-id="25"]').attr("disabled", true);
-        //     $('.btn__next[data-id="25"]').addClass("disabled")
-        //     $(this).parent().parent().parent().fadeOut(500);
-        //     $(this).parent().parent().parent().next().fadeIn(500);                        
-        // }else if (id==24) {
-        //     $(this).parent().parent().parent().fadeOut(500);
-        //     $(this).parent().parent().parent().next().next().fadeIn(500);
         }else{
-            // if(id==46){
-            //     save_data();
-            // }
+            if(id==59){
+                save_data();
+            }
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().fadeIn(500);            
         }
