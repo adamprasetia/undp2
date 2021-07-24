@@ -376,7 +376,7 @@
                 ]);
             ?>
 
-            <div class="wrap hiddens">
+            <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
                     
                     <div class="content p-6 text-t-blue">
@@ -463,64 +463,12 @@
                 </div>
             </div>
 
-
-
-            <?php 
-                $this->load->view('template/checkbox',[
-                    'class'=>'grid grid-cols-2',
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A10. Sejak pandemi COVID-19 dimulai (Maret 2020), apakah Bapak/Ibu pernah menutup usaha? Jika Ya, pada bulan apa?',
-                    'inc'=>++$inc,
-                    'question'=>['Maret 2020','April 2020','Mei 2020','Juni 2020','Juli 2020','Agustus 2020','September 2020','November 2020','Desember 2020','Januari 2021','Februari 2021','Maret 2021','April 2021','Mei 2021','Juni 2021','Tidak Pernah'],
-                    'show'=>0
-                ]);
-            ?>
-
             <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
                     
                     <div class="content p-6 text-t-blue">
                         <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
-                        <h1 class="text-xl font-bold">A19. Sejak Januari 2021 hinga hingga saat ini, berapakah jumlah pekerja Bapak/Ibu yang dirumahkan?</h1>
-                        <small>(tidak bisa dikosongkan, jika 0 isi dengan angka 0)</small>
-                        <ul class="my-4">
-                            <li class="my-2 ml-6 list-disc">
-                                <div>
-                                    <span>Wanita</span>
-                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
-                                    <span>orang</span>
-                                </div>
-                                <div>
-                                    <span>Dengan disabilitas</span>
-                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text"  data-id="<?php echo $inc ?>">
-                                    <span>orang</span>
-                                </div>
-                            </li>
-                            <li class="my-2 ml-6 list-disc">
-                                <div>
-                                    <span>Pria</span>
-                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
-                                    <span>orang</span>
-                                </div>
-                                <div>
-                                    <span>Dengan disabilitas</span>
-                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
-                                    <span>orang</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
-                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
-                        <h1 class="text-xl font-bold">A20. Apabila Bapak/Ibu harus merumahkan pekerja akibat pandemi, karakteristik pekerja yang mana yang menjadi prioritas utama untuk anda rumahkan:</h1>
+                        <h1 class="text-xl font-bold">A22. Apabila Bapak/Ibu harus merumahkan pekerja akibat pandemi, karakteristik pekerja yang mana yang menjadi prioritas utama untuk anda rumahkan?</h1>
                         <small>Urutkan pilihan jawaban dari atas ke bawah, dimana angka 1 menandakan prioritas paling tinggi dan angka 5 menandakan prioritas paling rendah.</small>
                         <div id="sort-a20">
                             <div class="my-4 flex items-center font-bold drag__a20" data-position="1">
@@ -584,6 +532,504 @@
                     </div>
                 </div>
             </div>
+
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'A. Profil Usaha',
+                    'subtitle'=>'A23. Apakah Bapak/Ibu tergabung dalam asosiasi/ forum/ komunitas usaha tertentu?',
+                    'inc'=>++$inc,
+                    'question'=>['Ya','Tidak'],
+                    'show'=>0
+                ]);
+            ?>
+
+            <!-- Part B -->
+            <div class="wrap hidden part__divider">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    <div class="content p-6 text-t-blue text-center font-bold">
+                        <p class="text-xl md:text-2xl">Digitalisasi Usaha Mikro, Kecil, dan Menengah</p>
+                        <br>
+                        <p class="text-base md:text-xl"> Bagian ini menanyakan status digitalisasi usaha Bapak/Ibu.</p>                        
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="b">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'B. Digitalisasi Usaha Mikro, Kecil, dan Menengah',
+                    'subtitle'=>'B1. Apakah Bapak/Ibu sudah memanfaatkan platform online untuk akses penjualan/promosi?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Sudah, sebelum pandemi COVID-19',
+                        'Sudah, saat pandemi COVID-19',
+                        'Belum',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'class'=>'',
+                    'title'=>'B. Digitalisasi Usaha Mikro, Kecil, dan Menengah',
+                    'subtitle'=>'B2. Mengapa Bapak/Ibu belum menggunakan platform online untuk pemasaran/promosi?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Kesulitan memahami cara kerja platform online',
+                        'Produk tidak bisa dijual secara online',
+                        'Tidak memiliki perangkat untuk menggunakan platform online',
+                        'Tidak memiliki waktu atau SDM untuk mengelola platform online',
+                        'Tidak tertarik',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'B. Digitalisasi Usaha Mikro, Kecil, dan Menengah',
+                    'subtitle'=>'B3. Apakah ada peningkatan keuntungan dari penjualan setelah menggunakan platform online?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Meningkat kurang dari 20%',
+                        'Meningkat 20-50%',
+                        'Meningkat lebih dari 50%',
+                        'Tidak ada peningkatan',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'class'=>'grid grid-cols-2',
+                    'title'=>'B. Digitalisasi Usaha Mikro, Kecil, dan Menengah',
+                    'subtitle'=>'B4. Platform online apa saja yang Bapak/Ibu gunakan untuk memasarkan produk?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Tokopedia',
+                        'Shopee',
+                        'Go-Jek',
+                        'Grab',
+                        'Lazada',
+                        'BukaLapak',
+                        'Blibli',
+                        'Instagram',
+                        'Facebook',
+                        'WhatsApp',
+                        'TikTok',
+                        'Twitter',
+                        'Lainnya',
+                    ],
+                    'placeholder'=>'',
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'class'=>'',
+                    'title'=>'B. Digitalisasi Usaha Mikro, Kecil, dan Menengah',
+                    'subtitle'=>'B5. Kesulitan apa saja yang Bapak/Ibu hadapi dalam menggunakan platform online untuk pemasaran/promosi?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Kesulitan memahami cara kerja platform online',
+                        'Kesulitan memfoto dan mengunggah produk',
+                        'Kesulitan menarik pelanggan secara online',
+                        'Kesulitan mengirimkan produk',
+                        'Tidak memiliki admin tetap untuk mengelola platform online',
+                        'Tidak ada kesulitan',
+                    ],
+                    'placeholder'=>'',
+                    'show'=>0
+                ]);
+            ?>
+
+            <!-- Part C -->
+            <div class="wrap hidden part__divider">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    <div class="content p-6 text-t-blue text-center font-bold">
+                        <p class="text-xl md:text-2xl">Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali</p>
+                        <br>
+                        <p class="text-base md:text-xl">Bagian ini menanyakan kondisi usaha Bapak/Ibu selama periode sejak mulainya Pandemi COVID-19 (Maret 2020) hingga sebelum pelaksanaan PPKM Darurat Jawa Bali (akhir Juni 2021).</p>
+                        
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="c">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">C. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali</h2>
+                        <h1 class="text-xl font-bold">C1. Sejak mulainya pandemi COVID-19 (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, berapakah jumlah pekerja Bapak/Ibu yang dirumahkan?</h1>
+                        <small>(tidak bisa dikosongkan, jika 0 isi dengan angka 0)</small>
+                        <ul class="my-4">
+                            <li class="my-2 ml-6 list-disc">
+                                <div>
+                                    <span>Wanita</span>
+                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                                <div>
+                                    <span>Dengan disabilitas</span>
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text"  data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                            </li>
+                            <li class="my-2 ml-6 list-disc">
+                                <div>
+                                    <span>Pria</span>
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                                <div>
+                                    <span>Dengan disabilitas</span>
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'title'=>'C. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'C2. Sejak mulainya pandemi COVID-19 (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, bulan apa saja yang memberikan tantangan paling besar bagi usaha anda?',
+                    'inc'=>++$inc,
+                    'question'=>['Maret 2020','April 2020','Mei 2020','Juni 2020','Juli 2020','Agustus 2020','September 2020','November 2020','Desember 2020','Januari 2021','Februari 2021','Maret 2021','April 2021','Mei 2021','Juni 2021','Tidak ada yang memberi tantangan'],
+                    'class'=>'grid grid-cols-2',
+                    'show'=>0
+                ]);
+            ?>
+
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'title'=>'C. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'C3. Sejak mulainya pandemi COVID-19 (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, apakah Bapak/Ibu pernah menutup usaha? Jika Ya, pada bulan apa saja?',
+                    'inc'=>++$inc,
+                    'question'=>['Maret 2020','April 2020','Mei 2020','Juni 2020','Juli 2020','Agustus 2020','September 2020','November 2020','Desember 2020','Januari 2021','Februari 2021','Maret 2021','April 2021','Mei 2021','Juni 2021','Tidak pernah'],
+                    'class'=>'grid grid-cols-2',
+                    'show'=>0
+                ]);
+            ?>
+
+            <?php 
+                $this->load->view('template/dropdown',[
+                    'title'=>'C. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'C4. Menurut Bapak/Ibu, apakah terjadi penurunan kondisi usaha Sejak mulainya pandemi COVID-19 (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, jika dibandingkan dengan kondisi sebelum pandemi? Jika ya, seberapa besar penurunan yang terjadi?',
+                    'inc'=>++$inc,
+                    'question_attr'=>'class="font-bold text-t-red"',
+                    'question'=>[
+                        'Permintaan',
+                        'Pendapatan',
+                        'Nilai Aset',
+                        'Keuntungan',
+                    ],
+                    'option'=>[
+                        'Tidak menurun',
+                        'Menurun kurang dari 20%',
+                        'Menurun 20-50%',
+                        'Menurun lebih dari 50%'
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">C. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali</h2>
+                        <h1 class="text-xl font-bold">C5. Sejak mulainya pandemi COVID-19 (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, adaptasi usaha apa saja yang telah diterapkan pada bisnis Bapak/Ibu selama pandemi berlangsung?</h1>
+                        <small>(bisa lebih dari satu)</small>
+                        <div class=" md:grid md:grid-cols-2 md:gap-x-10">
+                            <div>
+                                <h3 class="text-lg font-bold text-t-red my-4">Terkait pengurangan transmisi virus</h3>
+                                <div class="my-4">
+                                <div class="my-2 multiple__input">
+                                    <label class="flex items-center input__wrap">
+                                        <input value="Penggunaan alat pelindung bagi pekerja" type="checkbox" name="q[<?php echo ++$inc ?>][0][]" class="mr-3 hidden input__b3_1" data-id="<?php echo $inc ?>_0">
+                                        <span class="input__custom"></span>
+                                        Penggunaan alat pelindung bagi pekerja
+                                    </label>
+                                </div>
+                                <div class="my-2 multiple__input">
+                                    <label class="flex items-center input__wrap">
+                                        <input value="Pengaturan ulang ruang usaha agar bisa mengakomodasi pembatasan kontak fisik" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b3_1" data-id="<?php echo $inc ?>_0">
+                                        <span class="input__custom"></span>
+                                        Pengaturan ulang ruang usaha agar bisa mengakomodasi pembatasan kontak fisik
+                                    </label>
+                                </div>
+                                <div class="my-2 multiple__input">
+                                    <label class="flex items-center input__wrap">
+                                        <input value="Pengawasan kesehatan dan suhu tubuh pekerja" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b3_1" data-id="<?php echo $inc ?>_0">
+                                        <span class="input__custom"></span>
+                                        Pengawasan kesehatan dan suhu tubuh pekerja
+                                    </label>
+                                </div>
+                                <div class="my-2 multiple__input">
+                                    <label class="flex items-center input__wrap">
+                                        <input value="Melaksanakan bekerja dari rumah" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b3_1" data-id="<?php echo $inc ?>_0">
+                                        <span class="input__custom"></span>
+                                        Melaksanakan bekerja dari rumah
+                                    </label>
+                                </div>
+                                <div class="my-2 multiple__input">
+                                    <label class="flex items-center input__wrap">
+                                        <input value="Pembersihan rutin ruang usaha" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b3_1" data-id="<?php echo $inc ?>_0">
+                                        <span class="input__custom"></span>
+                                        Pembersihan rutin ruang usaha
+                                    </label>
+                                </div>
+                                <div class="my-2 multiple__input">
+                                    <label class="flex items-center input__wrap">
+                                        <input value="Tidak melaksanakan" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b3_1" data-id="<?php echo $inc ?>_0">
+                                        <span class="input__custom"></span>
+                                        Tidak melaksanakan
+                                    </label>
+                                </div>
+                            </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-t-red my-4">Terkait strategi dan operasional usaha</h3>
+                                <div class="my-4">
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Mengurangi jumlah produksi" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b3_2" data-id="<?php echo $inc ?>_1">
+                                            <span class="input__custom"></span>
+                                            Mengurangi jumlah produksi
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Diversifikasi usaha" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b3_2 input__b3_2_ver" data-id="<?php echo $inc ?>_1">
+                                            <span class="input__custom"></span>
+                                            Diversifikasi usaha
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Bergabung ke toko online seperti Shopee/Tokopedia" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b3_2" data-id="<?php echo $inc ?>_1">
+                                            <span class="input__custom"></span>
+                                            Bergabung ke toko online seperti Shopee/Tokopedia
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Modifikasi teknik produksi dan/atau komposisi bahan baku" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b3_2" data-id="<?php echo $inc ?>_1">
+                                            <span class="input__custom"></span>
+                                            Modifikasi teknik produksi dan/atau komposisi bahan baku
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Memberi diskon/hadiah" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b3_2" data-id="<?php echo $inc ?>_1">
+                                            <span class="input__custom"></span>
+                                            Memberi diskon/hadiah
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Menggencarkan promosi pada media online" type="checkbox" name="q[<?php echo $inc ?>][1][]" class="mr-3 hidden input__b3_2" data-id="<?php echo $inc ?>_1">
+                                            <span class="input__custom"></span>
+                                            Menggencarkan promosi pada media online
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Tidak melaksanakan" type="checkbox" name="q[<?php echo $inc ?>][0][]" class="mr-3 hidden input__b3_2" data-id="<?php echo $inc ?>_1">
+                                            <span class="input__custom"></span>
+                                            Tidak melaksanakan
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-t-red my-4">Terkait keuangan usaha</h3>
+                                <div class="my-4">
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Merumahkan pekerja" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b3_3" data-id="<?php echo $inc ?>_2">
+                                            <span class="input__custom"></span>
+                                            Merumahkan pekerja
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Mengubah status pekerja menjadi pekerja lepas" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b3_3" data-id="<?php echo $inc ?>_2">
+                                            <span class="input__custom"></span>
+                                            Mengubah status pekerja menjadi pekerja lepas
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Mengurangi biaya utilitas" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b3_3" data-id="<?php echo $inc ?>_2">
+                                            <span class="input__custom"></span>
+                                            Mengurangi biaya utilitas
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Mengurangi biaya sewa tanah/bangunan" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b3_3" data-id="<?php echo $inc ?>_2">
+                                            <span class="input__custom"></span>
+                                            Mengurangi biaya sewa tanah/bangunan
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Mengurangi gaji/bonus pekerja" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b3_3" data-id="<?php echo $inc ?>_2">
+                                            <span class="input__custom"></span>
+                                            Mengurangi gaji/bonus pekerja
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Mengurangi fasilitas khusus pekerja berkebutuhan khusus" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b3_3" data-id="<?php echo $inc ?>_2">
+                                            <span class="input__custom"></span>
+                                            Mengurangi fasilitas khusus pekerja berkebutuhan khusus
+                                        </label>
+                                    </div>
+                                    <div class="my-2 multiple__input">
+                                        <label class="flex items-center input__wrap">
+                                            <input value="Tidak melaksanakan" type="checkbox" name="q[<?php echo $inc ?>][2][]" class="mr-3 hidden input__b3_3" data-id="<?php echo $inc ?>_2">
+                                            <span class="input__custom"></span>
+                                            Tidak melaksanakan
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__next__b3 btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'C. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'C6. Apakah anda menjual produk yang berbeda dibandingkan dengan periode sebelum pandemi COVID-19?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Ya, produk masih sejenis dengan yang sebelumnya',
+                        'Ya, produk berbeda jenis dan terkait keperluan di masa pandemi (masker, hand sanitizer, disinfektan, oximeter)',
+                        'Ya, produk berbeda jenis dan terkait produk kesehatan (multivitamin, obat-obatan)',
+                        'Ya, produk yang berbeda jenis lainnya',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'C. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'C7. Sejak mulainya pandemi COVID-19 (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, apakah Bapak/Ibu meminta/mendapatkan bantuan baik keuangan atau non-keuangan untuk usaha dari pihak lain selama pandemi?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Ya, dari pemerintah',
+                        'Ya, dari selain pemerintah (keluarga, tetangga, teman, asosiasi usaha)',
+                        'Ya, dari keduanya',
+                        'Tidak sama sekali',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'title'=>'C. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'C8. Sejak mulainya pandemi COVID-19 (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, bantuan keuangan apa saja yang usaha Bapak/Ibu peroleh dari pemerintah?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Bantuan Produktif Usaha Mikro (BPUM)',
+                        'Bantuan Modal bagi Wirausaha Difabel',
+                        'Subsidi bunga',
+                        'PPh Final UMKM ditanggung pemerintah',
+                        'Pembiayaan investasi kepada koperasi melalui Lembaga pengelola dana bergulir KUMKM',
+                        'Bantuan penyerapan barang UMKM',
+                        'Perpanjangan grace period (masa leluasa) untuk meminjam dari bank',
+                        'Tidak menerima',
+                    ],
+                    'class'=>'',
+                    'show'=>0
+                ]);
+            ?>
+
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'title'=>'C. Keberlangsungan dan Adaptasi Usaha sejak Pandemi COVID-19 dimulai hingga PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'C9. Sejak mulainya pandemi COVID-19 (Maret 2020) hingga sebelum PPKM Darurat Jawa-Bali, bantuan non-keuangan apa yang usaha Bapak/Ibu peroleh dari pemerintah?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Pelatihan usaha melalui webinar',
+                        'Akses terhadap barang input domestik/barang import',
+                        'Kemudahan akses ke pasar',
+                        'Kemudahan pendistribusian barang',
+                        'Tidak menerima',
+                    ],
+                    'class'=>'',
+                    'show'=>1
+                ]);
+            ?>
+
+
+
+
+
+
+
+
+
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'class'=>'grid grid-cols-2',
+                    'title'=>'A. Profil Usaha',
+                    'subtitle'=>'A10. Sejak pandemi COVID-19 dimulai (Maret 2020), apakah Bapak/Ibu pernah menutup usaha? Jika Ya, pada bulan apa?',
+                    'inc'=>++$inc,
+                    'question'=>['Maret 2020','April 2020','Mei 2020','Juni 2020','Juli 2020','Agustus 2020','September 2020','November 2020','Desember 2020','Januari 2021','Februari 2021','Maret 2021','April 2021','Mei 2021','Juni 2021','Tidak Pernah'],
+                    'show'=>0
+                ]);
+            ?>
+
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
+                        <h1 class="text-xl font-bold">A19. Sejak Januari 2021 hinga hingga saat ini, berapakah jumlah pekerja Bapak/Ibu yang dirumahkan?</h1>
+                        <small>(tidak bisa dikosongkan, jika 0 isi dengan angka 0)</small>
+                        <ul class="my-4">
+                            <li class="my-2 ml-6 list-disc">
+                                <div>
+                                    <span>Wanita</span>
+                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                                <div>
+                                    <span>Dengan disabilitas</span>
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text"  data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                            </li>
+                            <li class="my-2 ml-6 list-disc">
+                                <div>
+                                    <span>Pria</span>
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                                <div>
+                                    <span>Dengan disabilitas</span>
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+
             <?php 
                 $this->load->view('template/radio',[
                     'title'=>'A. Profil Usaha',

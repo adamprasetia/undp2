@@ -134,6 +134,40 @@
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().fadeIn(500);            
 
+        }else if (id==26 && $('input[name="q[26]"]:checked').val() == "Sudah, sebelum pandemi COVID-19") {
+            $('input[name="q[27][]"]').prop('checked',false);
+            $('.btn__next[data-id="27"]').attr("disabled", true);
+            $('.btn__next[data-id="27"]').addClass("disabled")
+            $('input[name="q[28]"]').prop('checked',false);
+            $('.btn__next[data-id="28"]').attr("disabled", true);
+            $('.btn__next[data-id="28"]').addClass("disabled")
+
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().next().next().next().fadeIn(500);            
+        }else if (id==26 && $('input[name="q[26]"]:checked').val() == "Sudah, saat pandemi COVID-19") {
+            $('input[name="q[27][]"]').prop('checked',false);
+            $('.btn__next[data-id="27"]').attr("disabled", true);
+            $('.btn__next[data-id="27"]').addClass("disabled")
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().next().next().fadeIn(500);            
+
+        }else if (id==27) {
+            $('input[name="q[28]"]').prop('checked',false);
+            $('.btn__next[data-id="28"]').attr("disabled", true);
+            $('.btn__next[data-id="28"]').addClass("disabled")
+            $('input[name="q[29][]"]').prop('checked',false);
+            $('.btn__next[data-id="29"]').attr("disabled", true);
+            $('.btn__next[data-id="29"]').addClass("disabled")
+            $('input[name="q[30][]"]').prop('checked',false);
+            $('.btn__next[data-id="30"]').attr("disabled", true);
+            $('.btn__next[data-id="30"]').addClass("disabled")
+
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().next().next().next().next().fadeIn(500);            
+        }else if (id==35 && $('.input__b3_2_ver').is(':checked')==false) {
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().next().next().fadeIn(500);            
+
 
         // }else if (id==23 && $('input[name="q[23]"]:checked').val() == "Tidak") {
         //     $('input[name="q[24]"]').val('');
@@ -174,12 +208,23 @@
 
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().prev().prev().prev().prev().fadeIn(500);
-        }else if (id==25 && $('input[name="q[23]"]:checked').val() == "Tidak" || (id=='b' && $('input[name="q[23]"]:checked').val() == "Ya")) {
+        }else if (id==28) {
             $(this).parent().parent().parent().prev().prev().find('.btn__next').removeAttr("disabled", true);
             $(this).parent().parent().parent().prev().prev().find('.btn__next').removeClass("disabled");
 
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().prev().prev().fadeIn(500);
+        }else if (id==29 && $('input[name="q[26]"]:checked').val() == "Sudah, sebelum pandemi COVID-19") {
+            $(this).parent().parent().parent().prev().prev().prev().find('.btn__next').removeAttr("disabled", true);
+            $(this).parent().parent().parent().prev().prev().prev().find('.btn__next').removeClass("disabled");
+
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().prev().prev().prev().fadeIn(500);
+        }else if (id=='c' && $('input[name="q[26]"]:checked').val() == "Belum") {
+            $(this).parent().parent().parent().prev().prev().prev().prev().find('.btn__next').removeAttr("disabled", true);
+            $(this).parent().parent().parent().prev().prev().prev().prev().find('.btn__next').removeClass("disabled");
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().prev().prev().prev().prev().fadeIn(500);
         }else{
             $(this).parent().parent().parent().prev().find('.btn__next').removeAttr("disabled", true);
             $(this).parent().parent().parent().prev().find('.btn__next').removeClass("disabled");
@@ -223,10 +268,13 @@
 
         lock_checkbox(id, $(this),'Tidak menerima')
         lock_checkbox(id, $(this),'Tidak Pernah')
+        lock_checkbox(id, $(this),'Tidak pernah')
         lock_checkbox(id, $(this),'Tidak melakukan')
         lock_checkbox(id, $(this),'Tidak tahu')
         lock_checkbox(id, $(this),'Tidak melaksanakan')
         lock_checkbox(id, $(this),'Tidak ada kesulitan')
+        lock_checkbox(id, $(this),'Tidak tertarik')
+        lock_checkbox(id, $(this),'Tidak ada yang memberi tantangan')
 
         if($(this).hasClass('last')){
             if($(this).prop('checked') == false){
