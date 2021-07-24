@@ -49,11 +49,11 @@
         var id = $(this).attr('data-id');
         var value = $('input[data-id="'+id+'"]:checked').val()
         if(value){
-            $('button[data-id="'+id+'"').removeAttr("disabled");
-            $('button[data-id="'+id+'"').removeClass("disabled");
+            $('.btn__next[data-id="'+id+'"').removeAttr("disabled");
+            $('.btn__next[data-id="'+id+'"').removeClass("disabled");
         } else {
-            $('button[data-id="'+id+'"').attr("disabled", true);
-            $('button[data-id="'+id+'"').addClass("disabled");
+            $('.btn__next[data-id="'+id+'"').attr("disabled", true);
+            $('.btn__next[data-id="'+id+'"').addClass("disabled");
         }
     });
 
@@ -83,38 +83,38 @@
             }, 500);
 
             $(".last--page h1").text("Terima kasih atas waktu Bapak/Ibu");
-        }else if (id==6 && $('input[name="q[6]"]:checked').val() == "Tidak") {
-            $('input[name="q[7][]"]').prop('checked',false);
-            $('input[data-id="7"][type="text"]').val('');
-            $('input[data-id="7"][type="text"]').attr("disabled", true);
-            $('input[data-id="7"][type="text"]').addClass("disabled");
-            $('input[data-id="7"][type="text"]').hide();
-            $('.btn__next[data-id="7"]').attr("disabled", true);
-            $('.btn__next[data-id="7"]').addClass("disabled")
+        }else if (id==7 && $('input[name="q[7]"]:checked').val() == "Tidak") { //disabilitas
+            $('input[name="q[8][]"]').prop('checked',false);
+            $('input[data-id="8"][type="text"]').val('');
+            $('input[data-id="8"][type="text"]').attr("disabled", true);
+            $('input[data-id="8"][type="text"]').addClass("disabled");
+            $('input[data-id="8"][type="text"]').hide();
+            $('.btn__next[data-id="8"]').attr("disabled", true);
+            $('.btn__next[data-id="8"]').addClass("disabled")
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().fadeIn(500);                        
-        }else if (id==13 && ($('input[name="q[13]"]:checked').val() == "Beroperasi" || $('input[name="q[13]"]:checked').val() == "Beroperasi sebagian")) {
-            $('input[name="q[14][]"]').prop('checked',false);
-            $('.btn__next[data-id="14"]').attr("disabled", true);
-            $('.btn__next[data-id="14"]').addClass("disabled")
-            $('input[name="q[15]"]').prop('checked',false);
-            $('.btn__next[data-id="15"]').attr("disabled", true);
-            $('.btn__next[data-id="15"]').addClass("disabled")
-            $('input[name="q[16]"]').prop('checked',false);
-            $('.btn__next[data-id="16"]').attr("disabled", true);
-            $('.btn__next[data-id="16"]').addClass("disabled")
+        }else if (id==16 && ($('input[name="q[16]"]:checked').val() == "Beroperasi" || $('input[name="q[16]"]:checked').val() == "Beroperasi sebagian")) {
+            $('input[name="q[17]"]').prop('checked',false);
+            $('.btn__next[data-id="17"]').attr("disabled", true);
+            $('.btn__next[data-id="17"]').addClass("disabled")
+            $('input[name="q[18]"]').prop('checked',false);
+            $('.btn__next[data-id="18"]').attr("disabled", true);
+            $('.btn__next[data-id="18"]').addClass("disabled")
+            $('input[name="q[19]"]').prop('checked',false);
+            $('.btn__next[data-id="19"]').attr("disabled", true);
+            $('.btn__next[data-id="19"]').addClass("disabled")
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().next().next().fadeIn(500);                        
-        }else if (id==13 && $('input[name="q[13]"]:checked').val() == "Tutup permanen") {
-            $('input[name="q[15]"]').prop('checked',false);
-            $('.btn__next[data-id="15"]').attr("disabled", true);
-            $('.btn__next[data-id="15"]').addClass("disabled")
-            $('input[name="q[16]"]').prop('checked',false);
-            $('.btn__next[data-id="16"]').attr("disabled", true);
-            $('.btn__next[data-id="16"]').addClass("disabled")
+        }else if (id==16 && $('input[name="q[16]"]:checked').val() == "Tutup permanen") {
+            $('input[name="q[18]"]').prop('checked',false);
+            $('.btn__next[data-id="18"]').attr("disabled", true);
+            $('.btn__next[data-id="18"]').addClass("disabled")
+            $('input[name="q[19]"]').prop('checked',false);
+            $('.btn__next[data-id="19"]').attr("disabled", true);
+            $('.btn__next[data-id="19"]').addClass("disabled")
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().fadeIn(500);            
-        }else if (id==14 && $('input[name="q[13]"]:checked').val() == "Tutup permanen") {
+        }else if (id==17 && $('input[name="q[16]"]:checked').val() == "Tutup permanen") {
             save_data();
             $(this).parent().parent().parent().next().fadeOut(100);
             $(this).parent().parent().parent().fadeOut(500);
@@ -125,26 +125,36 @@
             }, 500);
 
             $(".last--page h1").text("Terima kasih atas waktu Bapak/Ibu");
-        }else if (id==23 && $('input[name="q[23]"]:checked').val() == "Tidak") {
-            $('input[name="q[24]"]').val('');
-            $('.btn__next[data-id="24"]').attr("disabled", true);
-            $('.btn__next[data-id="24"]').addClass("disabled")
+        }else if (id==21 || id==22) {
+            var total_p = parseInt($('#tetap-p').val())+parseInt($('#paruh-p').val());
+            var total_l = parseInt($('#tetap-l').val())+parseInt($('#paruh-l').val());
+            $('#dis-p').attr('max',total_p)
+            $('#dis-l').attr('max',total_l)
+            $(".input__text__dis").trigger('change')    
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().next().fadeIn(500);            
 
-            $(this).parent().parent().parent().fadeOut(500);
-            $(this).parent().parent().parent().next().next().fadeIn(500);                        
-        }else if (id==23 && $('input[name="q[23]"]:checked').val() == "Ya") {
-            $('input[name="q[25]"]').prop('checked',false);
-            $('.btn__next[data-id="25"]').attr("disabled", true);
-            $('.btn__next[data-id="25"]').addClass("disabled")
-            $(this).parent().parent().parent().fadeOut(500);
-            $(this).parent().parent().parent().next().fadeIn(500);                        
-        }else if (id==24) {
-            $(this).parent().parent().parent().fadeOut(500);
-            $(this).parent().parent().parent().next().next().fadeIn(500);
+
+        // }else if (id==23 && $('input[name="q[23]"]:checked').val() == "Tidak") {
+        //     $('input[name="q[24]"]').val('');
+        //     $('.btn__next[data-id="24"]').attr("disabled", true);
+        //     $('.btn__next[data-id="24"]').addClass("disabled")
+
+        //     $(this).parent().parent().parent().fadeOut(500);
+        //     $(this).parent().parent().parent().next().next().fadeIn(500);                        
+        // }else if (id==23 && $('input[name="q[23]"]:checked').val() == "Ya") {
+        //     $('input[name="q[25]"]').prop('checked',false);
+        //     $('.btn__next[data-id="25"]').attr("disabled", true);
+        //     $('.btn__next[data-id="25"]').addClass("disabled")
+        //     $(this).parent().parent().parent().fadeOut(500);
+        //     $(this).parent().parent().parent().next().fadeIn(500);                        
+        // }else if (id==24) {
+        //     $(this).parent().parent().parent().fadeOut(500);
+        //     $(this).parent().parent().parent().next().next().fadeIn(500);
         }else{
-            if(id==46){
-                save_data();
-            }
+            // if(id==46){
+            //     save_data();
+            // }
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().fadeIn(500);            
         }
@@ -152,13 +162,13 @@
     $(".btn__back").on("click", function(){
         var id = $(this).attr('data-id');
         console.log('data-id',id)
-        if(id==9 && $('input[name="q[6]"]:checked').val() == "Tidak"){
+        if(id==10 && $('input[name="q[7]"]:checked').val() == "Tidak"){
             $(this).parent().parent().parent().prev().prev().find('.btn__next').removeAttr("disabled", true);
             $(this).parent().parent().parent().prev().prev().find('.btn__next').removeClass("disabled");
 
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().prev().prev().fadeIn(500);
-        }else if(id==17 && ($('input[name="q[13]"]:checked').val() == "Beroperasi" || $('input[name="q[13]"]:checked').val() == "Beroperasi sebagian")) {
+        }else if(id==20 && ($('input[name="q[16]"]:checked').val() == "Beroperasi" || $('input[name="q[16]"]:checked').val() == "Beroperasi sebagian")) {
             $(this).parent().parent().parent().prev().prev().prev().prev().find('.btn__next').removeAttr("disabled", true);
             $(this).parent().parent().parent().prev().prev().prev().prev().find('.btn__next').removeClass("disabled");
 
@@ -204,11 +214,11 @@
         if(($('input[type="checkbox"][data-id="'+id+'"]:checked').length > 0 && $('input[type="checkbox"][data-id="'+id+'"][class*="last"]:checked').length == 0)
         || ($('input[type="checkbox"][data-id="'+id+'"]:checked').length > 0 && $('input[type="checkbox"][data-id="'+id+'"][class*="last"]:checked').length == 1 && $('input[type="text"][data-id="'+id+'"]').val() != '')
         ){
-            $('button[data-id="'+id+'"]').removeAttr("disabled");
-            $('button[data-id="'+id+'"]').removeClass("disabled");
+            $('.btn__next[data-id="'+id+'"]').removeAttr("disabled");
+            $('.btn__next[data-id="'+id+'"]').removeClass("disabled");
         } else {
-            $('button[data-id="'+id+'"]').attr("disabled", true);
-            $('button[data-id="'+id+'"]').addClass("disabled");   
+            $('.btn__next[data-id="'+id+'"]').attr("disabled", true);
+            $('.btn__next[data-id="'+id+'"]').addClass("disabled");   
         }
 
         lock_checkbox(id, $(this),'Tidak menerima')
@@ -216,6 +226,7 @@
         lock_checkbox(id, $(this),'Tidak melakukan')
         lock_checkbox(id, $(this),'Tidak tahu')
         lock_checkbox(id, $(this),'Tidak melaksanakan')
+        lock_checkbox(id, $(this),'Tidak ada kesulitan')
 
         if($(this).hasClass('last')){
             if($(this).prop('checked') == false){
@@ -238,11 +249,11 @@
         if(($('input[type="radio"][data-id="'+id+'"]:checked').length > 0 && $('input[type="radio"][data-id="'+id+'"][class*="last"]:checked').length == 0)
         || ($('input[type="radio"][data-id="'+id+'"]:checked').length > 0 && $('input[type="radio"][data-id="'+id+'"][class*="last"]:checked').length == 1 && $('input[type="text"][data-id="'+id+'"]').val() != '')
         ){
-            $('button[data-id="'+id+'"').removeAttr("disabled");
-            $('button[data-id="'+id+'"').removeClass("disabled");
+            $('.btn__next[data-id="'+id+'"').removeAttr("disabled");
+            $('.btn__next[data-id="'+id+'"').removeClass("disabled");
         } else {
-            $('button[data-id="'+id+'"').attr("disabled", true);
-            $('button[data-id="'+id+'"').addClass("disabled");   
+            $('.btn__next[data-id="'+id+'"').attr("disabled", true);
+            $('.btn__next[data-id="'+id+'"').addClass("disabled");   
         }
         if($('input[type="radio"][data-id="'+id+'"][class*="last"]:checked').length == 1){
             $('input[data-id="'+id+'"][type="text"]').show();
@@ -477,13 +488,42 @@
             if(el=='' || parseInt(el) < 0) status = false;
         });
         if(status){
-            $('button[data-id="'+id+'"').removeAttr("disabled");
-            $('button[data-id="'+id+'"').removeClass("disabled");
+            $('.btn__next[data-id="'+id+'"').removeAttr("disabled");
+            $('.btn__next[data-id="'+id+'"').removeClass("disabled");
         } else {
-            $('button[data-id="'+id+'"').attr("disabled", true);
-            $('button[data-id="'+id+'"').addClass("disabled");
+            $('.btn__next[data-id="'+id+'"').attr("disabled", true);
+            $('.btn__next[data-id="'+id+'"').addClass("disabled");
         }
     });
+
+    $(".input__text__dis").on("keyup change", function() {
+        var total_p = parseInt($('#tetap-p').val())+parseInt($('#paruh-p').val());
+        var total_l = parseInt($('#tetap-l').val())+parseInt($('#paruh-l').val());
+        var total_p_dis = parseInt($('#dis-p').val());
+        var total_l_dis = parseInt($('#dis-l').val());
+        var id = $(this).attr('data-id');
+        var value = $('input[data-id="'+id+'"]').map((_,el) => el.value).get()
+        var status = true;
+        $.each(value, function(i, el){
+            if(el=='' || parseInt(el) < 0) status = false;
+        });
+        if(total_p < total_p_dis){
+            $('#dis-error').html('Jumlah pekerja wanita yang memiliki disabilitas tidak boleh melebihi <strong>'+total_p+'</strong> orang');
+        }else if(total_l < total_l_dis){
+            $('#dis-error').html('Jumlah pekerja pria yang memiliki disabilitas tidak boleh melebihi <strong>'+total_l+'</strong> orang');
+        }else{
+            $('#dis-error').html('');
+        }
+        if(status && total_p >= total_p_dis && total_l >= total_l_dis){
+            $('#dis-error').html('');
+            $('.btn__next[data-id="'+id+'"').removeAttr("disabled");
+            $('.btn__next[data-id="'+id+'"').removeClass("disabled");
+        } else {
+            $('.btn__next[data-id="'+id+'"').attr("disabled", true);
+            $('.btn__next[data-id="'+id+'"').addClass("disabled");
+        }
+    });
+
 
     $(".input__dropdown").on("change", function() {
         var id = $(this).attr('data-id');
@@ -494,11 +534,11 @@
         });
 
         if(status){
-            $('button[data-id="'+id+'"').removeAttr("disabled");
-            $('button[data-id="'+id+'"').removeClass("disabled");
+            $('.btn__next[data-id="'+id+'"').removeAttr("disabled");
+            $('.btn__next[data-id="'+id+'"').removeClass("disabled");
         } else {
-            $('button[data-id="'+id+'"').attr("disabled", true);
-            $('button[data-id="'+id+'"').addClass("disabled");
+            $('.btn__next[data-id="'+id+'"').attr("disabled", true);
+            $('.btn__next[data-id="'+id+'"').addClass("disabled");
         }
     });
 

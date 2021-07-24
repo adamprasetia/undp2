@@ -872,7 +872,7 @@ video {
 
 .border-t-blue {
   --tw-border-opacity: 1;
-  border-color: rgba(0, 86, 136, var(--tw-border-opacity));
+  border-color: rgba(3, 104, 177, var(--tw-border-opacity));
 }
 
 .border-t-red {
@@ -887,7 +887,7 @@ video {
 
 .bg-t-blue {
   --tw-bg-opacity: 1;
-  background-color: rgba(0, 86, 136, var(--tw-bg-opacity));
+  background-color: rgba(3, 104, 177, var(--tw-bg-opacity));
 }
 
 .bg-t-red {
@@ -987,7 +987,7 @@ video {
 
 .text-t-blue {
   --tw-text-opacity: 1;
-  color: rgba(0, 86, 136, var(--tw-text-opacity));
+  color: rgba(3, 104, 177, var(--tw-text-opacity));
 }
 
 .text-t-red {

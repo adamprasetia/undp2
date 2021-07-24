@@ -20,7 +20,7 @@
     <div class="container">
         <form id="mainform" action="<?php echo site_url('participant') ?>" name="mainform" method="post">
 
-            <div class="bg blues fixed w-full h-full"></div>
+            <div class="bg blue fixed w-full h-full"></div>
 
             <div class="head absolute flex justify-between pr-4 pt-6 w-full md:pt-12 md:pr-10 hidden">
                 <div class="logo--left">
@@ -65,7 +65,7 @@
                     <div class="content content-scroll p-7 text-center font-bold text-t-blue h-full overflow-y-scroll md:text-xl">
                         <p>Selamat <?php echo (date('H') < 10?'pagi':(date('H') < 15?'siang':'malam')) ?>, Bapak/Ibu yang kami hormati, kami dari Kementerian Koperasi dan UKM, UNDP Indonesia, dan Indosat Oooredoo. Saat ini kami sedang melakukan Survei Lanjutan Dampak COVID-19 Terhadap UMKM di Indonesia. Kami mohon kesediaan Bapak/Ibu untuk menjadi responden dalam survei ini.</p>
                         <br>
-                        <p>Survei ini bertujuan untuk melihat dampak pandemi COVID-19 bagi UMKM selama tahun 2021, lebih dari satu tahun setelah pandemi dimulai. Survei ini ingin mengetahui apa strategi dan yang dipilih oleh pelaku usaha UMKM, termasuk pelaku usaha perempuan, pemuda, dan juga yang berkebutuhan khusus dalam memitigasi dampak dari pandemik terhadap usaha mereka, serta adaptasi usaha yang telah dilaksanakan. Survei ini juga ingin mengidentifikasi dampak Pandemi COVID 19 dan peluang kontribusi UMKM dalam pemulihan ekonomi yang bersifat ramah lingkungan dan inklusif. Hasil dari survei ini diharapkan dapat memberikan gambaran bagi pemangku kepentingan terkait dalam upaya memitigasi dampak pandemi COVID-19 baik dari sisi ekonomi maupun non-ekonomi bagi pelaku UMKM.</p>
+                        <p>Survei ini bertujuan untuk melihat dampak pandemi COVID-19 bagi UMKM selama tahun 2021, lebih dari satu tahun setelah pandemi dimulai. Survei ini ingin mengetahui apa strategi dan yang dipilih oleh pelaku usaha UMKM, termasuk pelaku usaha perempuan, pemuda, dan juga yang berkebutuhan khusus dalam memitigasi dampak dari pandemik terhadap usaha mereka, serta adaptasi usaha yang telah dilaksanakan. Survei ini juga ingin mengidentifikasi dampak Pandemi COVID 19 dan peluang kontribusi UMKM dalam pemulihan ekonomi yang bersifat ramah lingkungan dan inklusif. Hasil dari survei ini diharapkan dapat memberikan gambaran bagi pemangku kepentingan terkait dalam upaya memitigasi dampak pandemi COVID-19 baik dari sisi ekonomi maupun non-ekonomi bagi pelaku UMKM. </p>
                         <br>
                         <p>Survei ini bukan untuk menilai UMKM sebagai responden, jawaban responden tidak ada yang dinilai benar atau salah, melainkan diisi sesuai dengan kondisi responden. Kami menjamin seluruh informasi yang Bapak/Ibu berikan hanya dipergunakan untuk keperluan penelitian dan evaluasi program saja. Informasi yang Bapak/Ibu berikan selanjutnya akan diolah dan disusun menjadi suatu laporan yang berisi masukan dan rekomendasi kepada pihak-pihak terkait.</p>
                         <br>
@@ -75,87 +75,133 @@
                 </div>
             </div>
             <?php $inc = 0; ?>
-            <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'',
-                    'subtitle'=>'Apakah Bapak/Ibu adalah pemilik usaha?',
-                    'inc'=>$inc,
-                    'question'=>[
-                        'Ya',
-                        'Tidak'
-                    ],
-                    'show'=>0
-                ]);
-            ?>
-
-            <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'',
-                    'subtitle'=>'Apakah Bapak/Ibu bersedia menjadi responden survei ini?',
-                    'inc'=>++$inc,
-                    'question'=>[
-                        'Ya',
-                        'Tidak'
-                    ],
-                    'show'=>0
-                ]);
-            ?>
-
-            <?php 
-                $this->load->view('template/text',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A1. Nama Pemilik Usaha',
-                    'inc'=>++$inc,
-                    'question'=>'Nama',
-                    'show'=>0
-                ]);
-            ?>
-            <?php 
-                $this->load->view('template/text',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A2. Nama Usaha:',
-                    'inc'=>++$inc,
-                    'question'=>'Nama Usaha',
-                    'show'=>0
-                ]);
-            ?>
-
             <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
                     
                     <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
-                        <h1 class="text-xl font-bold">A3. Nomor Telepon</h1>
-                        <div class="my-4">
-                            <input type="number" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="15" name="q[<?php echo ++$inc ?>]" id="phone" class="border-2 border-t-blue rounded-lg px-2 py-1 w-full mt-2 input__text" data-id="<?php echo $inc ?>">
+                        <h1 class="text-xl font-bold">Apakah Bapak/Ibu adalah pemilik usaha?</h1>
+                        <div>
+                            <div class="my-4">
+                                <label class="flex items-center input__wrap">
+                                    <input type="radio" name="q[<?php echo $inc ?>]" value="Ya" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>" required>
+                                    <span class="input__custom"></span>
+                                    Ya
+                                </label>
+                            </div>
+                            <div class="my-4">
+                                <label class="flex items-center input__wrap">
+                                    <input type="radio" name="q[<?php echo $inc ?>]" value="Tidak" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>" required>
+                                    <span class="input__custom"></span>
+                                    Tidak
+                                </label>
+                            </div>
                         </div>
-                        <small>1,000 responden yang beruntung dan mengisi survei ini dengan lengkap akan mendapatkan pulsa senilai Rp 25,000. Silakan isi nomor telepon Bapak/Ibu jika tertarik mengikuti undian ini memperoleh kesempatan mendapatkan pulsa, silakan kosongkan jika tidak.</small>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form" data-id="<?php echo $inc ?>">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
                         <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
                 </div>
             </div>
             
-            <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A4. Jenis Kelamin',
-                    'inc'=>++$inc,
-                    'question'=>[
-                        'Pria',
-                        'Wanita',
-                        'Lainnya',
-                    ],
-                    'show'=>0
-                ]);
-            ?>
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h1 class="text-xl font-bold">Apakah Bapak/Ibu bersedia menjadi responden survei ini?</h1>
+                        <div>
+                            <div class="my-4">
+                                <label class="flex items-center input__wrap">
+                                    <input type="radio" name="q[<?php echo ++$inc ?>]" value="Ya" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>" required>
+                                    <span class="input__custom"></span>
+                                    Ya
+                                </label>
+                            </div>
+                            <div class="my-4">
+                                <label class="flex items-center input__wrap">
+                                    <input type="radio" name="q[<?php echo $inc ?>]" value="Tidak" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>" required>
+                                    <span class="input__custom"></span>
+                                    Tidak
+                                </label>
+                            </div>
+                        </div>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
 
             <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
                     
                     <div class="content p-6 text-t-blue">
                         <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
-                        <h1 class="text-xl font-bold">A5. Usia pemilik usaha</h1>
+                        <h1 class="text-xl font-bold">A1. Nama Pemilik Usaha</h1>
+                        <div class="my-4">
+                            <label for="name" class="font-bold block">Nama</label>
+                            <input type="text" name="q[<?php echo ++$inc ?>]" id="name" class="border-2 border-t-blue rounded-lg px-2 py-1 w-full mt-2 input__text" data-id="<?php echo $inc ?>">
+                        </div>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
+                        <h1 class="text-xl font-bold">A2. Nomor Telepon Pemilik Usaha</h1>
+                        <div class="my-4">
+                            <input type="number" min="0" name="q[<?php echo ++$inc ?>]" id="phone" class="border-2 border-t-blue rounded-lg px-2 py-1 w-full mt-2 input__text" data-id="<?php echo $inc ?>">
+                        </div>
+                        <small>1,000 responden yang beruntung dan mengisi survei ini dengan lengkap akan mendapatkan pulsa senilai Rp 25,000. Silakan isi nomor telepon Bapak/Ibu jika tertarik mengikuti undian ini. Cukup isi nama apabila tidak bersedia.</small>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form" data-id="<?php echo $inc ?>">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
+                        <h1 class="text-xl font-bold">A3. Jenis Kelamin</h1>
+                        <div>
+                            <div class="my-4">
+                                <label class="flex items-center input__wrap">
+                                    <input type="radio" value="Pria" name="q[<?php echo ++$inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
+                                    <span class="input__custom"></span>
+                                    Pria
+                                </label>
+                            </div>
+                            <div class="my-4">
+                                <label class="flex items-center input__wrap">
+                                    <input type="radio" value="Wanita" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
+                                    <span class="input__custom"></span>
+                                    Wanita
+                                </label>
+                            </div>
+                            <div class="my-4">
+                                <label class="flex items-center input__wrap">
+                                    <input type="radio" value="Lainnya" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
+                                    <span class="input__custom"></span>
+                                    Lainnya
+                                </label>
+                            </div>
+                        </div>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
+                        <h1 class="text-xl font-bold">A4. Usia pemilik usaha</h1>
                         <div>
                             <select name="q[<?php echo ++$inc ?>]" class="my-4 p-2 border-2 border-t-blue rounded-lg input__dropdown" data-id="<?php echo $inc ?>">
                                 <option value="" class="hidden" disabled selected>0</option>
@@ -171,9 +217,8 @@
             </div>
             <?php 
                 $this->load->view('template/radio',[
-                    'validation'=>'disabilitas',
                     'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A6. Apakah pemilik usaha merupakan penyandang disabilitas?',
+                    'subtitle'=>'A5. Apakah pemilik usaha merupakan penyandang disabilitas?',
                     'inc'=>++$inc,
                     'question'=>[
                         'Ya',
@@ -187,7 +232,7 @@
                 $this->load->view('template/checkbox',[
                     'class'=>'',
                     'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A7. Disabilitas apa yang dimiliki oleh pemilik usaha?',
+                    'subtitle'=>'A6. Disabilitas apa yang dimiliki oleh pemilik usaha?',
                     'inc'=>++$inc,
                     'question'=>[
                         'Kesulitan dalam pengelihatan',
@@ -209,7 +254,7 @@
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">                    
                     <div class="content p-6 text-t-blue">
                         <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
-                        <h1 class="text-xl font-bold">A8. Lokasi Usaha:</h1>
+                        <h1 class="text-xl font-bold">A7. Lokasi Usaha:</h1>
                         <div class="my-4">
                             <select id="prov_select" name="q[<?php echo ++$inc ?>]" class="border-2 border-t-blue rounded-lg w-full p-2 input__dropdown">
                                 <option value="" class="hidden" disabled selected>Provinsi</option>
@@ -233,7 +278,7 @@
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">                    
                     <div class="content p-6 text-t-blue">
                         <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
-                        <h1 class="text-xl font-bold">A9. Pada tahun berapa usaha ini mulai beroperasi?</h1>
+                        <h1 class="text-xl font-bold">A8. Pada tahun berapa usaha ini mulai beroperasi?</h1>
                         <div class="my-4">
                             <select name="q[<?php echo ++$inc ?>]" class="my-4 p-2 border-2 border-t-blue rounded-lg input__dropdown" data-id="<?php echo $inc ?>">
                                 <option value="" class="hidden" disabled selected>0</option>
@@ -250,60 +295,10 @@
             </div>
             
             <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A10. Apa bentuk perizinan usaha Bapak/Ibu?',
-                    'inc'=>++$inc,
-                    'question'=>[
-                        'SIUP',
-                        'IUMK',
-                        'NIB',
-                        'Tidak memiliki perizinan',
-                        'Lainnya'
-                    ],
-                    'placeholder'=>'sebutkan',
-                    'show'=>0
-                ]);
-            ?>
-            <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A11. Apa bentuk usaha/badan hukum Bapak/Ibu saat ini? ',
-                    'inc'=>++$inc,
-                    'question'=>[
-                        'Perorangan/belum berbadan usaha',
-                        'Koperasi',
-                        'CV/UD/Firma',
-                        'Perseroan Terbatas',
-                        'Lainnya'
-                    ],
-                    'placeholder'=>'sebutkan',
-                    'show'=>0
-                ]);
-            ?>
-            <?php 
                 $this->load->view('template/checkbox',[
                     'class'=>'',
                     'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A12. Kesulitan apa yang Bapak/Ibu hadapi dalam memperoleh perizinan usaha?',
-                    'inc'=>++$inc,
-                    'question'=>[
-                        'Kurang memahami tata cara pengurusan perizinan dan legalitas usaha',
-                        'Tidak mengetahui manfaat melegalkan usaha/perizinan usaha',
-                        'Proses melegalkan usaha/perizinan usaha terlalu berbelit',
-                        'Tidak memiliki biaya untuk melegalkan usaha/mengurus perizinan usaha',
-                        'Tidak ada kesulitan',
-                    ],
-                    'show'=>0
-                ]);
-            ?>
-
-
-            <?php 
-                $this->load->view('template/checkbox',[
-                    'class'=>'',
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A13. Jenis produk dari usaha yang dilaksanakan',
+                    'subtitle'=>'A9. Jenis Produk Usaha yang dilaksanakan?',
                     'inc'=>++$inc,
                     'question'=>[
                         'Furnitur',
@@ -316,154 +311,12 @@
                         'Komoditas pertanian dan perkebunan',
                         'Komoditas perikanan dan peternakan',
                         'Komponen mesin',
-                        'Toko/warung kelontong',
-                        'Jasa wisata',
-                        'Jasa lainnya',
+                        'Jasa',
                         'Lainnya'
                     ],
-                    'placeholder'=>'sebutkan jenis produk usaha Bapak/Ibu',
                     'show'=>0
                 ]);
             ?>
-
-            <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A14. Apa status usaha saat ini? ',
-                    'inc'=>++$inc,
-                    'question'=>['Beroperasi','Beroperasi sebagian','Tutup sementara','Tutup permanen'],
-                    'show'=>0
-                ]);
-            ?>
-
-            <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A15. Apa alasan utama dari penutupan usaha saat ini?',
-                    'inc'=>++$inc,
-                    'question'=>['Peraturan Pemerintah','Permintaan yang menurun drastis','Ketidakcukupan uang untuk membiayai produksi','Kesulitan mengakses bahan baku','Tidak bisa mengakses pendanaan dari luar untuk membiayai produksi','Perlu mengurus rumah tangga'],
-                    'show'=>0
-                ]);
-            ?>
-
-            <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A16. Sudah berapa lama usaha Bapak/Ibu tutup sementara?',
-                    'inc'=>++$inc,
-                    'question'=>['Kurang dari 2 minggu','Antara 2-4 minggu','Antara 1-2 bulan','Antara 3-6 bulan','Lebih dari 6 bulan'],
-                    'show'=>0
-                ]);
-            ?>
-
-            <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A17. Kapan rencana usaha dibuka kembali?',
-                    'inc'=>++$inc,
-                    'question'=>['Dalam kurang dari 2 minggu','Dalam 2-4 minggu','Dalam 1-2 bulan dari sekarang','Dalam 3-6 bulan dari sekarang','Lebih dari 6 bulan dari sekarang','Tidak tahu'],
-                    'show'=>0
-                ]);
-            ?>
-
-            <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A18. Berapakah penjualan atau omzet usaha Bapak/Ibu selama satu tahun ke belakang (Juni 2020 - Juni 2021)?',
-                    'inc'=>++$inc,
-                    'question'=>['Kurang dari Rp 100 juta / tahun ATAU setara kurang dari Rp 300 ribu / hari ATAU Rp 8,3 juta / bulan','Antara dari Rp 100 juta / tahun s.d Rp 300 juta / tahun ATAU setara antara Rp 8,3 juta / bulan s.d Rp 25 juta / bulan','Antara dari Rp 300 juta / tahun s.d Rp 1 miliar / tahun ATAU setara antara Rp 25 juta / bulan s.d Rp 83,3 juta / bulan','Antara Rp 1 s.d 2,5 miliar / tahun','Antara Rp 2,5 s.d 4,8 miliar / tahun','Antara Rp 4,8 miliar / tahun s.d Rp 50 miliar / tahun','Lebih dari Rp 50 miliar / tahun'],
-                    'show'=>0
-                ]);
-            ?>
-
-            <div class="wrap hiddens">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
-                        <h1 class="text-xl font-bold">A19. Berapakah jumlah pekerja Bapak/Ibu yang <u>bekerja tetap/penuh waktu</u> (termasuk pemilik/anda sendiri)?</h1>
-                        <small>(tidak bisa dikosongkan, jika 0 isi dengan angka 0)</small>
-                        <ul class="my-4">
-                            <li class="my-2 ml-6 list-disc">
-                                <div>
-                                    <span class="inline-block w-14">Wanita</span>
-                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" id="tetap-p" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
-                                    <span>orang</span>
-                                </div>
-                            </li>
-                            <li class="my-2 ml-6 list-disc">
-                                <div>
-                                    <span class="inline-block w-14">Pria</span>
-                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" id="tetap-l" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
-                                    <span>orang</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
-                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>                        
-                        <h1 class="text-xl font-bold">A20. Berapakah jumlah pekerja Bapak/Ibu yang bekerja lepas/paruh waktu?</h1>
-                        <small>(tidak bisa dikosongkan, jika 0 isi dengan angka 0)</small>
-                        <ul class="my-4">
-                            <li class="my-2 ml-6 list-disc">
-                                <div>
-                                    <span class="inline-block w-14">Wanita</span>
-                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" id="paruh-p" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
-                                    <span>orang</span>
-                                </div>
-                            </li>
-                            <li class="my-2 ml-6 list-disc">
-                                <div>
-                                    <span class="inline-block w-14">Pria</span>
-                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" id="paruh-l" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
-                                    <span>orang</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
-                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrap hidden">
-                <div class="min-h-screen min-w-full pt-24 md:pt-36">
-                    
-                    <div class="content p-6 text-t-blue">
-                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
-                        <h1 class="text-xl font-bold">A21. Berapakah jumlah pekerja Bapak/Ibu yang memiliki disabilitas?</h1>
-                        <small>(tidak bisa dikosongkan, jika 0 isi dengan angka 0)</small>
-                        <ul class="my-4">
-                            <li class="my-2 ml-6 list-disc">
-                                <div>
-                                    <span class="inline-block w-14">Wanita</span>
-                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" id="dis-p" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text__dis" data-id="<?php echo $inc ?>">
-                                    <span>orang</span>
-                                </div>
-                            </li>
-                            <li class="my-2 ml-6 list-disc">
-                                <div>
-                                    <span class="inline-block w-14">Pria</span>
-                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" id="dis-l" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text__dis" data-id="<?php echo $inc ?>">
-                                    <span>orang</span>
-                                </div>
-                            </li>
-                        </ul>
-                        <small id="dis-error" class="text-t-red"></small>
-                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
-                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
-                    </div>
-                </div>
-            </div>
-
-
 
             <?php 
                 $this->load->view('template/checkbox',[
@@ -475,6 +328,142 @@
                     'show'=>0
                 ]);
             ?>
+
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'A. Profil Usaha',
+                    'subtitle'=>'A11. Apa status usaha saat ini?',
+                    'inc'=>++$inc,
+                    'question'=>['Beroperasi','Beroperasi sebagian','Tutup sementara','Tutup permanen'],
+                    'show'=>0
+                ]);
+            ?>
+
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'A. Profil Usaha',
+                    'subtitle'=>'A12. Apa alasan utama dari penutupan usaha saat ini?',
+                    'inc'=>++$inc,
+                    'question'=>['Peraturan Pemerintah','Permintaan yang menurun drastis','Ketidakcukupan uang untuk membiayai produksi','Kesulitan mengakses bahan baku','Tidak bisa mengakses pendanaan dari luar untuk membiayai produksi','Perlu mengurus rumah tangga','Lainnya'],
+                    'show'=>0
+                ]);
+            ?>
+
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'A. Profil Usaha',
+                    'subtitle'=>'A13. Sudah berapa lama usaha Bapak/Ibu tutup sementara?',
+                    'inc'=>++$inc,
+                    'question'=>['Kurang dari 2 minggu','Antara 2-4 minggu','Antara 1-2 bulan','Antara 3-6 bulan','Lebih dari 6 bulan'],
+                    'show'=>0
+                ]);
+            ?>
+
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'A. Profil Usaha',
+                    'subtitle'=>'A14. Kapan rencana usaha dibuka kembali?',
+                    'inc'=>++$inc,
+                    'question'=>['Dalam kurang dari 2 minggu','Dalam 2-4 minggu','Dalam 1-2 bulan dari sekarang','Dalam 3-6 bulan dari sekarang','Lebih dari 6 bulan dari sekarang','Tidak tahu'],
+                    'show'=>0
+                ]);
+            ?>
+
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'A. Profil Usaha',
+                    'subtitle'=>'A15. Berapakah penjualan atau omzet usaha Bapak/Ibu selama satu tahun ke belakang (Juni 2020 - Juni 2021)?',
+                    'inc'=>++$inc,
+                    'question'=>['Kurang dari Rp 100 juta / tahun ATAU setara kurang dari Rp 300 ribu / hari ATAU Rp 8,3 juta / bulan','Antara dari Rp 100 juta / tahun s.d Rp 300 juta / tahun ATAU setara antara Rp 8,3 juta / bulan s.d Rp 25 juta / bulan','Antara dari Rp 300 juta / tahun s.d Rp 1 miliar / tahun ATAU setara antara Rp 25 juta / bulan s.d Rp 83,3 juta / bulan','Antara Rp 1 s.d 2,5 miliar / tahun','Antara Rp 2,5 s.d 4,8 miliar / tahun','Antara Rp 4,8 miliar / tahun s.d Rp 50 miliar / tahun','Lebih dari Rp 50 miliar / tahun'],
+                    'show'=>0
+                ]);
+            ?>
+
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
+                        <h1 class="text-xl font-bold">A16. Berapakah jumlah pekerja Bapak/Ibu yang <u>bekerja tetap/penuh waktu</u> (termasuk pemilik/anda sendiri)?</h1>
+                        <small>(tidak bisa dikosongkan, jika 0 isi dengan angka 0)</small>
+                        <ul class="my-4">
+                            <li class="my-2 ml-6 list-disc">
+                                <div>
+                                    <span class="inline-block w-14">Wanita</span>
+                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                            </li>
+                            <li class="my-2 ml-6 list-disc">
+                                <div>
+                                    <span class="inline-block w-14">Pria</span>
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>                        
+                        <h1 class="text-xl font-bold">A17. Berapakah jumlah pekerja Bapak/Ibu yang bekerja lepas/paruh waktu?</h1>
+                        <small>(tidak bisa dikosongkan, jika 0 isi dengan angka 0)</small>
+                        <ul class="my-4">
+                            <li class="my-2 ml-6 list-disc">
+                                <div>
+                                    <span class="inline-block w-14">Wanita</span>
+                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                            </li>
+                            <li class="my-2 ml-6 list-disc">
+                                <div>
+                                    <span class="inline-block w-14">Pria</span>
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
+                        <h1 class="text-xl font-bold">A18. Berapakah jumlah pekerja Bapak/Ibu yang memiliki disabilitas?</h1>
+                        <small>(tidak bisa dikosongkan, jika 0 isi dengan angka 0)</small>
+                        <ul class="my-4">
+                            <li class="my-2 ml-6 list-disc">
+                                <div>
+                                    <span class="inline-block w-14">Wanita</span>
+                                    <input type="number" min="0" name="q[<?php echo ++$inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                            </li>
+                            <li class="my-2 ml-6 list-disc">
+                                <div>
+                                    <span class="inline-block w-14">Pria</span>
+                                    <input type="number" min="0" name="q[<?php echo $inc ?>][]" id="" placeholder="..." class="w-20 m-1 border-2 border-t-blue px-2 py-1 rounded-lg input__text" data-id="<?php echo $inc ?>">
+                                    <span>orang</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
 
             <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">

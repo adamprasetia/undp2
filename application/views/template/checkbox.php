@@ -14,7 +14,7 @@
                         </label>
                         <?php if($row=='Lainnya'): ?>
                             <div class="flex-none">
-                                <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="Silakan diisi..." class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
+                                <input type="text" name="q[<?php echo $inc ?>][]" id="" placeholder="<?php echo !empty($placeholder)?$placeholder:'Silakan diisi...'?>" class="border-2 border-t-blue rounded-lg p-2 ml-6 my-2 w-10/12 lg:w-11/12 input__text input__others" data-id="<?php echo $inc ?>">
                             </div>
                         <?php endif ?>
                     </div>
