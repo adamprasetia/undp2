@@ -204,7 +204,7 @@
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().next().next().fadeIn(500);            
         }else{
-            if(id==59){
+            if(id==60){
                 save_data();
             }
             $(this).parent().parent().parent().fadeOut(500);

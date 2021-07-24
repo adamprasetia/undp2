@@ -1107,7 +1107,7 @@
                         <h1 class="text-xl font-bold">D6. Secara umum, menurut Bapak/Ibu, berapa bulan usaha Bapak/Ibu diperkirakan dapat bertahan?</h1>
                         <div class="my-4">
                             <input type="number" min="0" name="q[<?php echo ++$inc ?>]" placeholder="..." class="border-2 border-t-blue rounded-lg w-20 px-2 py-1 mr-1 input__text" data-id="<?php echo $inc ?>">
-                            bulan
+                            Bulan
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
                         <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
