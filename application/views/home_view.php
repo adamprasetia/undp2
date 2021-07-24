@@ -12,7 +12,7 @@
     <link rel="manifest" href="<?php echo base_url('assets') ?>/images/favicon/site.webmanifest">
     
     <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/tailwind.css?v=4">
-    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=4">
+    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=5">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -621,7 +621,7 @@
             ?>
             <?php 
                 $this->load->view('template/checkbox',[
-                    'class'=>'grid grid-cols-2',
+                    'class'=>'grid grid-cols-2 grid__fixed',
                     'title'=>'B. Digitalisasi Usaha Mikro, Kecil, dan Menengah',
                     'subtitle'=>'B4. Platform online apa saja yang Bapak/Ibu gunakan untuk memasarkan produk?',
                     'inc'=>++$inc,
