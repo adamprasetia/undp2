@@ -167,7 +167,16 @@
         }else if (id==35 && $('.input__b3_2_ver').is(':checked')==false) {
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().fadeIn(500);            
+        }else if (id==37 && ($('input[name="q[37]"]:checked').val() == "Ya, dari selain pemerintah (keluarga, tetangga, teman, asosiasi usaha)" || $('input[name="q[37]"]:checked').val() == "Tidak sama sekali")) {
+            $('input[name="q[38][]"]').prop('checked',false);
+            $('.btn__next[data-id="38"]').attr("disabled", true);
+            $('.btn__next[data-id="38"]').addClass("disabled")
+            $('input[name="q[39][]"]').prop('checked',false);
+            $('.btn__next[data-id="39"]').attr("disabled", true);
+            $('.btn__next[data-id="39"]').addClass("disabled")
 
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().next().next().next().fadeIn(500);            
 
         // }else if (id==23 && $('input[name="q[23]"]:checked').val() == "Tidak") {
         //     $('input[name="q[24]"]').val('');
@@ -225,6 +234,13 @@
             $(this).parent().parent().parent().prev().prev().prev().prev().find('.btn__next').removeClass("disabled");
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().prev().prev().prev().prev().fadeIn(500);
+        }else if (id=='d' && ($('input[name="q[37]"]:checked').val() == "Ya, dari selain pemerintah (keluarga, tetangga, teman, asosiasi usaha)" || $('input[name="q[37]"]:checked').val() == "Tidak sama sekali")) {
+            $(this).parent().parent().parent().prev().prev().prev().find('.btn__next').removeAttr("disabled", true);
+            $(this).parent().parent().parent().prev().prev().prev().find('.btn__next').removeClass("disabled");
+
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().prev().prev().prev().fadeIn(500);
+            
         }else{
             $(this).parent().parent().parent().prev().find('.btn__next').removeAttr("disabled", true);
             $(this).parent().parent().parent().prev().find('.btn__next').removeClass("disabled");
@@ -275,6 +291,7 @@
         lock_checkbox(id, $(this),'Tidak ada kesulitan')
         lock_checkbox(id, $(this),'Tidak tertarik')
         lock_checkbox(id, $(this),'Tidak ada yang memberi tantangan')
+        lock_checkbox(id, $(this),'Tidak ada kendala')
 
         if($(this).hasClass('last')){
             if($(this).prop('checked') == false){

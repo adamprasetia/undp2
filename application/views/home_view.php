@@ -968,9 +968,249 @@
                         'Tidak menerima',
                     ],
                     'class'=>'',
-                    'show'=>1
+                    'show'=>0
                 ]);
             ?>
+
+            <!-- Part D -->
+            <div class="wrap hidden part__divider">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    <div class="content p-6 text-t-blue text-center font-bold">
+                        <p class="text-xl md:text-2xl">Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali</p>
+                        <br>
+                        <p class="text-base md:text-xl">Bagian ini menanyakan kondisi usaha Bapak/Ibu selama periode PPKM Darurat Jawa-Bali yang dimulai pada tanggal 3 Juli 2021 dan diakhiri pada tanggal 25 Juli 2021.</p>
+                        
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="d">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+
+            <?php 
+                $this->load->view('template/dropdown',[
+                    'title'=>'D. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'D1. Menurut Bapak/Ibu, apakah terjadi penurunan kondisi usaha selama periode PPKM Darurat Jawa-Bali, jika dibandingkan dengan bulan Juni 2021? Jika ya, seberapa besar penurunan yang terjadi?',
+                    'inc'=>++$inc,
+                    'question_attr'=>'class="font-bold text-t-red"',
+                    'question'=>[
+                        'Permintaan',
+                        'Pendapatan',
+                        'Nilai Aset',
+                        'Keuntungan',
+                    ],
+                    'option'=>[
+                        'Tidak menurun',
+                        'Menurun kurang dari 20%',
+                        'Menurun 20-50%',
+                        'Menurun lebih dari 50%'
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'D. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'D2. Selama periode PPKM Darurat Jawa-Bali, pilih tantangan operasional yang paling sulit dihadapi oleh usaha Bapak/Ibu sebagai akibat dari pandemi:',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Kesulitan memperoleh akses bahan baku dari dalam negeri',
+                        'Kesulitan memperolah akses bahan baku dari luar negeri',
+                        'Penurunan tingkat penurunan permintaan produk usaha dari dalam negeri',
+                        'Penurunan tingkat penurunan permintaan produk usaha dari luar negeri',
+                        'Kesulitan menentukan harga produk',
+                        'Kenaikan harga bahan baku',
+                        'Kesulitan mendistribusikan produk usaha',
+                        'Kesulitan memasarkan/mempromosikan produk usaha',
+                        'Kesulitan mendapat akses pendanaan usaha',
+                        'Tidak ada tantangan usaha',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'D. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'D3. Selama periode PPKM Darurat Jawa-Bali, pilih tantangan keuangan yang paling sulit dihadapi oleh usaha Bapak/Ibu sebagai akibat dari pandemi:',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Gaji pekerja, asuransi, BPJS',
+                        'Pengeluaran tetap (contoh: biaya sewa)',
+                        'Pembayaran utang usaha',
+                        'Pengeluaran lainnya',
+                        'Tidak ada keringanan pembayaran kredit dari pemasok',
+                        'Tidak ada tantangan keuangan',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'D. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'D4. Selama periode PPKM Darurat Jawa-Bali, apa yang paling membantu usaha Bapak/Ibu agar tetap bertahan atau menjadi lebih baik?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Pemasaran melalui daring/online',
+                        'Bantuan dari pemerintah',
+                        'Bantuan dari keluarga/rekan/teman',
+                        'Bantuan dari komunitas usaha',
+                        'Peningkatan jumlah permintaan',
+                        'Akses bahan baku yang lebih baik',
+                        'Tidak ada yang membantu',
+                        'Lainnya'
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'D. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'D5. Bantuan apa yang dianggap paling dibutuhkan oleh usaha Bapak/Ibu?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Penangguhan pajak',
+                        'Pemberian modal kerja/bantuan likuiditas dari pemerintah',
+                        'Bantuan subsidi bunga modal kerja',
+                        'Subsidi biaya listrik',
+                        'Pelatihan usaha melalui webinar/tatap muka terkait e-commerce and pemasaran online',
+                        'Akses terhadap barang input domestik/barang impor',
+                        'Kemudahan akses ke pasar',
+                        'Kemudahan pendistribusian barang'
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">D. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali</h2>
+                        <h1 class="text-xl font-bold">D6. Secara umum, menurut Bapak/Ibu, berapa bulan usaha Bapak/Ibu diperkirakan dapat bertahan?</h1>
+                        <div class="my-4">
+                            <input type="number" min="0" name="q[<?php echo ++$inc ?>]" placeholder="..." class="border-2 border-t-blue rounded-lg w-20 px-2 py-1 mr-1 input__text" data-id="<?php echo $inc ?>">
+                            bulan
+                        </div>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'D. Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali',
+                    'subtitle'=>'D7. Sejak mulainya pandemi COVID-19 (Maret 2020), apakah Bapak/Ibu/pekerja usaha ada yang merasa tidak Bahagia atau tertekan sehingga mengganggu kegiatan sehari-hari?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Ya',
+                        'Tidak',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+
+            <!-- Part E -->
+            <div class="wrap hidden part__divider">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">
+                    <div class="content p-6 text-t-blue text-center font-bold">
+                        <p class="text-xl md:text-2xl">Ekspor</p>
+                        <br>
+                        <p class="text-base md:text-xl">Bagian ini menanyakan kondisi ekspor dari usaha Bapak/Ibu.</p>
+                        
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next">SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="e">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
+
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'E. Ekspor',
+                    'subtitle'=>'E1. Apakah usaha Bapak/Ibu sudah melakukan ekspor?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Sudah',
+                        'Belum',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'E. Ekspor',
+                    'subtitle'=>'E2. Apakah Bapak/Ibu berencana melakukan ekspor?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Ya, dalam waktu dekat (saat pandemi COVID-19)',
+                        'Ya, setelah pandemi COVID-19',
+                        'Tidak',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'class'=>'',
+                    'title'=>'E. Ekspor',
+                    'subtitle'=>'E3. Kendala apa saja yang Bapak/Ibu hadapi dalam persiapan ekspor?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Kendala bahan baku',
+                        'Kendala produksi',
+                        'Kendala kualitas',
+                        'Kendala sertifikasi',
+                        'Kendala informasi',
+                        'Kendala distribusi',
+                        'Kendala permodalan',
+                        'Tidak ada kendala',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+
+
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'class'=>'',
+                    'title'=>'E. Ekspor',
+                    'subtitle'=>'E4. Dimana lokasi negara yang menjadi tujuan ekspor Bapak/Ibu?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Asia',
+                        'Timur Tengah',
+                        'Australia',
+                        'Eropa',
+                        'Amerika',
+                        'Amerika Latin',
+                        'Afrika',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+            <?php 
+                $this->load->view('template/radio',[
+                    'title'=>'E. Ekspor',
+                    'subtitle'=>'E5. Kendala apa saja yang Bapak/Ibu hadapi dalam melakukan ekspor?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Kendala bahan baku',
+                        'Kendala produksi',
+                        'Kendala kualitas',
+                        'Kendala sertifikasi',
+                        'Kendala informasi',
+                        'Kendala distribusi',
+                        'Kendala permodalan',
+                        'Tidak ada kendala',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+
+
+
+
+
+
+
+
+
 
 
 
