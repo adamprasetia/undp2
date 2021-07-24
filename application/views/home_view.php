@@ -136,19 +136,39 @@
                 </div>
             </div>
             
-            <?php 
-                $this->load->view('template/radio',[
-                    'title'=>'A. Profil Usaha',
-                    'subtitle'=>'A4. Jenis Kelamin',
-                    'inc'=>++$inc,
-                    'question'=>[
-                        'Pria',
-                        'Wanita',
-                        'Lainnya',
-                    ],
-                    'show'=>0
-                ]);
-            ?>
+            <div class="wrap hidden">
+                <div class="min-h-screen min-w-full pt-24 md:pt-36">                    
+                    <div class="content p-6 text-t-blue">
+                        <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
+                        <h1 class="text-xl font-bold">A4. Jenis Kelamin</h1>
+                        <div>
+                            <div class="my-4">
+                                <label class="flex items-center input__wrap">
+                                    <input type="radio" value="Pria" name="q[<?php echo ++$inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
+                                    <span class="input__custom"></span>
+                                    Pria
+                                </label>
+                            </div>
+                            <div class="my-4">
+                                <label class="flex items-center input__wrap">
+                                    <input type="radio" value="Wanita" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
+                                    <span class="input__custom"></span>
+                                    Wanita
+                                </label>
+                            </div>
+                            <div class="my-4">
+                                <label class="flex items-center input__wrap">
+                                    <input type="radio" value="Lainnya" name="q[<?php echo $inc ?>]" class="mr-3 hidden radio__pick" data-id="<?php echo $inc ?>">
+                                    <span class="input__custom"></span>
+                                    Lainnya
+                                </label>
+                            </div>
+                        </div>
+                        <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
+                        <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
+                    </div>
+                </div>
+            </div>
 
             <div class="wrap hidden">
                 <div class="min-h-screen min-w-full pt-24 md:pt-36">
@@ -163,6 +183,7 @@
                                     <option value="<?php echo $i ?>"><?php echo $i ?></option>
                                 <?php } ?>
                             </select>
+                            Tahun
                         </div>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form disabled" data-id="<?php echo $inc ?>" disabled>SELANJUTNYA</button>
                         <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
@@ -321,7 +342,7 @@
                         'Jasa lainnya',
                         'Lainnya'
                     ],
-                    'placeholder'=>'sebutkan jenis produk usaha Bapak/Ibu',
+                    'placeholder'=>'sebutkan jenis produk usaha',
                     'show'=>0
                 ]);
             ?>
@@ -1187,7 +1208,23 @@
             <?php 
                 $this->load->view('template/radio',[
                     'title'=>'E. Ekspor',
-                    'subtitle'=>'E5. Kendala apa saja yang Bapak/Ibu hadapi dalam melakukan ekspor?',
+                    'subtitle'=>'E5. Bagaimana dampak pandemi COVID-19 terhadap permintaan ekspor?',
+                    'inc'=>++$inc,
+                    'question'=>[
+                        'Menurun',
+                        'Tetap',
+                        'Meningkat',
+                        'Tidak ada permintaan sama sekali',
+                    ],
+                    'show'=>0
+                ]);
+            ?>
+
+            <?php 
+                $this->load->view('template/checkbox',[
+                    'class'=>'',
+                    'title'=>'E. Ekspor',
+                    'subtitle'=>'E6. Kendala apa saja yang Bapak/Ibu hadapi dalam melakukan ekspor?',
                     'inc'=>++$inc,
                     'question'=>[
                         'Kendala bahan baku',
