@@ -12,7 +12,7 @@
     <link rel="manifest" href="<?php echo base_url('assets') ?>/images/favicon/site.webmanifest">
     
     <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/tailwind.css?v=4">
-    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=5">
+    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=6">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>

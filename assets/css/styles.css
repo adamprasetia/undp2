@@ -84,7 +84,7 @@ img {
   bottom: 0;
   z-index: -1;
   background-color: #fff;
-  background-image: url(../images/bg-white.jpg);
+  background-image: url(../images/bg-white.jpg?v=4);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -94,18 +94,18 @@ img {
 
 @media (min-width: 768px) {
   .bg {
-    background-image: url(../images/bg-white-d.jpg);
+    background-image: url(../images/bg-white-d.jpg?v=4);
   }
 }
 
 .bg.blue {
   background-color: #0368B1;
-  background-image: url(../images/bg-blue.jpg);
+  background-image: url(../images/bg-blue.jpg?v=4);
 }
 
 @media (min-width: 768px) {
   .bg.blue {
-    background-image: url(../images/bg-blue-d.jpg);
+    background-image: url(../images/bg-blue-d.jpg?v=4);
   }
 }
 
