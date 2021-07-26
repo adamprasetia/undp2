@@ -53,6 +53,99 @@
     <th>A22_c</th>
     <th>A22_d</th>
     <th>A22_e</th>
+    <th>A23</th>
+    <th>B1</th>
+    <th>B2_a</th>
+    <th>B2_b</th>
+    <th>B2_c</th>
+    <th>B2_d</th>
+    <th>B2_no</th>
+    <th>B3</th>
+    <?php for ($j='a'; $j <= 'l'; $j++) { ?>            
+        <th>B4_<?php echo $j?></th>
+    <?php } ?>            
+    <th>B4_oth</th>
+    <?php for ($j='a'; $j <= 'e'; $j++) { ?>            
+        <th>B5_<?php echo $j?></th>
+    <?php } ?>            
+    <th>B5_no</th>
+    <th>C1_f</th>
+    <th>C1_f_dis</th>
+    <th>C1_m</th>
+    <th>C1_m_dis</th>
+    <?php for ($j='a'; $j <= 'p'; $j++) { ?>            
+        <th>C2_<?php echo $j?></th>
+    <?php } ?>            
+    <th>C2_no</th>
+    <?php for ($j='a'; $j <= 'p'; $j++) { ?>            
+        <th>C3_<?php echo $j?></th>
+    <?php } ?>            
+    <th>C3_no</th>
+    <?php for ($j='a'; $j <= 'd'; $j++) { ?>            
+        <th>C4_<?php echo $j?></th>
+    <?php } ?>            
+    <?php for ($j='a'; $j <= 'f'; $j++) { ?>            
+        <th>C5_a_<?php echo $j?></th>
+    <?php } ?>    
+    <th>C5_a_no</th>        
+    <?php for ($j='a'; $j <= 'f'; $j++) { ?>            
+        <th>C5_b_<?php echo $j?></th>
+    <?php } ?>    
+    <th>C5_b_no</th>        
+    <?php for ($j='a'; $j <= 'i'; $j++) { ?>            
+        <th>C5_c_<?php echo $j?></th>
+    <?php } ?>    
+    <th>C5_c_no</th>        
+    <th>C6</th>        
+    <th>C7</th>        
+    <?php for ($j='a'; $j <= 'g'; $j++) { ?>            
+        <th>C8_<?php echo $j?></th>
+    <?php } ?>    
+    <th>C8_no</th>        
+    <?php for ($j='a'; $j <= 'd'; $j++) { ?>            
+        <th>C9_<?php echo $j?></th>
+    <?php } ?>    
+    <th>C9_no</th> 
+    <?php for ($j='a'; $j <= 'd'; $j++) { ?>            
+        <th>D1_<?php echo $j?></th>
+    <?php } ?>    
+    <?php for ($j=2; $j <= 7; $j++) { ?>            
+        <th>D<?php echo $j?></th>
+    <?php } ?>    
+    <th>E1</th>
+    <th>E2</th>
+    <?php for ($j='a'; $j <= 'g'; $j++) { ?>            
+        <th>E3_<?php echo $j?></th>
+    <?php } ?>    
+    <th>E3_no</th> 
+    <?php for ($j='a'; $j <= 'g'; $j++) { ?>            
+        <th>E4_<?php echo $j?></th>
+    <?php } ?>    
+    <th>E5</th> 
+    <?php for ($j='a'; $j <= 'g'; $j++) { ?>            
+        <th>E6_<?php echo $j?></th>
+    <?php } ?>    
+    <th>E6_no</th> 
+    <?php for ($j='a'; $j <= 'j'; $j++) { ?>            
+        <th>F1_<?php echo $j?></th>
+    <?php } ?>    
+    <th>F1_no</th> 
+    <?php for ($j='a'; $j <= 'd'; $j++) { ?>            
+        <th>F2_<?php echo $j?></th>
+    <?php } ?>    
+    <th>F3</th> 
+    <th>F4</th> 
+    <?php for ($j='a'; $j <= 'g'; $j++) { ?>            
+        <th>G1_<?php echo $j?></th>
+    <?php } ?>    
+    <th>G1_no</th> 
+    <?php for ($j='a'; $j <= 'c'; $j++) { ?>            
+        <th>G2_<?php echo $j?></th>
+    <?php } ?> 
+    <th>G3</th>    
+    <th>G4</th>    
+    <th>Source</th>    
+        
 </tr>
 </thead>
 <tbody>
@@ -79,7 +172,7 @@
         <td><?php echo $answer[12][0] ?></td>
         <td><?php echo @$answer[12][1] ?></td>
         <td><?php echo $answer[13][0] ?></td>
-        <td><?php echo $answer[13][1] ?></td>
+        <td><?php echo @$answer[13][1] ?></td>
         <?php for ($j=1; $j <= 5; $j++) { ?>            
             <td><?php echo !empty(@$answer[14][$j][0])?1:0 ?></td>
         <?php } ?>
@@ -103,6 +196,82 @@
         <td><?php echo substr(@$answer[24][3][0],0,1) ?></td>
         <td><?php echo substr(@$answer[24][4][0],0,1) ?></td>
         <td><?php echo substr(@$answer[24][5][0],0,1) ?></td>
+        <td><?php echo @$answer[25] ?></td>
+        <td><?php echo @$answer[26] ?></td>
+        <?php for ($j=1; $j <= 5; $j++) { ?>            
+            <td><?php echo !empty(@$answer[27][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <td><?php echo @$answer[28] ?></td>
+        <?php for ($j=1; $j <= 12; $j++) { ?>            
+            <td><?php echo !empty(@$answer[29][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <td><?php echo @$answer[29][14] ?></td>
+        <?php for ($j=1; $j <= 6; $j++) { ?>            
+            <td><?php echo !empty(@$answer[30][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <td><?php echo @$answer[31][0] ?></td>
+        <td><?php echo @$answer[31][1] ?></td>
+        <td><?php echo @$answer[31][2] ?></td>
+        <td><?php echo @$answer[31][3] ?></td>
+        <?php for ($j=1; $j <= 17; $j++) { ?>            
+            <td><?php echo !empty(@$answer[32][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <?php for ($j=1; $j <= 17; $j++) { ?>            
+            <td><?php echo !empty(@$answer[33][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <?php for ($j=0; $j <= 3; $j++) { ?>            
+            <td><?php echo @$answer[34][$j] ?></td>
+        <?php } ?>
+        <?php for ($j=1; $j <= 7; $j++) { ?>            
+            <td><?php echo !empty(@$answer[35][0][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <?php for ($j=1; $j <= 7; $j++) { ?>            
+            <td><?php echo !empty(@$answer[35][1][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <?php for ($j=1; $j <= 10; $j++) { ?>            
+            <td><?php echo !empty(@$answer[35][2][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <td><?php echo @$answer[36] ?></td>
+        <td><?php echo @$answer[37] ?></td>
+        <?php for ($j=1; $j <= 8; $j++) { ?>            
+            <td><?php echo !empty(@$answer[38][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <?php for ($j=1; $j <= 5; $j++) { ?>            
+            <td><?php echo !empty(@$answer[39][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <?php for ($j=0; $j <= 3; $j++) { ?>            
+            <td><?php echo @$answer[40][$j] ?></td>
+        <?php } ?>
+        <?php for ($j=41; $j <= 48; $j++) { ?>            
+            <td><?php echo @$answer[$j] ?></td>
+        <?php } ?>
+        <?php for ($j=1; $j <= 8; $j++) { ?>            
+            <td><?php echo !empty(@$answer[49][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <?php for ($j=1; $j <= 7; $j++) { ?>            
+            <td><?php echo !empty(@$answer[50][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <td><?php echo @$answer[51] ?></td>
+        <?php for ($j=1; $j <= 8; $j++) { ?>            
+            <td><?php echo !empty(@$answer[52][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <?php for ($j=1; $j <= 11; $j++) { ?>            
+            <td><?php echo !empty(@$answer[53][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <?php for ($j=0; $j <= 3; $j++) { ?>            
+            <td><?php echo @$answer[54][$j] ?></td>
+        <?php } ?>
+        <td><?php echo @$answer[55] ?></td>
+        <td><?php echo @$answer[56] ?></td>
+        <?php for ($j=1; $j <= 8; $j++) { ?>            
+            <td><?php echo !empty(@$answer[57][$j][0])?1:0 ?></td>
+        <?php } ?>
+        <?php for ($j=0; $j <= 2; $j++) { ?>            
+            <td><?php echo @$answer[58][$j] ?></td>
+        <?php } ?>
+        <td><?php echo @$answer[59] ?></td>
+        <td><?php echo @$answer[60] ?></td>
+        <td><?php echo @$row->source ?></td>
     </tr>
 <?php } ?>
 </tbody>

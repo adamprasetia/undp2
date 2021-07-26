@@ -1077,7 +1077,6 @@
                         'Peningkatan jumlah permintaan',
                         'Akses bahan baku yang lebih baik',
                         'Tidak ada yang membantu',
-                        'Lainnya'
                     ],
                     'show'=>0
                 ]);
