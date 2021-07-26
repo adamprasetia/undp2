@@ -493,7 +493,7 @@
                         <small>Urutkan pilihan jawaban dari atas ke bawah, dimana angka 1 menandakan prioritas paling tinggi dan angka 5 menandakan prioritas paling rendah.</small>
                         <div id="sort-a20">
                             <div class="my-4 flex items-center font-bold drag__a20" data-position="1">
-                                <select name="q[<?php echo ++$inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
+                                <select name="q[<?php echo ++$inc ?>][1][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
                                     <option value="" selected hidden></option>
                                     <option value="1-Pekerja Wanita">1</option>
                                     <option value="2-Pekerja Wanita">2</option>
@@ -504,7 +504,7 @@
                                 Pekerja Wanita
                             </div>
                             <div class="my-4 flex items-center font-bold drag__a20" data-position="2">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
+                                <select name="q[<?php echo $inc ?>][2][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
                                     <option value="" selected hidden></option>
                                     <option value="1-Pekerja Pria">1</option>
                                     <option value="2-Pekerja Pria">2</option>
@@ -515,7 +515,7 @@
                                 Pekerja Pria
                             </div>
                             <div class="my-4 flex items-center font-bold drag__a20" data-position="3">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
+                                <select name="q[<?php echo $inc ?>][3][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
                                     <option value="" selected hidden></option>
                                     <option value="1-Pekerja dengan produktivitas terendah">1</option>
                                     <option value="2-Pekerja dengan produktivitas terendah">2</option>
@@ -526,7 +526,7 @@
                                 Pekerja dengan produktivitas terendah
                             </div>
                             <div class="my-4 flex items-center font-bold drag__a20" data-position="4">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
+                                <select name="q[<?php echo $inc ?>][4][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
                                     <option value="" selected hidden></option>
                                     <option value="1-Pekerja yang tidak memiliki tanggungan">1</option>
                                     <option value="2-Pekerja yang tidak memiliki tanggungan">2</option>
@@ -537,7 +537,7 @@
                                 Pekerja yang tidak memiliki tanggungan
                             </div>
                             <div class="my-4 flex items-center font-bold drag__a20" data-position="5">
-                                <select name="q[<?php echo $inc ?>][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
+                                <select name="q[<?php echo $inc ?>][5][]" class="h-9 px-2 py-1 mr-2 border-2 border-t-blue rounded-lg input__dropdown input__a20">
                                     <option value="" selected hidden></option>
                                     <option value="1-Pekerja yang tidak memiliki tanggungan">1</option>
                                     <option value="2-Pekerja yang tidak memiliki tanggungan">2</option>

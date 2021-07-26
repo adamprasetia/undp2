@@ -37,6 +37,22 @@
         <th>A13_<?php echo $j?></th>
     <?php } ?>            
     <th>A13_oth</th>
+    <th>A14</th>
+    <th>A15</th>
+    <th>A16</th>
+    <th>A17</th>
+    <th>A18</th>
+    <th>A19_f</th>
+    <th>A19_m</th>
+    <th>A20_f</th>
+    <th>A20_m</th>
+    <th>A21_f</th>
+    <th>A21_m</th>
+    <th>A22_a</th>
+    <th>A22_b</th>
+    <th>A22_c</th>
+    <th>A22_d</th>
+    <th>A22_e</th>
 </tr>
 </thead>
 <tbody>
@@ -71,6 +87,22 @@
             <td><?php echo !empty(@$answer[15][$j][0])?1:0 ?></td>
         <?php } ?>
         <td><?php echo @$answer[15][15] ?></td>
+        <td><?php echo @$answer[16] ?></td>
+        <td><?php echo @$answer[17] ?></td>
+        <td><?php echo @$answer[18] ?></td>
+        <td><?php echo @$answer[19] ?></td>
+        <td><?php echo @$answer[20] ?></td>
+        <td><?php echo @$answer[21][0] ?></td>
+        <td><?php echo @$answer[21][1] ?></td>
+        <td><?php echo @$answer[22][0] ?></td>
+        <td><?php echo @$answer[22][1] ?></td>
+        <td><?php echo @$answer[23][0] ?></td>
+        <td><?php echo @$answer[23][1] ?></td>
+        <td><?php echo substr(@$answer[24][1][0],0,1) ?></td>
+        <td><?php echo substr(@$answer[24][2][0],0,1) ?></td>
+        <td><?php echo substr(@$answer[24][3][0],0,1) ?></td>
+        <td><?php echo substr(@$answer[24][4][0],0,1) ?></td>
+        <td><?php echo substr(@$answer[24][5][0],0,1) ?></td>
     </tr>
 <?php } ?>
 </tbody>
