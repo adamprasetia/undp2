@@ -8,7 +8,7 @@
                 <?php $i=1;foreach ($question as $row) { ?>                                
                     <div class="my-2 multiple__input">
                         <label class="flex items-center input__wrap">
-                            <input value="<?php echo $row ?>" type="checkbox" name="q[<?php echo $inc ?>][]" class="mr-3 hidden <?php echo $row=='Lainnya'?'last':''?>" data-id="<?php echo $inc ?>">
+                            <input value="<?php echo $row ?>" type="checkbox" name="q[<?php echo $inc ?>][<?php echo $i ?>][]" class="mr-3 hidden <?php echo $row=='Lainnya'?'last':''?>" data-id="<?php echo $inc ?>">
                             <span class="input__custom"></span>
                             <?php echo $row ?>
                         </label>

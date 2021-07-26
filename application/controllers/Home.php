@@ -24,6 +24,7 @@ class Home extends CI_Controller {
 	{		
 		$db = $this->load->database('default', true);
 		$answer = $this->input->post('q', true);
+		$source = $this->input->post('source', true);
 		// echo json_encode($answer);exit;
 		if(!is_array($answer)){
 			echo json_encode(['status'=>false,'message'=>'question wrong format']);
@@ -31,6 +32,7 @@ class Home extends CI_Controller {
 		}
 		$result = $db->insert('participant', [
 			'answer'=>json_encode($answer),
+			'source'=>$source,
 			'created_at'=>date('Y-m-d H:i:s')
 		]);
 		if($result){
@@ -42,18 +44,19 @@ class Home extends CI_Controller {
 	}
 	public function export()
     {       
-        if ($_SERVER['PHP_AUTH_USER']!='admin' || $_SERVER['PHP_AUTH_PW']!='#undp#') {
-            header('WWW-Authenticate: Basic realm="UNDP"');
-            header('HTTP/1.0 401 Unauthorized');
-            exit;
-        }
+        // if ($_SERVER['PHP_AUTH_USER']!='admin' || $_SERVER['PHP_AUTH_PW']!='#undp#') {
+        //     header('WWW-Authenticate: Basic realm="UNDP"');
+        //     header('HTTP/1.0 401 Unauthorized');
+        //     exit;
+        // }
 
 		$db = $this->load->database('default', true);
 
-        header("Content-type: application/vnd-ms-excel"); 
-        header("Content-Disposition: attachment; filename=undp-".date('YmdHis').".xls");
+        // header("Content-type: application/vnd-ms-excel"); 
+        // header("Content-Disposition: attachment; filename=undp-".date('YmdHis').".xls");
 
 		$result = $db->get('participant')->result();
-		$this->load->view('export_view', ['result'=>$result]);
+		// $this->load->view('export_view', ['result'=>$result]);
+		$this->load->view('export2_view', ['result'=>$result]);
     }
 }
