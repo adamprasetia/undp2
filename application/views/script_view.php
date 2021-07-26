@@ -165,6 +165,9 @@
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().next().next().fadeIn(500);            
         }else if (id==35 && $('.input__b3_2_ver').is(':checked')==false) {
+            $('input[name="q[36]"]').prop('checked',false);
+            $('.btn__next[data-id="36"]').attr("disabled", true);
+            $('.btn__next[data-id="36"]').addClass("disabled")
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().next().next().fadeIn(500);            
         }else if (id==37 && ($('input[name="q[37]"]:checked').val() == "Ya, dari selain pemerintah (keluarga, tetangga, teman, asosiasi usaha)" || $('input[name="q[37]"]:checked').val() == "Tidak sama sekali")) {
@@ -249,6 +252,11 @@
 
             $(this).parent().parent().parent().fadeOut(500);
             $(this).parent().parent().parent().prev().prev().prev().fadeIn(500);
+        }else if (id==37 && $('.input__b3_2_ver').is(':checked')==false) {
+            $(this).parent().parent().parent().prev().prev().find('.btn__next').removeAttr("disabled", true);
+            $(this).parent().parent().parent().prev().prev().find('.btn__next').removeClass("disabled");
+            $(this).parent().parent().parent().fadeOut(500);
+            $(this).parent().parent().parent().prev().prev().fadeIn(500);            
         }else if (id==50) {
             $(this).parent().parent().parent().prev().prev().prev().find('.btn__next').removeAttr("disabled", true);
             $(this).parent().parent().parent().prev().prev().prev().find('.btn__next').removeClass("disabled");

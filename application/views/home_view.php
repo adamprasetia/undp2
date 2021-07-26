@@ -12,7 +12,7 @@
     <link rel="manifest" href="<?php echo base_url('assets') ?>/images/favicon/site.webmanifest">
     
     <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/tailwind.css?v=4">
-    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=6">
+    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=7">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -27,14 +27,14 @@
                     <img src="<?php echo base_url('assets') ?>/images/survey-title.png?v=2" alt="">
                 </div>
                 <div class="logo--right flex justify-between">
+                    <div class="logo--undp">
+                        <img src="<?php echo base_url('assets') ?>/images/logo-undp.jpg" alt="">
+                    </div>
                     <div class="logo--kemenkopukm">
                         <img src="<?php echo base_url('assets') ?>/images/logo-kemenkopukm-black.png" alt="">
                     </div>
                     <div class="logo--indosat">
                         <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=3" alt="">
-                    </div>
-                    <div class="logo--undp">
-                        <img src="<?php echo base_url('assets') ?>/images/logo-undp.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -42,14 +42,14 @@
             <div class="wrap page--first">
                 <div class="min-h-screen min-w-full flex flex-col justify-center text-white text-center">
                     <div class="head__mid absolute w-full flex justify-center items-center">
+                        <div class="head__mid--two">
+                            <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
+                        </div>
                         <div class="head__mid--zero">
                             <img src="<?php echo base_url('assets') ?>/images/logo-kemenkopukm.png" alt="">
                         </div>
                         <div class="head__mid--one">
                             <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=2" alt="">
-                        </div>
-                        <div class="head__mid--two">
-                            <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
                         </div>
                     </div>
                     <div class="md:px-16 lg:px-60">
@@ -63,7 +63,7 @@
             <div class="wrap hidden">
                 <div class="min-h-screen h-screen min-w-full py-32 md:py-36 overflow-hidden">                    
                     <div class="content content-scroll p-7 text-center font-bold text-t-blue h-full overflow-y-scroll md:text-xl">
-                        <p>Selamat <?php echo (date('H') < 10?'pagi':(date('H') < 15?'siang':'malam')) ?>, Bapak/Ibu yang kami hormati, kami dari Kementerian Koperasi dan UKM, UNDP Indonesia, dan Indosat Oooredoo. Saat ini kami sedang melakukan Survei Lanjutan Dampak COVID-19 Terhadap UMKM di Indonesia. Kami mohon kesediaan Bapak/Ibu untuk menjadi responden dalam survei ini.</p>
+                        <p>Selamat <?php echo (date('H') < 12?'pagi':(date('H') < 15?'siang':(date('H') < 19?'sore':'malam'))) ?>, Bapak/Ibu yang kami hormati, kami dari Kementerian Koperasi dan UKM, UNDP Indonesia, dan Indosat Oooredoo. Saat ini kami sedang melakukan Survei Lanjutan Dampak COVID-19 Terhadap UMKM di Indonesia. Kami mohon kesediaan Bapak/Ibu untuk menjadi responden dalam survei ini.</p>
                         <br>
                         <p>Survei ini bertujuan untuk melihat dampak pandemi COVID-19 bagi UMKM selama tahun 2021, lebih dari satu tahun setelah pandemi dimulai. Survei ini ingin mengetahui apa strategi dan yang dipilih oleh pelaku usaha UMKM, termasuk pelaku usaha perempuan, pemuda, dan juga yang berkebutuhan khusus dalam memitigasi dampak dari pandemik terhadap usaha mereka, serta adaptasi usaha yang telah dilaksanakan. Survei ini juga ingin mengidentifikasi dampak Pandemi COVID 19 dan peluang kontribusi UMKM dalam pemulihan ekonomi yang bersifat ramah lingkungan dan inklusif. Hasil dari survei ini diharapkan dapat memberikan gambaran bagi pemangku kepentingan terkait dalam upaya memitigasi dampak pandemi COVID-19 baik dari sisi ekonomi maupun non-ekonomi bagi pelaku UMKM.</p>
                         <br>
@@ -125,11 +125,11 @@
                     
                     <div class="content p-6 text-t-blue">
                         <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
-                        <h1 class="text-xl font-bold">A3. Nomor Telepon</h1>
+                        <h1 class="text-xl font-bold">A3. Nomor Telepon Seluler</h1>
                         <div class="my-4">
-                            <input type="number" min="0" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="15" name="q[<?php echo ++$inc ?>]" id="phone" class="border-2 border-t-blue rounded-lg px-2 py-1 w-full mt-2 input__text" data-id="<?php echo $inc ?>">
+                            <input type="text" placeholder="Isi dengan format: 08xxxxx" maxlength="15" name="q[<?php echo ++$inc ?>]" id="phone" class="border-2 border-t-blue rounded-lg px-2 py-1 w-full mt-2 input__texts" data-id="<?php echo $inc ?>">
                         </div>
-                        <small>1,000 responden yang beruntung dan mengisi survei ini dengan lengkap akan mendapatkan pulsa senilai Rp 25,000. Silakan isi nomor telepon Bapak/Ibu jika tertarik mengikuti undian ini memperoleh kesempatan mendapatkan pulsa, silakan kosongkan jika tidak.</small>
+                        <small>1,000 responden yang beruntung dan mengisi survei ini dengan lengkap akan mendapatkan pulsa senilai Rp 25,000. Silakan isi nomor telepon seluler Bapak/Ibu jika tertarik mengikuti undian ini memperoleh kesempatan mendapatkan pulsa, silakan kosongkan jika tidak.</small>
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next btn__form" data-id="<?php echo $inc ?>">SELANJUTNYA</button>
                         <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="<?php echo $inc ?>">KEMBALI</button>
                     </div>
@@ -276,9 +276,9 @@
                     'subtitle'=>'A10. Apa bentuk perizinan usaha Bapak/Ibu?',
                     'inc'=>++$inc,
                     'question'=>[
-                        'SIUP',
-                        'IUMK',
-                        'NIB',
+                        'SIUP (Surat Izin Usaha Perdagangan)',
+                        'IUMK (Izin Usaha Mikro Kecil)',
+                        'NIB (Nomor Induk Berusaha)',
                         'Tidak memiliki perizinan',
                         'Lainnya'
                     ],
@@ -403,7 +403,7 @@
                     <div class="content p-6 text-t-blue">
                         <h2 class="text-base font-bold text-t-red mb-4">A. Profil Usaha</h2>
                         <h1 class="text-xl font-bold">A19. Berapakah jumlah pekerja Bapak/Ibu yang <u>bekerja tetap/penuh waktu</u> (termasuk pemilik/anda sendiri)?</h1>
-                        <small>(tidak bisa dikosongkan, jika 0 isi dengan angka 0)</small>
+                        <small>(tidak bisa dikosongkan, isi angka 0 jika tidak ada.)</small>
                         <ul class="my-4">
                             <li class="my-2 ml-6 list-disc">
                                 <div>
@@ -1182,6 +1182,15 @@
                         'Kendala permodalan',
                         'Tidak ada kendala',
                     ],
+                    'small'=>[
+                        'Misal: kesulitan memperoleh bahan baku, harga bahan baku tidak stabil',
+                        'Misal: kesulitan mencapai target produksi, kesulitan pemeliharaan alat produksi',
+                        'Misal: kesulitan menjaga kualitas produk',
+                        'Misal: kesulitan mendapat sertifikasi, kesulitan biaya untuk sertifikasi, kesulitan memenuhi syarat sertifikasi',
+                        'Misal: minimnya informasi terkait syarat ekspor ke berbagai negara, minimnya informasi terkait tren di berbagai negara',
+                        'Misal: kesulitan mengirim barang ekspor, adanya kuota/tarif impor dari negara tujuan',
+                        'Misal: kesulitan mendapat pinjaman untuk melakukan ekspor',
+                    ],
                     'show'=>0
                 ]);
             ?>
@@ -1198,10 +1207,11 @@
                         'Timur Tengah',
                         'Australia',
                         'Eropa',
-                        'Amerika',
+                        'Amerika Utara',
                         'Amerika Latin',
                         'Afrika',
                     ],
+                    'small'=>'',
                     'show'=>0
                 ]);
             ?>
@@ -1235,6 +1245,15 @@
                         'Kendala distribusi',
                         'Kendala permodalan',
                         'Tidak ada kendala',
+                    ],
+                    'small'=>[
+                        'Misal: kesulitan memperoleh bahan baku, harga bahan baku tidak stabil',
+                        'Misal: kesulitan mencapai target produksi, kesulitan pemeliharaan alat produksi',
+                        'Misal: kesulitan menjaga kualitas produk',
+                        'Misal: kesulitan mendapat sertifikasi, kesulitan biaya untuk sertifikasi, kesulitan memenuhi syarat sertifikasi',
+                        'Misal: minimnya informasi terkait syarat ekspor ke berbagai negara, minimnya informasi terkait tren di berbagai negara',
+                        'Misal: kesulitan mengirim barang ekspor, adanya kuota/tarif impor dari negara tujuan',
+                        'Misal: kesulitan mendapat pinjaman untuk melakukan ekspor',
                     ],
                     'show'=>0
                 ]);
@@ -1273,6 +1292,7 @@
                         'Membeli bahan baku dari penjual yang lokasinya dekat',
                         'Tidak melakukan'
                     ],
+                    'small'=>'',
                     'show'=>0
                 ]);
             ?>
@@ -1300,7 +1320,7 @@
             <?php 
                 $this->load->view('template/radio',[
                     'title'=>'F. Usaha Ramah Lingkungan',
-                    'subtitle'=>'F3. Menurut Bapak/Ibu, apa yang menjadi tantangan dalam melaksanakan praktik ramah lingkungan pada usaha Bapak/Ibu?',
+                    'subtitle'=>'F3. Menurut Bapak/Ibu, apa yang menjadi tantangan utama dalam melaksanakan praktik ramah lingkungan pada usaha Bapak/Ibu?',
                     'inc'=>++$inc,
                     'question'=>[
                         'Banyak prioritas lain dalam usaha',
@@ -1357,7 +1377,6 @@
                         'Memiliki kebijakan yang mengakomodasi cuti haid/melahirkan',
                         'Memiliki kebijakan yang mengakomodasi jam kerja fleksibel bagi ibu yang memiliki anak',
                         'Tidak melakukan',
-                        'Lainnya',
                     ],
                     'show'=>0
                 ]);
@@ -1394,7 +1413,6 @@
                         'Kapasitas terbatas (sumber daya, waktu, dan pemahaman)',
                         'Kurangnya kesadaran akan pentingnya praktik ramah penyandang disabilitas dan perempuan',
                         'Biaya yang tinggi untuk menjalankan praktik ramah penyandang disabilitas dan perempuan',
-                        'Lainnya',
                     ],
                     'show'=>0
                 ]);
@@ -1409,7 +1427,6 @@
                         'Perluasan informasi melalui media daring',
                         'Lokakarya dari institusi/asosiasi penggerak praktik ramah penyandang disabilitas dan perempuan',
                         'Subsidi/kemudahan pajak bagi usaha yang melaksanakan praktik ramah penyandang disabilitas dan perempuan',
-                        'Lainnya',
                     ],
                     'button_class'=>'btn__change--blue',
                     'show'=>0
@@ -1419,14 +1436,14 @@
             <div class="wrap last--page hidden">
                 <div class="min-h-screen min-w-full flex flex-col justify-center text-white text-center">
                     <div class="head__mid absolute w-full flex justify-center items-center">
+                        <div class="head__mid--two">
+                            <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
+                        </div>
                         <div class="head__mid--zero">
                             <img src="<?php echo base_url('assets') ?>/images/logo-kemenkopukm.png" alt="">
                         </div>
                         <div class="head__mid--one">
                             <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=2" alt="">
-                        </div>
-                        <div class="head__mid--two">
-                            <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
                         </div>
                     </div>
                     <div class="md:px-16 lg:px-60">
