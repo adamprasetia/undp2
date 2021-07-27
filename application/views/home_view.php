@@ -1207,7 +1207,7 @@
                         'Australia',
                         'Eropa',
                         'Amerika Utara',
-                        'Amerika Latin',
+                        'Amerika Selatan',
                         'Afrika',
                     ],
                     'small'=>'',
