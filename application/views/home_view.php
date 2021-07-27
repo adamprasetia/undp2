@@ -12,7 +12,7 @@
     <link rel="manifest" href="<?php echo base_url('assets') ?>/images/favicon/site.webmanifest">
     
     <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/tailwind.css?v=4">
-    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=7">
+    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -27,14 +27,14 @@
                     <img src="<?php echo base_url('assets') ?>/images/survey-title.png?v=2" alt="">
                 </div>
                 <div class="logo--right flex justify-between">
-                    <div class="logo--undp">
-                        <img src="<?php echo base_url('assets') ?>/images/logo-undp.jpg" alt="">
-                    </div>
                     <div class="logo--kemenkopukm">
                         <img src="<?php echo base_url('assets') ?>/images/logo-kemenkopukm-black.png" alt="">
                     </div>
                     <div class="logo--indosat">
                         <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=3" alt="">
+                    </div>
+                    <div class="logo--undp">
+                        <img src="<?php echo base_url('assets') ?>/images/logo-undp.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -42,14 +42,14 @@
             <div class="wrap page--first">
                 <div class="min-h-screen min-w-full flex flex-col justify-center text-white text-center">
                     <div class="head__mid absolute w-full flex justify-center items-center">
-                        <div class="head__mid--two">
-                            <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
-                        </div>
                         <div class="head__mid--zero">
                             <img src="<?php echo base_url('assets') ?>/images/logo-kemenkopukm.png" alt="">
                         </div>
                         <div class="head__mid--one">
                             <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=2" alt="">
+                        </div>
+                        <div class="head__mid--two">
+                            <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
                         </div>
                     </div>
                     <div class="md:px-16 lg:px-60">
@@ -63,13 +63,11 @@
             <div class="wrap hidden">
                 <div class="min-h-screen h-screen min-w-full py-32 md:py-36 overflow-hidden">                    
                     <div class="content content-scroll p-7 text-center font-bold text-t-blue h-full overflow-y-scroll md:text-xl">
-                        <p>Selamat <?php echo (date('H') < 12?'pagi':(date('H') < 15?'siang':(date('H') < 19?'sore':'malam'))) ?>, Bapak/Ibu yang kami hormati, kami dari Kementerian Koperasi dan UKM, UNDP Indonesia, dan Indosat Oooredoo. Saat ini kami sedang melakukan Survei Lanjutan Dampak COVID-19 Terhadap UMKM di Indonesia. Kami mohon kesediaan Bapak/Ibu untuk menjadi responden dalam survei ini.</p>
+                        <p>Selamat <?php echo (date('H') < 12?'pagi':(date('H') < 15?'siang':(date('H') < 19?'sore':'malam'))) ?>, Bapak/Ibu yang kami hormati. Kami dari Kementerian Koperasi dan UKM, UNDP Indonesia, dan Indosat Oooredoo. Saat ini kami sedang melaksanakan Survei Dampak COVID-19 Terhadap UMKM di Indonesia. Kami mohon kesediaan Bapak/Ibu untuk menjadi responden dalam survei ini.</p>
                         <br>
-                        <p>Survei ini bertujuan untuk melihat dampak pandemi COVID-19 bagi UMKM selama tahun 2021, lebih dari satu tahun setelah pandemi dimulai. Survei ini ingin mengetahui apa strategi dan yang dipilih oleh pelaku usaha UMKM, termasuk pelaku usaha perempuan, pemuda, dan juga yang berkebutuhan khusus dalam memitigasi dampak dari pandemik terhadap usaha mereka, serta adaptasi usaha yang telah dilaksanakan. Survei ini juga ingin mengidentifikasi dampak Pandemi COVID 19 dan peluang kontribusi UMKM dalam pemulihan ekonomi yang bersifat ramah lingkungan dan inklusif. Hasil dari survei ini diharapkan dapat memberikan gambaran bagi pemangku kepentingan terkait dalam upaya memitigasi dampak pandemi COVID-19 baik dari sisi ekonomi maupun non-ekonomi bagi pelaku UMKM.</p>
+                        <p>Survei ini bertujuan untuk melihat dampak pandemi COVID-19 bagi UMKM setelah lebih dari satu tahun setelah pandemi dimulai. Hasil dari survei ini diharapkan dapat memberikan gambaran bagi pemangku kepentingan untuk memitigasi dampak pandemi COVID-19 terhadap pelaku UMKM dari sisi ekonomi dan non-ekonomi. Kami menjamin kerahasiaan informasi yang Bapak/Ibu berikan. Informasi yang Bapak/Ibu berikan hanya digunakan untuk penelitian yang akan diolah dan disusun menjadi suatu laporan yang berisi masukan dan rekomendasi kepada pihak-pihak terkait.</p>
                         <br>
-                        <p>Survei ini bukan untuk menilai UMKM sebagai responden, jawaban responden tidak ada yang dinilai benar atau salah, melainkan diisi sesuai dengan kondisi responden. Kami menjamin seluruh informasi yang Bapak/Ibu berikan hanya dipergunakan untuk keperluan penelitian dan evaluasi program saja. Informasi yang Bapak/Ibu berikan selanjutnya akan diolah dan disusun menjadi suatu laporan yang berisi masukan dan rekomendasi kepada pihak-pihak terkait.</p>
-                        <br>
-                        <p>Partisipasi dalam survei ini sepenuhnya sukarela. Jika Bapak/Ibu memutuskan untuk tidak berpartisipasi, tidak akan ada konsekuensi negatif. Perlu diketahui bahwa jika Bapak/Ibu memutuskan untuk berpartisipasi, Bapak/Ibu dapat berhenti berpartisipasi kapan saja dan dapat memutuskan untuk tidak menjawab pertanyaan spesifik apa pun.</p>
+                        <p>Partisipasi dalam survei ini sepenuhnya bersifat sukarela dan tidak ada konsekuensi negatif jika Bapak/Ibu memutuskan untuk tidak berpartisipasi. Terima kasih atas partisipasi Bapak/Ibu.</p>
                         <button class="mt-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 btn__next">SELANJUTNYA</button>
                     </div>
                 </div>
@@ -999,7 +997,7 @@
                     <div class="content p-6 text-t-blue text-center font-bold">
                         <p class="text-xl md:text-2xl">Keberlangsungan dan Adaptasi Usaha Selama PPKM Darurat Jawa-Bali</p>
                         <br>
-                        <p class="text-base md:text-xl">Bagian ini menanyakan kondisi usaha Bapak/Ibu selama periode PPKM Darurat Jawa-Bali yang dimulai pada tanggal 3 Juli 2021 dan diakhiri pada tanggal 25 Juli 2021.</p>
+                        <p class="text-base md:text-xl">Bagian ini menanyakan kondisi usaha Bapak/Ibu selama periode PPKM Darurat Jawa-Bali yang dimulai pada tanggal 3 Juli 2021 dan diakhiri pada tanggal 2 Agustus 2021.</p>
                         
                         <button class="my-6 font-bold bg-white border-2 border-t-red rounded-lg px-4 py-2 mx-auto block text-t-blue btn__next">SELANJUTNYA</button>
                         <button class="my-6 font-bold bg-white border-2 border-t-blue rounded-lg px-4 py-2 mx-auto block text-t-blue btn__back" data-id="d">KEMBALI</button>
@@ -1435,14 +1433,14 @@
             <div class="wrap last--page hidden">
                 <div class="min-h-screen min-w-full flex flex-col justify-center text-white text-center">
                     <div class="head__mid absolute w-full flex justify-center items-center">
-                        <div class="head__mid--two">
-                            <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
-                        </div>
                         <div class="head__mid--zero">
                             <img src="<?php echo base_url('assets') ?>/images/logo-kemenkopukm.png" alt="">
                         </div>
                         <div class="head__mid--one">
                             <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=2" alt="">
+                        </div>
+                        <div class="head__mid--two">
+                            <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
                         </div>
                     </div>
                     <div class="md:px-16 lg:px-60">
