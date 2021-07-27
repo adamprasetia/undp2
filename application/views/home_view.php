@@ -19,7 +19,7 @@
 <body>
     <div class="container">
         <form id="mainform" action="<?php echo site_url('participant') ?>" name="mainform" method="post">
-            <input type="hidden" name="source" value="<?php echo htmlentities($this->input->get('source', true)) ?>">
+            <input type="hidden" name="source" value="<?php echo $source ?>">
             <div class="bg blue fixed w-full h-full"></div>
 
             <div class="head absolute flex justify-between pr-4 pt-6 w-full md:pt-12 md:pr-10 hidden">

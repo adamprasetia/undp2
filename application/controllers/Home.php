@@ -3,12 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
-	public function index()
+	public function index($source = '')
 	{		
 		$db = $this->load->database('default', true);
 
-
 		$data = [
+			'source'=>$source,
 			'prov' => $db->query('select distinct(prov) from city')->result(),
 		];
 
@@ -42,7 +42,7 @@ class Home extends CI_Controller {
 		}
 		echo json_encode($return);
 	}
-	public function export()
+	public function export($source = '')
     {       
         if ($_SERVER['PHP_AUTH_USER']!='admin' || $_SERVER['PHP_AUTH_PW']!='#undp#') {
             header('WWW-Authenticate: Basic realm="UNDP"');
@@ -55,6 +55,9 @@ class Home extends CI_Controller {
         header("Content-type: application/vnd-ms-excel"); 
         header("Content-Disposition: attachment; filename=undp-".date('YmdHis').".xls");
 
+		if(!empty($source)){
+			$db->where('source', $source);
+		}
 		$result = $db->get('participant')->result();
 		// $this->load->view('export_view', ['result'=>$result]);
 		$this->load->view('export2_view', ['result'=>$result]);
