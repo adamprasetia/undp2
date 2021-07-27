@@ -118,10 +118,12 @@ img {
 }
 
 .head__mid {
-  top: 50px;
+  top: 40px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {
@@ -174,6 +176,12 @@ img {
         -ms-flex: 0 0 65px;
             flex: 0 0 65px;
     margin-right: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .head__text {
+    font-size: 13px;
   }
 }
 
@@ -402,5 +410,9 @@ select {
 .multiple__input small {
   margin-left: 28px;
   display: inline-block;
+}
+
+.main__title {
+  padding-top: 40px;
 }
 /*# sourceMappingURL=styles.css.map */

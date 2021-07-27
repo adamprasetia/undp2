@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNDP x Indosat Ooredo</title>
+    <title>Survei UMKM</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo base_url('assets') ?>/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo base_url('assets') ?>/images/favicon/favicon-32x32.png">
@@ -12,7 +12,7 @@
     <link rel="manifest" href="<?php echo base_url('assets') ?>/images/favicon/site.webmanifest">
     
     <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/tailwind.css?v=4">
-    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=8">
+    <link rel="stylesheet" href="<?php echo base_url('assets') ?>/css/styles.css?v=10">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -51,8 +51,9 @@
                         <div class="head__mid--two">
                             <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
                         </div>
+                        <div class="head__text font-bold my-4 px-4">Kementerian Koperasi dan UKM Republik Indonesia | Indosat Ooredoo | UNDP Indonesia</div>
                     </div>
-                    <div class="md:px-16 lg:px-60">
+                    <div class="main__title md:px-16 lg:px-60">
                         <h1 class="font-bold p-4 text-3xl leading-snug lg:text-5xl lg:leading-relaxed">SURVEI LANJUTAN DAMPAK COVID-19 TERHADAP UMKM DI INDONESIA</h1>
                         <br>
                         <button class="bg-t-red p-2 w-24 mx-auto rounded-lg font-bold btn--start lg:w-32 lg:text-xl btn__next btn__change--white">MULAI</button>
