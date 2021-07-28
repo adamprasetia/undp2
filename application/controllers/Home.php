@@ -24,19 +24,30 @@ class Home extends CI_Controller {
 	{		
 		$db = $this->load->database('default', true);
 		$answer = $this->input->post('q', true);
+		$id = $this->input->post('id', true);
 		$source = $this->input->post('source', true);
 		// echo json_encode($answer);exit;
 		if(!is_array($answer)){
 			echo json_encode(['status'=>false,'message'=>'question wrong format']);
 			exit;
 		}
-		$result = $db->insert('participant', [
-			'answer'=>json_encode($answer),
-			'source'=>$source,
-			'created_at'=>date('Y-m-d H:i:s')
-		]);
+		if(!empty($id)){
+			$db->where('md5(id)', $id);
+			$result = $db->update('participant', [
+				'answer'=>json_encode($answer),
+				'source'=>$source,
+				'created_at'=>date('Y-m-d H:i:s')
+			]);
+		}else{
+			$result = $db->insert('participant', [
+				'answer'=>json_encode($answer),
+				'source'=>$source,
+				'created_at'=>date('Y-m-d H:i:s')
+			]);
+			$id = md5($db->insert_id());
+		}
 		if($result){
-			$return = ['status'=>true, 'message'=>'Success'];
+			$return = ['status'=>true, 'message'=>'Success', 'id'=>$id];
 		}else{
 			$return = ['status'=>true, 'message'=>'Failed'];
 		}

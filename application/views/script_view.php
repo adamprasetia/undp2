@@ -10,6 +10,7 @@
             dataType: 'json',
             success: function(res) {
                 console.log(res);
+                $('#form-id').val(res.id)
             },error: function(xhr, textStatus, errorThrown) {
                 alert("Oops... Something went wrong!");
             }
@@ -61,6 +62,9 @@
         $(this).attr("disabled", true);
         $(this).addClass("disabled")
         var id = $(this).attr('data-id');
+        if(id){
+            save_data()
+        }
         var ques = $(this).attr('data-ques');
         if (id==0 && $('input[name="q[0]"]:checked').val() == "Tidak") {
             save_data();
