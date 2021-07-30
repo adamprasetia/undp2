@@ -32,7 +32,7 @@ class Home extends CI_Controller {
 			exit;
 		}
 		if(!empty($id)){
-			$db->where('md5(id)', $id);
+			$db->where('MD5(concat(id,"#undp%"))', $id);
 			$result = $db->update('participant', [
 				'answer'=>json_encode($answer),
 				'source'=>$source,
@@ -44,7 +44,7 @@ class Home extends CI_Controller {
 				'source'=>$source,
 				'created_at'=>date('Y-m-d H:i:s')
 			]);
-			$id = md5($db->insert_id());
+			$id = md5($db->insert_id().'#undp%');
 		}
 		if($result){
 			$return = ['status'=>true, 'message'=>'Success', 'id'=>$id];

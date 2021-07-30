@@ -32,7 +32,7 @@
                         <img src="<?php echo base_url('assets') ?>/images/logo-kemenkopukm-black.png" alt="">
                     </div>
                     <div class="logo--indosat">
-                        <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=3" alt="">
+                        <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=4" alt="">
                     </div>
                     <div class="logo--undp">
                         <img src="<?php echo base_url('assets') ?>/images/logo-undp.jpg" alt="">
@@ -47,7 +47,7 @@
                             <img src="<?php echo base_url('assets') ?>/images/logo-kemenkopukm.png" alt="">
                         </div>
                         <div class="head__mid--one">
-                            <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=2" alt="">
+                            <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=4" alt="">
                         </div>
                         <div class="head__mid--two">
                             <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
@@ -1439,7 +1439,7 @@
                             <img src="<?php echo base_url('assets') ?>/images/logo-kemenkopukm.png" alt="">
                         </div>
                         <div class="head__mid--one">
-                            <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=2" alt="">
+                            <img src="<?php echo base_url('assets') ?>/images/logo-indosat.png?v=4" alt="">
                         </div>
                         <div class="head__mid--two">
                             <img src="<?php echo base_url('assets') ?>/images/logo-undp-w.png" alt="">
