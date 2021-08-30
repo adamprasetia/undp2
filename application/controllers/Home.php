@@ -176,65 +176,65 @@ class Home extends CI_Controller {
 			if(empty($answer[0])){continue;}
 			$output .= $i++.',';
 			$output .= $row->created_at.',';
-			$output .= @$answer[0].',';
-			$output .= @$answer[1].',';
-			$output .= @$answer[2].',';
-			$output .= @$answer[3].',';
-			$output .=  @$answer[4].',';
-			$output .=  @$answer[5].',';
-			$output .=  @$answer[6].',';
-			$output .=  @$answer[7].',';
+			$output .= '"'.@$answer[0].'",';
+			$output .= '"'.@$answer[1].'",';
+			$output .= '"'.@$answer[2].'",';
+			$output .= '"'.@$answer[3].'",';
+			$output .= '"'.@$answer[4].'",';
+			$output .= '"'.@$answer[5].'",';
+			$output .= '"'.@$answer[6].'",';
+			$output .= '"'.@$answer[7].'",';
 			for ($j=1; $j <= 9; $j++) {
 				$output .= (!empty(@$answer[8][$j][0])?1:0).',';
 			}
-			$output .= @$answer[8][11].',';
-			$output .= @$answer[9].',';
-			$output .= @$answer[10].',';
-			$output .= @$answer[11].',';
-			$output .= $answer[12][0].',';
-			$output .= @$answer[12][1].',';
-			$output .= $answer[13][0].',';
-			$output .= @$answer[13][1].',';
+			$output .= '"'.@$answer[8][11].'",';
+			$output .= '"'.@$answer[9].'",';
+			$output .= '"'.@$answer[10].'",';
+			$output .= '"'.@$answer[11].'",';
+			$output .= '"'.$answer[12][0].'",';
+			$output .= '"'.@$answer[12][1].'",';
+			$output .= '"'.$answer[13][0].'",';
+			$output .= '"'.@$answer[13][1].'",';
 			for ($j=1; $j <= 5; $j++) {
 				$output .= (!empty(@$answer[14][$j][0])?1:0).',';
 			}
 			for ($j=1; $j <= 13; $j++) {
 				$output .= (!empty(@$answer[15][$j][0])?1:0).',';
 			}
-			$output .= @$answer[15][15].',';
-			$output .= @$answer[16].',';
-			$output .= @$answer[17].',';
-			$output .= @$answer[18].',';
-			$output .= @$answer[19].',';
-			$output .= @$answer[20].',';
-			$output .= @$answer[21][0].',';
-			$output .= @$answer[21][1].',';
-			$output .= @$answer[22][0].',';
-			$output .= @$answer[22][1].',';
-			$output .= @$answer[23][0].',';
-			$output .= @$answer[23][1].',';
-			$output .= substr(@$answer[24][1][0],0,1).',';
-			$output .= substr(@$answer[24][2][0],0,1).',';
-			$output .= substr(@$answer[24][3][0],0,1).',';
-			$output .= substr(@$answer[24][4][0],0,1).',';
-			$output .= substr(@$answer[24][5][0],0,1).',';
-			$output .= @$answer[25].',';
-			$output .= @$answer[26].',';
+			$output .= '"'.@$answer[15][15].'",';
+			$output .= '"'.@$answer[16].'",';
+			$output .= '"'.@$answer[17].'",';
+			$output .= '"'.@$answer[18].'",';
+			$output .= '"'.@$answer[19].'",';
+			$output .= '"'.@$answer[20].'",';
+			$output .= '"'.@$answer[21][0].'",';
+			$output .= '"'.@$answer[21][1].'",';
+			$output .= '"'.@$answer[22][0].'",';
+			$output .= '"'.@$answer[22][1].'",';
+			$output .= '"'.@$answer[23][0].'",';
+			$output .= '"'.@$answer[23][1].'",';
+			$output .= '"'.substr(@$answer[24][1][0],0,1).'",';
+			$output .= '"'.substr(@$answer[24][2][0],0,1).'",';
+			$output .= '"'.substr(@$answer[24][3][0],0,1).'",';
+			$output .= '"'.substr(@$answer[24][4][0],0,1).'",';
+			$output .= '"'.substr(@$answer[24][5][0],0,1).'",';
+			$output .= '"'.@$answer[25].'",';
+			$output .= '"'.@$answer[26].'",';
 			for ($j=1; $j <= 5; $j++) {
 				$output .= (!empty(@$answer[27][$j][0])?1:0).',';
 			}
-			$output .= @$answer[28].',';
+			$output .= '"'.@$answer[28].'",';
 			for ($j=1; $j <= 12; $j++) {
 				$output .= (!empty(@$answer[29][$j][0])?1:0).',';
 			}
-			$output .= @$answer[29][14].',';
+			$output .= '"'.@$answer[29][14].'",';
 			for ($j=1; $j <= 6; $j++) {
 				$output .= (!empty(@$answer[30][$j][0])?1:0).',';
 			}
-			$output .= @$answer[31][0].',';
-			$output .= @$answer[31][1].',';
-			$output .= @$answer[31][2].',';
-			$output .= @$answer[31][3].',';
+			$output .= '"'.@$answer[31][0].'",';
+			$output .= '"'.@$answer[31][1].'",';
+			$output .= '"'.@$answer[31][2].'",';
+			$output .= '"'.@$answer[31][3].'",';
 			for ($j=1; $j <= 17; $j++) {
 				$output .= (!empty(@$answer[32][$j][0])?1:0).',';
 			}
@@ -253,8 +253,8 @@ class Home extends CI_Controller {
 			for ($j=1; $j <= 10; $j++) {
 				$output .= (!empty(@$answer[35][2][$j][0])?1:0).',';
 			}
-			$output .= @$answer[36].',';
-			$output .= @$answer[37].',';
+			$output .= '"'.@$answer[36].'",';
+			$output .= '"'.@$answer[37].'",';
 			for ($j=1; $j <= 8; $j++) {
 				$output .= (!empty(@$answer[38][$j][0])?1:0).',';
 			}
@@ -273,7 +273,7 @@ class Home extends CI_Controller {
 			for ($j=1; $j <= 7; $j++) {
 				$output .= (!empty(@$answer[50][$j][0])?1:0).',';
 			}
-			$output .= @$answer[51].',';
+			$output .= '"'.@$answer[51].'",';
 			for ($j=1; $j <= 8; $j++) {
 				$output .= (!empty(@$answer[52][$j][0])?1:0).',';
 			}
@@ -283,17 +283,17 @@ class Home extends CI_Controller {
 			for ($j=0; $j <= 3; $j++) {
 				$output .= @$answer[54][$j].',';
 			}
-			$output .= @$answer[55].',';
-			$output .= @$answer[56].',';
+			$output .= '"'.@$answer[55].'",';
+			$output .= '"'.@$answer[56].'",';
 			for ($j=1; $j <= 8; $j++) {
 				$output .= (!empty(@$answer[57][$j][0])?1:0).',';
 			}
 			for ($j=0; $j <= 2; $j++) {
 				$output .= @$answer[58][$j].',';
 			}
-			$output .= @$answer[59].',';
-			$output .= @$answer[60].',';
-			$output .= @$row->source.PHP_EOL;
+			$output .= '"'.@$answer[59].'",';
+			$output .= '"'.@$answer[60].'",';
+			$output .= '"'.@$row->source.'"'.PHP_EOL;
 		}
 
 		echo $output;
