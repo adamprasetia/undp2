@@ -73,7 +73,7 @@ class Home extends CI_Controller {
 		// $this->load->view('export_view', ['result'=>$result]);
 		$this->load->view('export2_view', ['result'=>$result]);
     }
-	public function export()
+	public function export($source = '')
 	{
 		if ($_SERVER['PHP_AUTH_USER']!='admin' || $_SERVER['PHP_AUTH_PW']!='#undp#') {
             header('WWW-Authenticate: Basic realm="UNDP"');
@@ -89,213 +89,219 @@ class Home extends CI_Controller {
 			$db->where('source', $source);
 		}
 		$result = $db->get('participant')->result();
-		$output = 'No,Tanggal,O1,O2,A1,A2,A3,A4,A5,A6,A7_a,A7_b,A7_c,A7_d,A7_e,A7_f,A7_g,A7_h,A7_no,A7_oth,A8_prov,A8_kab,A9,A10,A10_oth,A11,A11_oth,A12_a,A12_b,A12_c,A12_d,A12_no,';
+		$output = fopen("php://output", "w"); 
+		$header = ['No','Tanggal','O1','O2','A1','A2','A3','A4','A5','A6','A7_a','A7_b','A7_c','A7_d','A7_e','A7_f','A7_g','A7_h','A7_no','A7_oth','A8_prov','A8_kab','A9','A10','A10_oth','A11','A11_oth','A12_a','A12_b','A12_c','A12_d','A12_no'];
 		for ($j='a'; $j <= 'm'; $j++) { 
-			$output .= 'A13_'.$j.',';
+			$header[] = 'A13_'.$j;
 		}
-		$output .= 'A13_oth,A14,A15,A16,A17,A18,A19_f,A19_m,A20_f,A20_m,A21_f,A21_m,A22_a,A22_b,A22_c,A22_d,A22_e,A23,B1,B2_a,B2_b,B2_c,B2_d,B2_no,B3,';
+		$header = array_merge($header,['A13_oth','A14','A15','A16','A17','A18','A19_f','A19_m','A20_f','A20_m','A21_f','A21_m','A22_a','A22_b','A22_c','A22_d','A22_e','A23','B1','B2_a','B2_b','B2_c','B2_d','B2_no','B3']);
 		for ($j='a'; $j <= 'l'; $j++) {
-			$output .= 'B4_'.$j.',';
+			$header[] = 'B4_'.$j;
 		}
-		$output .= 'B4_oth,';
+		$header[] = 'B4_oth';
 		for ($j='a'; $j <= 'e'; $j++) {
-			$output .= 'B5_'.$j.',';
+			$header[] = 'B5_'.$j;
 		}
-		$output .= 'B5_no,C1_f,C1_f_dis,C1_m,C1_m_dis,';
+		$header = array_merge($header,['B5_no','C1_f','C1_f_dis','C1_m','C1_m_dis']);
 		for ($j='a'; $j <= 'p'; $j++) {
-			$output .= 'C2_'.$j.',';
+			$header[] = 'C2_'.$j;
 		}
-		$output .= 'C2_no,';
+		$header[] = 'C2_no';
 		for ($j='a'; $j <= 'p'; $j++) {
-			$output .= 'C3_'.$j.',';
+			$header[] = 'C3_'.$j;
 		}
-		$output .= 'C3_no,';
+		$header[] = 'C3_no';
 		for ($j='a'; $j <= 'd'; $j++) {
-			$output .= 'C4_'.$j.',';
+			$header[] = 'C4_'.$j;
 		}
 		for ($j='a'; $j <= 'f'; $j++) {
-			$output .= 'C5_a_'.$j.',';
+			$header[] = 'C5_a_'.$j;
 		}
-		$output .= 'C5_a_no,';
+		$header[] = 'C5_a_no';
 		for ($j='a'; $j <= 'f'; $j++) {
-			$output .= 'C5_b_'.$j.',';
+			$header[] = 'C5_b_'.$j;
 		}
-		$output .= 'C5_b_no,';
+		$header[] = 'C5_b_no';
 		for ($j='a'; $j <= 'i'; $j++) {
-			$output .= 'C5_c_'.$j.',';
+			$header[] = 'C5_c_'.$j;
 		}
-		$output .= 'C5_c_no,C6,C7,';
+		$header = array_merge($header,['C5_c_no','C6','C7']);
 		for ($j='a'; $j <= 'g'; $j++) {
-			$output .= 'C8_'.$j.',';
+			$header[] = 'C8_'.$j;
 		}
-		$output .= 'C8_no,';
+		$header[] = 'C8_no';
 		for ($j='a'; $j <= 'd'; $j++) {
-			$output .= 'C9_'.$j.',';
+			$header[] = 'C9_'.$j;
 		}
-		$output .= 'C9_no,';
+		$header[] = 'C9_no';
 		for ($j='a'; $j <= 'd'; $j++) {
-			$output .= 'D1_'.$j.',';
+			$header[] = 'D1_'.$j;
 		}
 		for ($j=2; $j <= 7; $j++) {
-			$output .= 'D'.$j.',';
+			$header[] = 'D'.$j;
 		}
-		$output .= 'E1,E2,';
+		$header = array_merge($header,['E1','E2']);
 		for ($j='a'; $j <= 'g'; $j++) {
-			$output .= 'E3_'.$j.',';
+			$header[] = 'E3_'.$j;
 		}
-		$output .= 'E3_no,';
+		$header[] = 'E3_no';
 		for ($j='a'; $j <= 'g'; $j++) {
-			$output .= 'E4_'.$j.',';
+			$header[] = 'E4_'.$j;
 		}
-		$output .= 'E5,';
+		$header[] = 'E5';
 		for ($j='a'; $j <= 'g'; $j++) {
-			$output .= 'E6_'.$j.',';
+			$header[] = 'E6_'.$j;
 		}
-		$output .= 'E6_no,';
+		$header[] = 'E6_no';
 		for ($j='a'; $j <= 'j'; $j++) {
-			$output .= 'F1_'.$j.',';
+			$header[] = 'F1_'.$j;
 		}
-		$output .= 'F1_no,';
+		$header[] = 'F1_no';
 		for ($j='a'; $j <= 'd'; $j++) {
-			$output .= 'F2_'.$j.',';
+			$header[] = 'F2_'.$j;
 		}
-		$output .= 'F3,F4,';
+		$header = array_merge($header,['F3','F4']);
 		for ($j='a'; $j <= 'g'; $j++) {
-			$output .= 'G1_'.$j.',';
+			$header[] = 'G1_'.$j;
 		}
-		$output .= 'G1_no,';
+		$header[] = 'G1_no';
 		for ($j='a'; $j <= 'c'; $j++) {
-			$output .= 'G2_'.$j.',';
+			$header[] = 'G2_'.$j;
 		}
-		$output .= 'G3,';
-		$output .= 'G4,';
-		$output .= 'Source'.PHP_EOL;
+		$header[] = 'G3';
+		$header[] = 'G4';
+		$header[] = 'Source';
+		// dd($header);
+		fputcsv($output, $header); 
 		$i=1;
-		foreach ($result as $row) {
+		foreach ($result as $row) {			
 			$answer = @json_decode($row->answer, true);
-			if(empty($answer[0])){continue;}
-			$output .= '"'.$i++.'",';
-			$output .= '"'.$row->created_at.'",';
-			$output .= '"'.@$answer[0].'",';
-			$output .= '"'.@$answer[1].'",';
-			$output .= '"'.@$answer[2].'",';
-			$output .= '"'.@$answer[3].'",';
-			$output .= '"'.@$answer[4].'",';
-			$output .= '"'.@$answer[5].'",';
-			$output .= '"'.@$answer[6].'",';
-			$output .= '"'.@$answer[7].'",';
+			if(empty($answer[0])){continue;}			
+			$body[] = $i++;
+			$body[] = $row->created_at;
+			$body[] = @$answer[0];
+			$body[] = @$answer[1];
+			$body[] = @$answer[2];
+			$body[] = @$answer[3];
+			$body[] = @$answer[4];
+			$body[] = @$answer[5];
+			$body[] = @$answer[6];
+			$body[] = @$answer[7];
 			for ($j=1; $j <= 9; $j++) {
-				$output .= '"'.(!empty(@$answer[8][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[8][$j][0])?1:0);
 			}
-			$output .= '"'.@$answer[8][11].'",';
-			$output .= '"'.@$answer[9].'",';
-			$output .= '"'.@$answer[10].'",';
-			$output .= '"'.@$answer[11].'",';
-			$output .= '"'.$answer[12][0].'",';
-			$output .= '"'.@$answer[12][1].'",';
-			$output .= '"'.$answer[13][0].'",';
-			$output .= '"'.@$answer[13][1].'",';
+			$body[] = @$answer[8][11];
+			$body[] = @$answer[9];
+			$body[] = @$answer[10];
+			$body[] = @$answer[11];
+			$body[] = $answer[12][0];
+			$body[] = @$answer[12][1];
+			$body[] = $answer[13][0];
+			$body[] = @$answer[13][1];
 			for ($j=1; $j <= 5; $j++) {
-				$output .= '"'.(!empty(@$answer[14][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[14][$j][0])?1:0);
 			}
 			for ($j=1; $j <= 13; $j++) {
-				$output .= '"'.(!empty(@$answer[15][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[15][$j][0])?1:0);
 			}
-			$output .= '"'.@$answer[15][15].'",';
-			$output .= '"'.@$answer[16].'",';
-			$output .= '"'.@$answer[17].'",';
-			$output .= '"'.@$answer[18].'",';
-			$output .= '"'.@$answer[19].'",';
-			$output .= '"'.@$answer[20].'",';
-			$output .= '"'.@$answer[21][0].'",';
-			$output .= '"'.@$answer[21][1].'",';
-			$output .= '"'.@$answer[22][0].'",';
-			$output .= '"'.@$answer[22][1].'",';
-			$output .= '"'.@$answer[23][0].'",';
-			$output .= '"'.@$answer[23][1].'",';
-			$output .= '"'.substr(@$answer[24][1][0],0,1).'",';
-			$output .= '"'.substr(@$answer[24][2][0],0,1).'",';
-			$output .= '"'.substr(@$answer[24][3][0],0,1).'",';
-			$output .= '"'.substr(@$answer[24][4][0],0,1).'",';
-			$output .= '"'.substr(@$answer[24][5][0],0,1).'",';
-			$output .= '"'.@$answer[25].'",';
-			$output .= '"'.@$answer[26].'",';
+			$body[] = @$answer[15][15];
+			$body[] = @$answer[16];
+			$body[] = @$answer[17];
+			$body[] = @$answer[18];
+			$body[] = @$answer[19];
+			$body[] = @$answer[20];
+			$body[] = @$answer[21][0];
+			$body[] = @$answer[21][1];
+			$body[] = @$answer[22][0];
+			$body[] = @$answer[22][1];
+			$body[] = @$answer[23][0];
+			$body[] = @$answer[23][1];
+			$body[] = substr(@$answer[24][1][0],0,1);
+			$body[] = substr(@$answer[24][2][0],0,1);
+			$body[] = substr(@$answer[24][3][0],0,1);
+			$body[] = substr(@$answer[24][4][0],0,1);
+			$body[] = substr(@$answer[24][5][0],0,1);
+			$body[] = @$answer[25];
+			$body[] = @$answer[26];
 			for ($j=1; $j <= 5; $j++) {
-				$output .= '"'.(!empty(@$answer[27][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[27][$j][0])?1:0);
 			}
-			$output .= '"'.@$answer[28].'",';
+			$body[] = @$answer[28];
 			for ($j=1; $j <= 12; $j++) {
-				$output .= '"'.(!empty(@$answer[29][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[29][$j][0])?1:0);
 			}
-			$output .= '"'.@$answer[29][14].'",';
+			$body[] = @$answer[29][14];
 			for ($j=1; $j <= 6; $j++) {
-				$output .= '"'.(!empty(@$answer[30][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[30][$j][0])?1:0);
 			}
-			$output .= '"'.@$answer[31][0].'",';
-			$output .= '"'.@$answer[31][1].'",';
-			$output .= '"'.@$answer[31][2].'",';
-			$output .= '"'.@$answer[31][3].'",';
+			$body[] = @$answer[31][0];
+			$body[] = @$answer[31][1];
+			$body[] = @$answer[31][2];
+			$body[] = @$answer[31][3];
 			for ($j=1; $j <= 17; $j++) {
-				$output .= '"'.(!empty(@$answer[32][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[32][$j][0])?1:0);
 			}
 			for ($j=1; $j <= 17; $j++) {
-				$output .= '"'.(!empty(@$answer[33][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[33][$j][0])?1:0);
 			}
 			for ($j=0; $j <= 3; $j++) {
-				$output .= '"'.@$answer[34][$j].'",';
+				$body[] = @$answer[34][$j];
 			}
 			for ($j=1; $j <= 7; $j++) {
-				$output .= '"'.(!empty(@$answer[35][0][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[35][0][$j][0])?1:0);
 			}
 			for ($j=1; $j <= 7; $j++) {
-				$output .= '"'.(!empty(@$answer[35][1][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[35][1][$j][0])?1:0);
 			}
 			for ($j=1; $j <= 10; $j++) {
-				$output .= '"'.(!empty(@$answer[35][2][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[35][2][$j][0])?1:0);
 			}
-			$output .= '"'.@$answer[36].'",';
-			$output .= '"'.@$answer[37].'",';
+			$body[] = @$answer[36];
+			$body[] = @$answer[37];
 			for ($j=1; $j <= 8; $j++) {
-				$output .= '"'.(!empty(@$answer[38][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[38][$j][0])?1:0);
 			}
 			for ($j=1; $j <= 5; $j++) {
-				$output .= '"'.(!empty(@$answer[39][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[39][$j][0])?1:0);
 			}
 			for ($j=0; $j <= 3; $j++) {
-				$output .= '"'.@$answer[40][$j].'",';
+				$body[] = @$answer[40][$j];
 			}
 			for ($j=41; $j <= 48; $j++) {
-				$output .= '"'.@$answer[$j].'",';
+				$body[] = @$answer[$j];
 			}
 			for ($j=1; $j <= 8; $j++) {
-				$output .= '"'.(!empty(@$answer[49][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[49][$j][0])?1:0);
 			}
 			for ($j=1; $j <= 7; $j++) {
-				$output .= '"'.(!empty(@$answer[50][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[50][$j][0])?1:0);
 			}
-			$output .= '"'.@$answer[51].'",';
+			$body[] = @$answer[51];
 			for ($j=1; $j <= 8; $j++) {
-				$output .= '"'.(!empty(@$answer[52][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[52][$j][0])?1:0);
 			}
 			for ($j=1; $j <= 11; $j++) {
-				$output .= '"'.(!empty(@$answer[53][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[53][$j][0])?1:0);
 			}
 			for ($j=0; $j <= 3; $j++) {
-				$output .= '"'.@$answer[54][$j].'",';
+				$body[] = @$answer[54][$j];
 			}
-			$output .= '"'.@$answer[55].'",';
-			$output .= '"'.@$answer[56].'",';
+			$body[] = @$answer[55];
+			$body[] = @$answer[56];
 			for ($j=1; $j <= 8; $j++) {
-				$output .= '"'.(!empty(@$answer[57][$j][0])?1:0).'",';
+				$body[] = (!empty(@$answer[57][$j][0])?1:0);
 			}
 			for ($j=0; $j <= 2; $j++) {
-				$output .= '"'.@$answer[58][$j].'",';
+				$body[] = @$answer[58][$j];
 			}
-			$output .= '"'.@$answer[59].'",';
-			$output .= '"'.@$answer[60].'",';
-			$output .= '"'.@$row->source.'"'.PHP_EOL;
+			$body[] = @$answer[59];
+			$body[] = @$answer[60];
+			$body[] = @$row->source;
+			fputcsv($output, $body);
+			unset($body);
 		}
 
-		echo $output;
+		// echo $output;
+		fclose($output); 
 	}
 }
